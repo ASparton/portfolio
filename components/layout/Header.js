@@ -5,7 +5,7 @@ function Header() {
     <header>
         <div>
             <Link href="/" alt="Home">
-                AS.
+                AS
             </Link>
         </div>
         <div>
