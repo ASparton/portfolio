@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+html, body, div, a, h1, h2, h3, p, img, ul, li, input, label, footer, header, nav, section, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 100%;
+  font-family: 'Quicksand', 'sans-serif';
+}
+
+body {
+  background-color: #FCF7F8;
+}
+/*# sourceMappingURL=global.css.map */

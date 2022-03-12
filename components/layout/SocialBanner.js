@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 // icons
-import githubWhiteIcon from '/public/images/icons/github-white-icon.png';
-import linkedinWhiteIcon from '/public/images/icons/linkedin-white-icon.png';
-import emailWhiteIcon from '/public/images/icons/email-white-icon.png';
-import githubBlackIcon from '/public/images/icons/github-black-icon.png';
-import linkedinBlackIcon from '/public/images/icons/linkedin-black-icon.png';
-import emailBlackIcon from '/public/images/icons/email-black-icon.png';
+import githubWhiteIcon from '/public/images/icons/github-white.png';
+import linkedinWhiteIcon from '/public/images/icons/linkedin-white.png';
+import emailWhiteIcon from '/public/images/icons/email-white.png';
+import githubBlackIcon from '/public/images/icons/github-black.png';
+import linkedinBlackIcon from '/public/images/icons/linkedin-black.png';
+import emailBlackIcon from '/public/images/icons/email-black.png';
 
 function SocialBanner({isWhiteTheme}) {
   return (
