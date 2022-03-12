@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react'
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,8 +13,27 @@ import styles from '/styles/layout/header.module.css';
 
 function Header({ isWhiteTheme }) {
 
+  const hideHeaderClass = `${styles.header} ${styles.hideHeader}`;
+  const displayHeaderClass = `${styles.header} ${styles.displayHeader}`;
+  const [headerClass, setHeaderClass] = useState(styles.header);
+
+  let lastScrollY = 9999999;
+  function hideHeader() {
+    if (scrollY > lastScrollY && headerClass === styles.header) {
+      setHeaderClass(hideHeaderClass);
+    } else if (scrollY < lastScrollY) {
+      setHeaderClass(displayHeaderClass);
+    }
+    lastScrollY = scrollY;
+  }
+  
+  // Set the event listener once when the component is rendered
+  useEffect(() => {
+    window.addEventListener('scroll', hideHeader);
+  }, [])
+
   return (
-      <header className={styles.header}>
+      <header className={headerClass}>
         <div className={styles.mainContainer}>
           <div className={styles.logoContainer}>
             <Link href="/">

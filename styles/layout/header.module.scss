@@ -10,7 +10,6 @@
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     
-
     .mainContainer {
         margin-left: 20%;
         margin-right: 20%;
@@ -50,5 +49,37 @@
                 }
             }
         }
+    }
+}
+
+.hideHeader {
+    animation-duration: 1s;
+    animation-name: slideout;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes slideout {
+    from {
+      transform: translateY(0px)
+    }
+  
+    to {
+      transform: translateY(-125px)
+    }
+}
+
+.displayHeader {
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes slidein {
+    from {
+      transform: translateY(-125px)
+    }
+  
+    to {
+      transform: translateY(0px)
     }
 }
