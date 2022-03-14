@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACV,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,GAAG;ECDhB,OAAO,EAAE,IAAI;EACb,SAAS,EDEQ,GAAG,EAAE,MAAM;ECD5B,eAAe,EDCe,MAAM;ECApC,WAAW,EDA2B,UAAU;CAenD;;AAnBD,AAMI,aANS,CAMT,cAAc,CAAC;EACX,KAAK,EAAE,KAAK;EACZ,YAAY,EAAE,EAAE;CAKnB;;AAbL,AAUQ,aAVK,CAMT,cAAc,CAIV,WAAW,CAAC;EACR,aAAa,EAAE,IAAI;CACtB;;AAZT,AAeI,aAfS,CAeT,YAAY,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "about.module.scss",
+        "../_mixins.scss",
+        "../_variables.scss"
+    ],
+    "names": [],
+    "file": "about.module.css"
+}
