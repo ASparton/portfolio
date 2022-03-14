@@ -1,0 +1,32 @@
+.aboutSection {
+  width: 60%;
+  margin-left: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row, nowrap;
+          flex-flow: row, nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.aboutSection .textContainer {
+  width: 52.5%;
+  margin-right: 5%;
+}
+
+.aboutSection .textContainer .helloWorld {
+  margin-bottom: 2.5%;
+}
+
+.aboutSection .coffeeImage {
+  width: 42.5%;
+  margin-left: 2.5%;
+}
+/*# sourceMappingURL=about.module.css.map */
