@@ -5,6 +5,8 @@
   z-index: 1;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  -webkit-box-shadow: 0px 0px 10px #151515;
+          box-shadow: 0px 0px 10px #151515;
 }
 
 .header .mainContainer {
@@ -74,8 +76,8 @@
 }
 
 .hideHeader {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-name: slideout;
           animation-name: slideout;
   -webkit-animation-fill-mode: forwards;
@@ -105,8 +107,8 @@
 }
 
 .displayHeader {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-name: slidein;
           animation-name: slidein;
   -webkit-animation-fill-mode: forwards;

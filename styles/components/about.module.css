@@ -1,4 +1,9 @@
 .aboutSection {
+  margin-top: 0;
+  padding-top: 30vh;
+}
+
+.aboutSection .mainContainer {
   width: 60%;
   margin-left: 20%;
   display: -webkit-box;
@@ -16,16 +21,16 @@
           align-items: flex-start;
 }
 
-.aboutSection .textContainer {
+.aboutSection .mainContainer .textContainer {
   width: 52.5%;
   margin-right: 5%;
 }
 
-.aboutSection .textContainer .helloWorld {
+.aboutSection .mainContainer .textContainer .helloWorld {
   margin-bottom: 2.5%;
 }
 
-.aboutSection .coffeeImage {
+.aboutSection .mainContainer .coffeeImage {
   width: 42.5%;
   margin-left: 2.5%;
 }

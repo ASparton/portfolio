@@ -1,0 +1,101 @@
+@import '../mixins';
+@import '../variables';
+
+.contactSection {
+    margin-bottom: 10vh;
+
+    .mainContainer {
+        width: 60%;
+        margin-left: 20%;
+    
+        text-align: center;
+    
+        .form {
+            width: 60%;
+            margin-top: 3%;
+            margin-left: 20%;
+    
+            .formInput {
+                width: 75%;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                padding: 1.5%;
+
+                background-color: transparent;
+                border: 1px solid $middleGrey;
+                border-radius: 6px;
+            }
+
+            .messageInputContainer {
+                width: 100%;
+
+                .messageInput {
+                    @extend .formInput;
+                    height: 20vh;
+                    resize: none;
+                }
+            }
+    
+            .submitButton {
+                @extend .formInput;
+                width: 25%;
+                cursor: pointer;
+            }
+
+            .submitButtonWhite {
+                background-color: $darkness;
+                color: $snow;
+
+                animation: toBgWhite;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+
+                &:hover {
+                    animation: toBgBlack;
+                    animation-duration: 0.5s;
+                    animation-fill-mode: forwards;
+                }
+            }
+            
+            .submitButtonBlack {
+                background-color: $snow;
+                color: $darkness;
+
+                animation: toBgBlack;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+
+                &:hover {
+                    animation: toBgWhite;
+                    animation-duration: 0.5s;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+            @keyframes toBgWhite {
+                from { background-color: $darkness; color: $snow; }
+                to { background-color: $snow; color: $darkness; }
+            }
+
+            @keyframes toBgBlack {
+                from { background-color: $snow; color: $darkness; }
+                to { background-color: $darkness; color: $snow; }
+            }
+        }
+    
+    }
+}
+
+
+.title {
+    margin-bottom: 2%;
+}
+
+.shootEmail {
+    width: 49.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 25.25%;
+
+    @include flexBox(row, nowrap, space-between, center);
+}

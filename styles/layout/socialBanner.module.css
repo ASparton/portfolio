@@ -23,8 +23,8 @@
   margin-right: 5px;
   -webkit-animation-name: scaleDown;
           animation-name: scaleDown;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -32,6 +32,10 @@
 .bannerContainer .bannerIcon:hover {
   -webkit-animation-name: scaleUp;
           animation-name: scaleUp;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes scaleUp {

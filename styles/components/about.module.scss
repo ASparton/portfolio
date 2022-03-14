@@ -1,22 +1,27 @@
 @import '../mixins';
 
 .aboutSection {
-    width: 60%;
-    margin-left: 20%;
+    margin-top: 0;
+    padding-top: 30vh;
 
-    @include flexBox(row, nowrap, center, flex-start);
-
-    .textContainer {
-        width: 52.5%;
-        margin-right: 5%;
-
-        .helloWorld {
-            margin-bottom: 2.5%;
-        }
-    }
+    .mainContainer {
+        width: 60%;
+        margin-left: 20%;
     
-    .coffeeImage {
-        width: 42.5%;
-        margin-left: 2.5%;
+        @include flexBox(row, nowrap, center, flex-start);
+    
+        .textContainer {
+            width: 52.5%;
+            margin-right: 5%;
+    
+            .helloWorld {
+                margin-bottom: 2.5%;
+            }
+        }
+        
+        .coffeeImage {
+            width: 42.5%;
+            margin-left: 2.5%;
+        }
     }
 }

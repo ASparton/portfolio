@@ -1,0 +1,28 @@
+.bodyWhite {
+  background-color: #FCF7F8;
+}
+
+.bodyBlack {
+  background-color: #151515;
+}
+
+.textWhite {
+  color: #E4E4E4;
+}
+
+.textBlack {
+  color: #151515;
+}
+
+.Link {
+  color: #999999;
+}
+
+.LinkWhite:hover {
+  color: #151515;
+}
+
+.LinkBlack:hover {
+  color: #FCF7F8;
+}
+/*# sourceMappingURL=global.module.css.map */

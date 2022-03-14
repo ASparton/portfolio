@@ -8,6 +8,7 @@
     z-index: 1;
     
     backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 10px $darkness;
     
     .mainContainer {
         margin-left: 20%;
@@ -54,7 +55,7 @@
 }
 
 .hideHeader {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: slideout;
     animation-fill-mode: forwards;
 }
@@ -70,7 +71,7 @@
 }
 
 .displayHeader {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: slidein;
     animation-fill-mode: forwards;
 }

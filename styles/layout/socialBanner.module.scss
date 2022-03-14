@@ -14,11 +14,13 @@
         margin-right: 5px;
 
         animation-name: scaleDown;
-        animation-duration: 1s;
+        animation-duration: 0.25s;
         animation-fill-mode: forwards;
 
         &:hover {
             animation-name: scaleUp;
+            animation-duration: 0.25s;
+            animation-fill-mode: forwards;
         }
 
         @keyframes scaleUp {

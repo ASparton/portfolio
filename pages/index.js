@@ -12,7 +12,7 @@ import Technos from '/components/Technos.js';
 import Contact from '/components/Contact.js';
 
 /* Style */
-import styles from '/styles/layout/body.module.css';
+import styles from '/styles/layout/global.module.css';
 
 export default function Home() {
 
@@ -30,9 +30,9 @@ export default function Home() {
       </Head>
 
       <Header isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
-      <About />
-      <Technos />
-      <Contact />
+      <About isWhiteTheme={isWhiteTheme} />
+      <Technos isWhiteTheme={isWhiteTheme} />
+      <Contact isWhiteTheme={isWhiteTheme} />
       <Footer isWhiteTheme={isWhiteTheme} />
     </div>
   )

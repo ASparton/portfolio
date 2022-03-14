@@ -10,7 +10,7 @@ import themeSwitcherBlack from '/public/images/icons/color-adjust-black.png';
 import themeSwitcherWhite from '/public/images/icons/color-adjust-white.png';
 
 import headerStyles from '/styles/layout/header.module.css';
-import templatesStyles from '/styles/templates.module.css';
+import globalStyles from '/styles/layout/global.module.css';
 
 function Header({ isWhiteTheme, switchThemeFunction }) {
 
@@ -50,7 +50,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
               <li className={headerStyles.navElement}>
                 <Link href="/#about">
                   <a title="About section" 
-                     className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                     className={`${globalStyles.Link} ${isWhiteTheme ? globalStyles.LinkWhite : globalStyles.LinkBlack}`}>
                     About
                   </a>
                 </Link>
@@ -58,7 +58,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
               <li className={headerStyles.navElement}>
                 <Link href="/#technos">
                     <a title="Technologies && Tools section" 
-                       className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                       className={`${globalStyles.Link} ${isWhiteTheme ? globalStyles.LinkWhite : globalStyles.LinkBlack}`}>
                       Technologies & Tools
                     </a>
                 </Link>
@@ -66,7 +66,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
               <li className={headerStyles.navElement}>
                 <Link href="/">
                     <a title="Projects section" 
-                       className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                       className={`${globalStyles.Link} ${isWhiteTheme ? globalStyles.LinkWhite : globalStyles.LinkBlack}`}>
                       Projects
                     </a>
                 </Link>
@@ -74,7 +74,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
               <li className={headerStyles.navElement}>
                 <Link href="/#contact">
                     <a title="Contact section" 
-                       className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                       className={`${globalStyles.Link} ${isWhiteTheme ? globalStyles.LinkWhite : globalStyles.LinkBlack}`}>
                       Contact
                     </a>
                 </Link>

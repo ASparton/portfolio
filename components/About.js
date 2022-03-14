@@ -1,18 +1,21 @@
+import PropTypes from 'prop-types';
+
 import Image from 'next/image'
 
 // images
 import mycoffee from '/public/images/photos/mycoffee.png';
 
 // styles
-import styles from '/styles/components/about.module.css'
+import aboutStyles from '/styles/components/about.module.css'
+import globalStyles from '/styles/layout/global.module.css'
 
-function About() {
+function About({ isWhiteTheme }) {
   return (
-    <section name="about">
-      <div className={styles.aboutSection}>
-        <div className={styles.textContainer}>
-          <h1 className={styles.helloWorld}>Hello World!</h1>
-          <p>
+    <section name="about" className={aboutStyles.aboutSection}>
+      <div className={aboutStyles.mainContainer}>
+        <div className={aboutStyles.textContainer}>
+          <h1 className={`${aboutStyles.helloWorld} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>Hello World!</h1>
+          <p className={isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}>
             How many times were you frustrated while looking
             out for a good collection of programming/
             algorithm/ interview questions? What did you
@@ -32,12 +35,16 @@ function About() {
             preparation course.
           </p>
         </div>
-        <div className={styles.coffeeImage}>
+        <div className={aboutStyles.coffeeImage}>
           <Image src={mycoffee} alt="Me & my coffee" />
         </div>
       </div>
     </section>
   )
+}
+
+About.propTypes = {
+  isWhiteTheme: PropTypes.bool.isRequired
 }
 
 export default About;
