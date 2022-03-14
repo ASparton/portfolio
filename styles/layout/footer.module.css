@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 1.5%;
+  text-align: center;
+}
+
+.footer .repoLink {
+  width: 16%;
+  margin-left: 42%;
+  margin-right: 42%;
+}
+/*# sourceMappingURL=footer.module.css.map */

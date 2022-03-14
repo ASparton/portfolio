@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,gBAAgB,ECEb,OAAO;CDDb;;AAED,AAAA,UAAU,CAAC;EACP,gBAAgB,ECNT,OAAO;CDOjB",
+    "sources": [
+        "body.module.scss",
+        "../_variables.scss"
+    ],
+    "names": [],
+    "file": "body.module.css"
+}

@@ -1,7 +1,9 @@
 @import 'variables';
+@import 'mixins';
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-html, body, div, a, h1, h2, h3, p, img, ul, li, input, label, footer, header, nav, section, span {
+html, body, div, a, h1, h2, h3, h4, p, img, ul, li, input, label, footer, header, nav, section, span {
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,8 +11,4 @@ html, body, div, a, h1, h2, h3, p, img, ul, li, input, label, footer, header, na
     text-decoration: none;
     font-size: 100%;
     font-family: 'Quicksand', 'sans-serif';
-}
-
-body {
-    background-color: $snow;
 }

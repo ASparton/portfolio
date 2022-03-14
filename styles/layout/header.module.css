@@ -3,7 +3,6 @@
   padding-top: 1.5%;
   position: fixed;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
@@ -59,18 +58,19 @@
   padding-bottom: 1%;
 }
 
-.header .navContainer .nav .navElement .navLink {
-  color: #999999;
-}
-
-.header .navContainer .nav .navElement .navLink:hover {
-  color: #151515;
-}
-
 .header .navContainer .nav .navElement .themeSwitcher {
   width: 25px;
   height: 25px;
   margin-left: 100%;
+  cursor: pointer;
+}
+
+.headerWhite {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.headerBlack {
+  background: rgba(5, 5, 5, 0.2);
 }
 
 .hideHeader {

@@ -1,0 +1,34 @@
+@import '../mixins';
+
+.bannerContainer {
+    width: 100%;
+    margin-top: 0.5%;
+
+    @include flexBox(row, nowrap, center, center);
+    
+    .bannerIcon {
+        width: 30px;
+        height: 30px;
+    
+        margin-left: 5px;
+        margin-right: 5px;
+
+        animation-name: scaleDown;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+
+        &:hover {
+            animation-name: scaleUp;
+        }
+
+        @keyframes scaleUp {
+            from { transform: scale(1); }
+            to { transform: scale(1.5); }
+        }
+
+        @keyframes scaleDown {
+            from { transform: scale(1.5); }
+            to { transform: scale(1); }
+        }
+    }
+}

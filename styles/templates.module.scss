@@ -1,0 +1,17 @@
+@import 'variables';
+
+.Link {
+    color: $middleGrey;
+}
+
+.LinkWhite {
+    &:hover {
+        color: $darkness;
+    }
+}
+
+.LinkBlack {
+    &:hover {
+        color: $snow;
+    }
+}

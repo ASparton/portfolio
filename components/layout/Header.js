@@ -9,17 +9,20 @@ import whiteLogo from '/public/images/logo/LogoWhite.png';
 import themeSwitcherBlack from '/public/images/icons/color-adjust-black.png';
 import themeSwitcherWhite from '/public/images/icons/color-adjust-white.png';
 
-import styles from '/styles/layout/header.module.css';
+import headerStyles from '/styles/layout/header.module.css';
+import templatesStyles from '/styles/templates.module.css';
 
-function Header({ isWhiteTheme }) {
+function Header({ isWhiteTheme, switchThemeFunction }) {
 
-  const hideHeaderClass = `${styles.header} ${styles.hideHeader}`;
-  const displayHeaderClass = `${styles.header} ${styles.displayHeader}`;
-  const [headerClass, setHeaderClass] = useState(styles.header);
+  let hideHeaderClass = `${headerStyles.header} ${headerStyles.hideHeader}`;
+  let displayHeaderClass = `${headerStyles.header} ${headerStyles.displayHeader}`;
+  let defaultHeaderClass = `${headerStyles.header}`;
+
+  const [headerClass, setHeaderClass] = useState(defaultHeaderClass);
 
   let lastScrollY = 9999999;
-  function hideHeader() {
-    if (scrollY > lastScrollY && headerClass === styles.header) {
+  function updateHeaderPosition() {
+    if (scrollY > lastScrollY && headerClass === defaultHeaderClass) {
       setHeaderClass(hideHeaderClass);
     } else if (scrollY < lastScrollY) {
       setHeaderClass(displayHeaderClass);
@@ -29,48 +32,57 @@ function Header({ isWhiteTheme }) {
   
   // Set the event listener once when the component is rendered
   useEffect(() => {
-    window.addEventListener('scroll', hideHeader);
+    window.addEventListener('scroll', updateHeaderPosition);
   }, [])
 
   return (
-      <header className={headerClass}>
-        <div className={styles.mainContainer}>
-          <div className={styles.logoContainer}>
+      <header className={`${headerClass} ${isWhiteTheme ? headerStyles.headerWhite : headerStyles.headerBlack}`}>
+        <div className={headerStyles.mainContainer}>
+          <div className={headerStyles.logoContainer}>
             <Link href="/">
               <a title="Home">
                 <Image src={isWhiteTheme ? blackLogo : whiteLogo} alt="AS Logo" />
               </a>
             </Link>
           </div>
-          <nav className={styles.navContainer}>
-            <ul className={styles.nav}>
-              <li className={styles.navElement}>
+          <nav className={headerStyles.navContainer}>
+            <ul className={headerStyles.nav}>
+              <li className={headerStyles.navElement}>
                 <Link href="/#about">
-                  <a title="About section" className={styles.navLink}>About</a>
+                  <a title="About section" 
+                     className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                    About
+                  </a>
                 </Link>
               </li>
-              <li className={styles.navElement}>
+              <li className={headerStyles.navElement}>
                 <Link href="/#technos">
-                    <a title="Technologies && Tools section" className={styles.navLink}>Technologies & Tools</a>
-                </Link>
-              </li>
-              <li className={styles.navElement}>
-                <Link href="/">
-                    <a title="Projects section" className={styles.navLink}>Projects</a>
-                </Link>
-              </li>
-              <li className={styles.navElement}>
-                <Link href="/#contact">
-                    <a title="Contact section" className={styles.navLink}>Contact</a>
-                </Link>
-              </li>
-              <li className={styles.navElement}>
-                <div className={styles.themeSwitcher}>
-                  <Link href="/">
-                    <a title="Switch theme" className={styles.navLink}>
-                      <Image src={isWhiteTheme ? themeSwitcherBlack : themeSwitcherWhite} alt="Theme switcher icon" />
+                    <a title="Technologies && Tools section" 
+                       className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                      Technologies & Tools
                     </a>
-                  </Link>
+                </Link>
+              </li>
+              <li className={headerStyles.navElement}>
+                <Link href="/">
+                    <a title="Projects section" 
+                       className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                      Projects
+                    </a>
+                </Link>
+              </li>
+              <li className={headerStyles.navElement}>
+                <Link href="/#contact">
+                    <a title="Contact section" 
+                       className={`${templatesStyles.Link} ${isWhiteTheme ? templatesStyles.LinkWhite : templatesStyles.LinkBlack}`}>
+                      Contact
+                    </a>
+                </Link>
+              </li>
+              <li className={headerStyles.navElement}>
+                <div className={headerStyles.themeSwitcher}>
+                  <Image src={isWhiteTheme ? themeSwitcherBlack : themeSwitcherWhite} alt="Theme switcher icon" title="Theme switcher" 
+                         onClick={switchThemeFunction}/>
                 </div>
               </li>
             </ul>
@@ -81,7 +93,8 @@ function Header({ isWhiteTheme }) {
 }
 
 Header.propTypes = {
-    isWhiteTheme: PropTypes.bool.isRequired
+    isWhiteTheme: PropTypes.bool.isRequired,
+    switchThemeFunction: PropTypes.func.isRequired
 };
 
 export default Header;
