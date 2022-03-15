@@ -9,6 +9,7 @@ import Footer from '/components/layout/Footer.js';
 // Sections
 import About from '/components/About.js';
 import Technos from '/components/Technos.js';
+import Projects from '/components/Projects.js';
 import Contact from '/components/Contact.js';
 
 /* Style */
@@ -32,6 +33,7 @@ export default function Home() {
       <Header isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
       <About isWhiteTheme={isWhiteTheme} />
       <Technos isWhiteTheme={isWhiteTheme} />
+      <Projects isWhiteTheme={isWhiteTheme} />
       <Contact isWhiteTheme={isWhiteTheme} />
       <Footer isWhiteTheme={isWhiteTheme} />
     </div>

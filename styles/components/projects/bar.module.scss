@@ -1,0 +1,36 @@
+@import "../../mixins";
+@import "../../variables";
+
+.mainContainer {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
+    .tagsContainer {
+        @include flexBox(row, wrap, flex-start, center);
+
+        .tag {
+            margin-left: 2%;
+            margin-right: 2%;
+
+            padding: 0.5%;
+            padding-left: 1%;
+            padding-right: 1%;
+
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 20px;
+        }
+
+        .tagWhite {
+            @extend .tag;
+            border-color: $snow;
+        }
+
+        .tagBlack {
+            @extend .tag;
+            border-color: $darkness;
+        }
+    }
+}

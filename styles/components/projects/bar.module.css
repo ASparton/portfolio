@@ -1,0 +1,42 @@
+.mainContainer {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.mainContainer .tagsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row, wrap;
+          flex-flow: row, wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainContainer .tagsContainer .tag, .mainContainer .tagsContainer .tagWhite, .mainContainer .tagsContainer .tagBlack {
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 0.5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+}
+
+.mainContainer .tagsContainer .tagWhite {
+  border-color: #FCF7F8;
+}
+
+.mainContainer .tagsContainer .tagBlack {
+  border-color: #151515;
+}
+/*# sourceMappingURL=bar.module.css.map */
