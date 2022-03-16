@@ -10,26 +10,43 @@
     .tagsContainer {
         @include flexBox(row, wrap, flex-start, center);
 
-        .tag {
+        .tagContainer {
+            margin-top: 1%;
             margin-left: 2%;
             margin-right: 2%;
 
-            padding: 0.5%;
+            padding: 0.15%;
             padding-left: 1%;
             padding-right: 1%;
 
             border-style: solid;
             border-width: 1px;
             border-radius: 20px;
+
+            cursor: pointer;
+
+            .tag {
+                @include flexBox(row, nowrap, center, center);
+
+                .tagName {
+                    font-size: 0.85em;
+                    margin-right: 5px;
+                }
+
+                .tagIcon {
+                    width: 18px;
+                    margin-top: 5px;
+                }
+            }
         }
 
         .tagWhite {
-            @extend .tag;
+            @extend .tagContainer;
             border-color: $snow;
         }
 
         .tagBlack {
-            @extend .tag;
+            @extend .tagContainer;
             border-color: $darkness;
         }
     }

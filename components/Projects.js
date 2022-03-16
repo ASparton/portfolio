@@ -11,30 +11,36 @@ import globalStyles from '/styles/layout/global.module.css';
 let dummyCategories = [
     {
         id: 0,
-        name: 'Game programming'
+        name: 'Game programming',
+        chosen: false
     },
     {
         id: 1,
-        name: 'Web application'
+        name: 'Web application',
+        chosen: true
     },
     {
         id: 2,
-        name: 'Graphics programming'
+        name: 'Graphics programming',
+        chosen: false
     }
 ];
 
 let dummySkills = [
     {
         id: 0,
-        name: 'Javascript'
+        name: 'Javascript',
+        chosen: true
     },
     {
         id: 1,
-        name: 'C++'
+        name: 'C++',
+        chosen: false
     },
     {
         id: 2,
-        name: 'Docker'
+        name: 'Docker',
+        chosen: false
     }
 ];
 

@@ -21,15 +21,43 @@
           align-items: center;
 }
 
-.mainContainer .tagsContainer .tag, .mainContainer .tagsContainer .tagWhite, .mainContainer .tagsContainer .tagBlack {
+.mainContainer .tagsContainer .tagContainer, .mainContainer .tagsContainer .tagWhite, .mainContainer .tagsContainer .tagBlack {
+  margin-top: 1%;
   margin-left: 2%;
   margin-right: 2%;
-  padding: 0.5%;
+  padding: 0.15%;
   padding-left: 1%;
   padding-right: 1%;
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+.mainContainer .tagsContainer .tagContainer .tag, .mainContainer .tagsContainer .tagWhite .tag, .mainContainer .tagsContainer .tagBlack .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row, nowrap;
+          flex-flow: row, nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainContainer .tagsContainer .tagContainer .tag .tagName, .mainContainer .tagsContainer .tagWhite .tag .tagName, .mainContainer .tagsContainer .tagBlack .tag .tagName {
+  font-size: 0.85em;
+  margin-right: 5px;
+}
+
+.mainContainer .tagsContainer .tagContainer .tag .tagIcon, .mainContainer .tagsContainer .tagWhite .tag .tagIcon, .mainContainer .tagsContainer .tagBlack .tag .tagIcon {
+  width: 18px;
+  margin-top: 5px;
 }
 
 .mainContainer .tagsContainer .tagWhite {
