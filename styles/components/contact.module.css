@@ -40,7 +40,7 @@
 
 .contactSection .mainContainer .form .submitButtonWhite {
   background-color: #151515;
-  color: #FCF7F8;
+  color: #fcf7f8;
   -webkit-animation: toBgWhite;
           animation: toBgWhite;
   -webkit-animation-duration: 0.5s;
@@ -59,7 +59,7 @@
 }
 
 .contactSection .mainContainer .form .submitButtonBlack {
-  background-color: #FCF7F8;
+  background-color: #fcf7f8;
   color: #151515;
   -webkit-animation: toBgBlack;
           animation: toBgBlack;
@@ -81,10 +81,10 @@
 @-webkit-keyframes toBgWhite {
   from {
     background-color: #151515;
-    color: #FCF7F8;
+    color: #fcf7f8;
   }
   to {
-    background-color: #FCF7F8;
+    background-color: #fcf7f8;
     color: #151515;
   }
 }
@@ -92,33 +92,33 @@
 @keyframes toBgWhite {
   from {
     background-color: #151515;
-    color: #FCF7F8;
+    color: #fcf7f8;
   }
   to {
-    background-color: #FCF7F8;
+    background-color: #fcf7f8;
     color: #151515;
   }
 }
 
 @-webkit-keyframes toBgBlack {
   from {
-    background-color: #FCF7F8;
+    background-color: #fcf7f8;
     color: #151515;
   }
   to {
     background-color: #151515;
-    color: #FCF7F8;
+    color: #fcf7f8;
   }
 }
 
 @keyframes toBgBlack {
   from {
-    background-color: #FCF7F8;
+    background-color: #fcf7f8;
     color: #151515;
   }
   to {
     background-color: #151515;
-    color: #FCF7F8;
+    color: #fcf7f8;
   }
 }
 
@@ -136,8 +136,10 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row, nowrap;
-          flex-flow: row, nowrap;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

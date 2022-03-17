@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import Head from 'next/head';
+import Image from 'next/image';
 
 /* Components */
 // Layout
@@ -12,8 +13,12 @@ import Technos from '/components/Technos.js';
 import Projects from '/components/Projects.js';
 import Contact from '/components/Contact.js';
 
-/* Style */
+/* Styles */
 import styles from '/styles/layout/global.module.css';
+
+/* Images */
+import logoBlack from '/public/images/logo/logoBlack.png'
+import logoWhite from '/public/images/logo/logoWhite.png'
 
 export default function Home() {
 
@@ -30,6 +35,11 @@ export default function Home() {
         <link rel="icon" href="/images/logo/LogoBlack.png" />
       </Head>
 
+      <div key={isWhiteTheme} className={isWhiteTheme ? styles.themeSwitchTransitionBlack : styles.themeSwitchTransitionWhite}>
+        <div className={styles.transitionLogo}>
+          <Image src={isWhiteTheme ? logoWhite : logoBlack} alt="Logo Alexandre Sparton"/>
+        </div>
+      </div>
       <Header isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
       <About isWhiteTheme={isWhiteTheme} />
       <Technos isWhiteTheme={isWhiteTheme} />

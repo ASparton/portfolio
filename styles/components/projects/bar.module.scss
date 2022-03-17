@@ -7,47 +7,112 @@
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 
+    border-bottom: 1px solid $platinium;
+
     .tagsContainer {
-        @include flexBox(row, wrap, flex-start, center);
+        @include flexBox(row, wrap, flex-start, flex-start);
 
         .tagContainer {
-            margin-top: 1%;
-            margin-left: 2%;
-            margin-right: 2%;
+            margin: 1%;
+            height: 50px;
+            @include flexBox(column, nowrap, flex-start, center);
+        }
 
-            padding: 0.15%;
-            padding-left: 1%;
-            padding-right: 1%;
+        .tag {
+            padding: 3px;
+            padding-left: 10px;
+            padding-right: 10px;
 
             border-style: solid;
             border-width: 1px;
             border-radius: 20px;
-
             cursor: pointer;
+            font-size: 0.85em;
+        }
 
-            .tag {
-                @include flexBox(row, nowrap, center, center);
+        
+        .tagWhite {
+            @extend .tag;
+            border-color: $snow;
+            
+            animation-name: backgroundFadeOutWhite;
+            animation-duration: 0.25s;
+            animation-fill-mode: forwards;
 
-                .tagName {
-                    font-size: 0.85em;
-                    margin-right: 5px;
-                }
+            &:hover {
+                animation-name: backgroundFadeInWhite;
+                animation-duration: 0.25s;
+                animation-fill-mode: forwards;
+            }
+        }
+        .tagBlack {
+            @extend .tag;
+            border-color: $darkness;
+            
+            animation-name: backgroundFadeOutBlack;
+            animation-duration: 0.25s;
+            animation-fill-mode: forwards;
 
-                .tagIcon {
-                    width: 18px;
-                    margin-top: 5px;
-                }
+            &:hover {
+                animation-name: backgroundFadeInBlack;
+                animation-duration: 0.25s;
+                animation-fill-mode: forwards;
             }
         }
 
-        .tagWhite {
-            @extend .tagContainer;
-            border-color: $snow;
+        .tagChosenWhite {
+            @extend .tagWhite;
+            background-color: $snow;
+            color: $darkness;
+        }
+        .tagChosenBlack {
+            @extend .tagBlack;
+            background-color: $darkness;
+            color: $snow;
         }
 
-        .tagBlack {
-            @extend .tagContainer;
-            border-color: $darkness;
+        @keyframes backgroundFadeInWhite {
+            from {background-color: none;}
+            to {background-color: $tagHoveredSnow;}
+        }
+        
+        @keyframes backgroundFadeOutWhite {
+            from {background-color: $tagHoveredSnow;}
+            to {background-color: none;}
+        }
+
+        @keyframes backgroundFadeInBlack {
+            from {background-color: none;}
+            to {background-color: $tagHoveredDarkness;}
+        }
+
+        @keyframes backgroundFadeOutBlack {
+            from {background-color: $tagHoveredDarkness;}
+            to {background-color: none;}
+        }
+
+        .tagIcon {
+            width: 18px;
+            margin-top: 5px;
+
+            animation-name: display Icon;
+            animation-duration: 0.25s;
+            animation-fill-mode: forwards;
+        }
+
+        .tagIconHided {
+            @extend .tagIcon;
+            animation-name: hideIcon;
+        }
+
+        @keyframes displayIcon {
+            from {opacity: 0;}
+            to {opacity: 100%;}
+        }
+
+        @keyframes hideIcon {
+            from {opacity: 100%;}
+            to {opacity: 0;}
         }
     }
 }

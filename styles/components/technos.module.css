@@ -17,8 +17,10 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row, nowrap;
-          flex-flow: row, nowrap;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;

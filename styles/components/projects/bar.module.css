@@ -3,6 +3,7 @@
   margin-left: 20%;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
+  border-bottom: 1px solid #E4E4E4;
 }
 
 .mainContainer .tagsContainer {
@@ -11,8 +12,30 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row, wrap;
-          flex-flow: row, wrap;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mainContainer .tagsContainer .tagContainer {
+  margin: 1%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -21,50 +44,186 @@
           align-items: center;
 }
 
-.mainContainer .tagsContainer .tagContainer, .mainContainer .tagsContainer .tagWhite, .mainContainer .tagsContainer .tagBlack {
-  margin-top: 1%;
-  margin-left: 2%;
-  margin-right: 2%;
-  padding: 0.15%;
-  padding-left: 1%;
-  padding-right: 1%;
+.mainContainer .tagsContainer .tag, .mainContainer .tagsContainer .tagWhite, .mainContainer .tagsContainer .tagChosenWhite, .mainContainer .tagsContainer .tagBlack, .mainContainer .tagsContainer .tagChosenBlack {
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-style: solid;
   border-width: 1px;
   border-radius: 20px;
   cursor: pointer;
-}
-
-.mainContainer .tagsContainer .tagContainer .tag, .mainContainer .tagsContainer .tagWhite .tag, .mainContainer .tagsContainer .tagBlack .tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row, nowrap;
-          flex-flow: row, nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.mainContainer .tagsContainer .tagContainer .tag .tagName, .mainContainer .tagsContainer .tagWhite .tag .tagName, .mainContainer .tagsContainer .tagBlack .tag .tagName {
   font-size: 0.85em;
-  margin-right: 5px;
 }
 
-.mainContainer .tagsContainer .tagContainer .tag .tagIcon, .mainContainer .tagsContainer .tagWhite .tag .tagIcon, .mainContainer .tagsContainer .tagBlack .tag .tagIcon {
+.mainContainer .tagsContainer .tagWhite, .mainContainer .tagsContainer .tagChosenWhite {
+  border-color: #fcf7f8;
+  -webkit-animation-name: backgroundFadeOutWhite;
+          animation-name: backgroundFadeOutWhite;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainContainer .tagsContainer .tagWhite:hover, .mainContainer .tagsContainer .tagChosenWhite:hover {
+  -webkit-animation-name: backgroundFadeInWhite;
+          animation-name: backgroundFadeInWhite;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainContainer .tagsContainer .tagBlack, .mainContainer .tagsContainer .tagChosenBlack {
+  border-color: #151515;
+  -webkit-animation-name: backgroundFadeOutBlack;
+          animation-name: backgroundFadeOutBlack;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainContainer .tagsContainer .tagBlack:hover, .mainContainer .tagsContainer .tagChosenBlack:hover {
+  -webkit-animation-name: backgroundFadeInBlack;
+          animation-name: backgroundFadeInBlack;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mainContainer .tagsContainer .tagChosenWhite {
+  background-color: #fcf7f8;
+  color: #151515;
+}
+
+.mainContainer .tagsContainer .tagChosenBlack {
+  background-color: #151515;
+  color: #fcf7f8;
+}
+
+@-webkit-keyframes backgroundFadeInWhite {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+}
+
+@keyframes backgroundFadeInWhite {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+}
+
+@-webkit-keyframes backgroundFadeOutWhite {
+  from {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+@keyframes backgroundFadeOutWhite {
+  from {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+@-webkit-keyframes backgroundFadeInBlack {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+}
+
+@keyframes backgroundFadeInBlack {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+}
+
+@-webkit-keyframes backgroundFadeOutBlack {
+  from {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+@keyframes backgroundFadeOutBlack {
+  from {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+.mainContainer .tagsContainer .tagIcon, .mainContainer .tagsContainer .tagIconHided {
   width: 18px;
   margin-top: 5px;
+  -webkit-animation-name: display Icon;
+          animation-name: display Icon;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-.mainContainer .tagsContainer .tagWhite {
-  border-color: #FCF7F8;
+.mainContainer .tagsContainer .tagIconHided {
+  -webkit-animation-name: hideIcon;
+          animation-name: hideIcon;
 }
 
-.mainContainer .tagsContainer .tagBlack {
-  border-color: #151515;
+@-webkit-keyframes displayIcon {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes displayIcon {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes hideIcon {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hideIcon {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=bar.module.css.map */
