@@ -8,4 +8,28 @@
 
         @include flexBox(row, nowrap, center, center);
     }
+
+    .moreProjectsButton {
+        width: 3.5%;
+        margin-left: 47.5%;
+
+        background-color: transparent;
+        background-repeat:no-repeat;
+        border: none;
+        border-radius: 50px;
+
+        cursor: pointer;
+
+
+        &:hover {
+            animation-name: scale;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes scale {
+        from {transform: scale(1)}
+        to {transform: scale(1.25);}
+    }
 }

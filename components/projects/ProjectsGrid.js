@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react'
 
 import Image from 'next/image';
 
@@ -9,8 +10,8 @@ import ProjectCard from './ProjectCard.js';
 import pgStyles from '/styles/components/projects/projectGrid.module.css';
 
 // images
-import plusBlack from '/public/images/icon/plusBlack.png'
-import plusWhite from '/public/images/icon/plusWhite.png'
+import plusBlack from '/public/images/icons/plusBlack.png'
+import plusWhite from '/public/images/icons/plusWhite.png'
 
 function ProjectsGrid({projectsCard, isWhiteTheme }) {
   return (
@@ -20,7 +21,8 @@ function ProjectsGrid({projectsCard, isWhiteTheme }) {
           <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} />
         ))}
       </div>
-      <button title="Show more projects">
+      <button title="Show more projects"
+              className={pgStyles.moreProjectsButton}>
         <Image src={isWhiteTheme ? plusBlack : plusWhite} alt="Plus icon"/>
       </button>
     </div>

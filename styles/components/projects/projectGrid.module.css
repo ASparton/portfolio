@@ -20,4 +20,45 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.gridContainer .moreProjectsButton {
+  width: 3.5%;
+  margin-left: 47.5%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.gridContainer .moreProjectsButton:hover {
+  -webkit-animation-name: scale;
+          animation-name: scale;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
+
+@keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+}
 /*# sourceMappingURL=projectGrid.module.css.map */

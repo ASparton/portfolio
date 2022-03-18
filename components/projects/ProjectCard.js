@@ -12,7 +12,7 @@ function ProjectCard({ projectCard, isWhiteTheme }) {
         <img src={projectCard.imageUrl} alt={projectCard.title + " cover"} className={cardStyles.coverImage} />
       </a>
       <a href="/" title={projectCard.title}>
-        <h3 className={`${cardStyles.title} ${isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}`}>{projectCard.title}</h3>
+        <h3 className={`${cardStyles.title} ${isWhiteTheme ? globalStyles.linkBlack : globalStyles.linkWhite}`}>{projectCard.title}</h3>
       </a>
       <p className={`${cardStyles.description} ${isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack}`}>{projectCard.description}</p>
       <a href="/" title={projectCard.title} className={isWhiteTheme ? cardStyles.seeMoreWhite : cardStyles.seeMoreBlack}>
