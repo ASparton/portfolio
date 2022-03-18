@@ -12,7 +12,7 @@ function Footer({ isWhiteTheme }) {
     <footer className={footerStyles.footer}>
       <div className={footerStyles.repoLink}>
         <a href="https://github.com/ASparton/Portfolio" title="Portfolio repository" target="_blank" rel="noopener noreferrer">
-          <h4 className={`${globalStyles.Link} ${isWhiteTheme ? globalStyles.LinkWhite : globalStyles.LinkBlack}`}>
+          <h4 className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
             Designed & Built by Alexandre Sparton
           </h4>
         </a>

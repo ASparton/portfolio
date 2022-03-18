@@ -14,7 +14,7 @@
   margin-left: 20%;
 }
 
-.contactSection .mainContainer .form .formInput, .contactSection .mainContainer .form .messageInputContainer .messageInput, .contactSection .mainContainer .form .submitButton {
+.contactSection .mainContainer .form .formInput, .contactSection .mainContainer .form .messageInputContainer .messageInput, .contactSection .mainContainer .form .submitButton, .contactSection .mainContainer .form .submitButtonWhite, .contactSection .mainContainer .form .submitButtonBlack {
   width: 75%;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -33,7 +33,7 @@
   resize: none;
 }
 
-.contactSection .mainContainer .form .submitButton {
+.contactSection .mainContainer .form .submitButton, .contactSection .mainContainer .form .submitButtonWhite, .contactSection .mainContainer .form .submitButtonBlack {
   width: 25%;
   cursor: pointer;
 }

@@ -32,7 +32,7 @@ export default function Home() {
     <div className={isWhiteTheme ? styles.bodyWhite : styles.bodyBlack}>
       <Head>
         <title>Alexandre Sparton</title>
-        <link rel="icon" href="/images/logo/LogoBlack.png" />
+        <link rel="icon" href="/images/logo/logoBlack.png" />
       </Head>
 
       <div key={isWhiteTheme} className={isWhiteTheme ? styles.themeSwitchTransitionBlack : styles.themeSwitchTransitionWhite}>

@@ -14,8 +14,8 @@ function Contact({ isWhiteTheme }) {
           <div className={contactStyles.shootEmail}>
             <p className={isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}>Use this form or shoot me an email directly on:</p>
             <a href="mailto:sparton.alexandre@gmail.com?subject=From Portfolio" title="Email address" target="_blank" rel="noopener noreferrer"
-              className={`${globalStyles.Link} ${isWhiteTheme ? globalStyles.LinkWhite : globalStyles.LinkBlack}`}>
-                <h4 className={`${globalStyles.Link} ${isWhiteTheme ? globalStyles.LinkWhite : globalStyles.LinkBlack}`}>
+              className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
+                <h4 className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
                   sparton.alexandre@gmail.com
                 </h4>
             </a>
@@ -38,7 +38,7 @@ function Contact({ isWhiteTheme }) {
           </div>
           <label htmlFor="submitButton" hidden></label>
           <input type="submit" name="submitButton" id="submitButton" value="Send message" 
-                 className={`${contactStyles.submitButton} ${isWhiteTheme ? contactStyles.submitButtonBlack : contactStyles.submitButtonWhite}`}>
+                 className={isWhiteTheme ? contactStyles.submitButtonBlack : contactStyles.submitButtonWhite}>
           </input>
         </form>
       </div>

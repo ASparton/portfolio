@@ -43,6 +43,8 @@
             }
 
             .submitButtonWhite {
+                @extend .submitButton;
+
                 background-color: $darkness;
                 color: $snow;
 
@@ -58,6 +60,8 @@
             }
             
             .submitButtonBlack {
+                @extend .submitButton;
+                
                 background-color: $snow;
                 color: $darkness;
 

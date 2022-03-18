@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,IAAI;CAOd;;AARD,AAGI,cAHU,CAGV,KAAK,CAAC;EACF,KAAK,EAAE,IAAI;ECLf,OAAO,EAAE,IAAI;EACb,cAAc,EDMO,GAAG;ECLxB,SAAS,EDKiB,MAAM;ECJhC,eAAe,EDImB,MAAM;ECHxC,WAAW,EDG+B,MAAM;CAC/C",
+    "sources": [
+        "projectGrid.module.scss",
+        "../../_mixins.scss"
+    ],
+    "names": [],
+    "file": "projectGrid.module.css"
+}

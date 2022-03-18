@@ -16,17 +16,21 @@
     color: $darkness;
 }
 
-.Link {
+.link {
     color: $middleGrey;
 }
 
-.LinkWhite {
+.linkWhite {
+    @extend .link;
+
     &:hover {
         color: $darkness;
     }
 }
 
-.LinkBlack {
+.linkBlack {
+    @extend .link;
+    
     &:hover {
         color: $snow;
     }

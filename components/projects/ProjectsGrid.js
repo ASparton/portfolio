@@ -1,12 +1,34 @@
 import PropTypes from 'prop-types';
 
-function ProjectsGrid({ isWhiteTheme }) {
+import Image from 'next/image';
+
+// subcomponents
+import ProjectCard from './ProjectCard.js';
+
+// styles
+import pgStyles from '/styles/components/projects/projectGrid.module.css';
+
+// images
+import plusBlack from '/public/images/icon/plusBlack.png'
+import plusWhite from '/public/images/icon/plusWhite.png'
+
+function ProjectsGrid({projectsCard, isWhiteTheme }) {
   return (
-    <div>ProjectsGrid</div>
+    <div className={pgStyles.gridContainer}>
+      <div className={pgStyles.grid}>
+        {projectsCard.map((projectCard) => (
+          <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} />
+        ))}
+      </div>
+      <button title="Show more projects">
+        <Image src={isWhiteTheme ? plusBlack : plusWhite} alt="Plus icon"/>
+      </button>
+    </div>
   )
 }
 
 ProjectsGrid.propTypes = {
+    projectsCard: PropTypes.arrayOf(PropTypes.object).isRequired,
     isWhiteTheme: PropTypes.bool.isRequired
 }
 

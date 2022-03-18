@@ -1,0 +1,129 @@
+.card, .cardBlack, .cardWhite {
+  width: 30%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+  padding: 3%;
+  border-radius: 20px;
+}
+
+.card .cover, .cardBlack .cover, .cardWhite .cover {
+  width: 100%;
+}
+
+.card .cover .coverImage, .cardBlack .cover .coverImage, .cardWhite .cover .coverImage {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card .title, .cardBlack .title, .cardWhite .title {
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+
+.card .description, .cardBlack .description, .cardWhite .description {
+  margin-bottom: 10%;
+}
+
+.card .seeMore, .cardBlack .seeMore, .cardWhite .seeMore, .card .seeMoreBlack, .cardBlack .seeMoreBlack, .cardWhite .seeMoreBlack, .card .seeMoreWhite, .cardBlack .seeMoreWhite, .cardWhite .seeMoreWhite {
+  padding: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.card .seeMoreBlack, .cardBlack .seeMoreBlack, .cardWhite .seeMoreBlack {
+  background-color: #151515;
+  border-color: #151515;
+  color: #fcf7f8;
+  -webkit-animation: toBgBlack;
+          animation: toBgBlack;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.card .seeMoreBlack:hover, .cardBlack .seeMoreBlack:hover, .cardWhite .seeMoreBlack:hover {
+  -webkit-animation: toBgWhite;
+          animation: toBgWhite;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.card .seeMoreWhite, .cardBlack .seeMoreWhite, .cardWhite .seeMoreWhite {
+  background-color: #fcf7f8;
+  border-color: #fcf7f8;
+  color: #151515;
+  -webkit-animation: toBgWhite;
+          animation: toBgWhite;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.card .seeMoreWhite:hover, .cardBlack .seeMoreWhite:hover, .cardWhite .seeMoreWhite:hover {
+  -webkit-animation: toBgBlack;
+          animation: toBgBlack;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes toBgWhite {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@keyframes toBgWhite {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@-webkit-keyframes toBgBlack {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+@keyframes toBgBlack {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+.cardBlack {
+  background-color: #151515;
+}
+
+.cardWhite {
+  background-color: #fcf7f8;
+}
+/*# sourceMappingURL=projectCard.module.css.map */

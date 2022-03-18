@@ -75,7 +75,7 @@ function TagsBar({ title, tags, updateTag, isWhiteTheme }) {
 
 TagsBar.propTypes = {
     title: PropTypes.string.isRequired,
-    tags: PropTypes.array.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.object).isRequired,
     updateTag: PropTypes.func.isRequired,
     isWhiteTheme: PropTypes.bool.isRequired
 };

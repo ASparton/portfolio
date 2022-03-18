@@ -14,15 +14,15 @@
   color: #151515;
 }
 
-.Link {
+.link, .linkWhite, .linkBlack {
   color: #999999;
 }
 
-.LinkWhite:hover {
+.linkWhite:hover {
   color: #151515;
 }
 
-.LinkBlack:hover {
+.linkBlack:hover {
   color: #fcf7f8;
 }
 

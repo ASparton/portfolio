@@ -97,6 +97,30 @@ let dummySkills = [
     }
 ];
 
+const dummyProjects = [
+    {
+        id: 0,
+        title: "OpenFlappy",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg"
+    },
+    {
+        id: 1,
+        title: "Other",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg"
+    },
+    {
+        id: 2,
+        title: "Best project",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg"
+    }
+];
+
 function Projects({ isWhiteTheme }) {
 
     const [categories, setCategories] = useState(dummyCategories);
@@ -123,18 +147,16 @@ function Projects({ isWhiteTheme }) {
     }
 
   return (
-    <section>
-        <div className={projectsStyles.mainContainer} >
-            <h2 className={`${projectsStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
-                Some projects I have worked on
-            </h2>
+    <section className={projectsStyles.mainContainer}>
+        <h2 className={`${projectsStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
+            Some projects I have worked on
+        </h2>
+        <div>
             <div>
-                <div>
-                    <TagsBar title="Categories" tags={categories} updateTag={updateCategoryFilter} isWhiteTheme={isWhiteTheme} />
-                    <TagsBar title="Skills" tags={skills} updateTag={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
-                </div>
-                <ProjectsGrid isWhiteTheme={isWhiteTheme} />
+                <TagsBar title="Categories" tags={categories} updateTag={updateCategoryFilter} isWhiteTheme={isWhiteTheme} />
+                <TagsBar title="Skills" tags={skills} updateTag={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
             </div>
+            <ProjectsGrid projectsCard={dummyProjects} isWhiteTheme={isWhiteTheme} />
         </div>
     </section>
   )
