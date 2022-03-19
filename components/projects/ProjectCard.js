@@ -6,8 +6,18 @@ import globalStyles from '/styles/layout/global.module.css';
 
 function ProjectCard({ projectCard, isWhiteTheme }) {
 
+  let skillKey = 0;
+
   return (
     <article className={isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite}>
+      <p className={isWhiteTheme ? cardStyles.tagWhite : cardStyles.tagBlack}>{projectCard.category}</p>
+      <ul className={cardStyles.skillsContainer}>
+        {projectCard.skills.map((projectSkill) =>
+          <li key={skillKey++} className={isWhiteTheme ? cardStyles.skillWhite : cardStyles.skillBlack}>
+            <p>{projectSkill}</p>
+          </li>
+        )}
+      </ul>
       <a href="/" title={projectCard.title} className={cardStyles.cover}>
         <img src={projectCard.imageUrl} alt={projectCard.title + " cover"} className={cardStyles.coverImage} />
       </a>

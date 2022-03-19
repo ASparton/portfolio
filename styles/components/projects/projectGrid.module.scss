@@ -1,35 +1,62 @@
 @import "../../mixins";
+@import "../../variables";
 
 .gridContainer {
     width: 100%;
+    @include flexBox(row, nowrap, space-between, center);
 
     .grid {
         width: 100%;
-
         @include flexBox(row, nowrap, center, center);
     }
 
-    .moreProjectsButton {
-        width: 3.5%;
-        margin-left: 47.5%;
-
+    .arrow {
+        width: 4%;
         background-color: transparent;
-        background-repeat:no-repeat;
-        border: none;
-        border-radius: 50px;
-
         cursor: pointer;
-
+    }
+    .arrowRight {
+        @extend .arrow;
+        
+        animation-name: bounceyRightReverse;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
 
         &:hover {
-            animation-name: scale;
+            animation-name: bounceyRight;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
+    .arrowLeft {
+        @extend .arrow;
+
+        animation-name: bounceyLeftReverse;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+
+        &:hover {
+            animation-name: bounceyLeft;
             animation-duration: 0.5s;
             animation-fill-mode: forwards;
         }
     }
 
-    @keyframes scale {
-        from {transform: scale(1)}
-        to {transform: scale(1.25);}
+    @keyframes bounceyRight {
+        from {transform: translateX(0);}
+        to {transform: translateX(5px);}
+    }
+    @keyframes bounceyRightReverse {
+        from {transform: translateX(5px);}
+        to {transform: translateX(0);}
+    }
+
+    @keyframes bounceyLeft {
+        from {transform: translateX(0);}
+        to {transform: translateX(-5px);}
+    }
+    @keyframes bounceyLeftReverse {
+        from {transform: translateX(-5px);}
+        to {transform: translateX(0);}
     }
 }

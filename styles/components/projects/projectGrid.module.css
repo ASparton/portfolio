@@ -1,5 +1,20 @@
 .gridContainer {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gridContainer .grid {
@@ -21,44 +36,133 @@
           align-items: center;
 }
 
-.gridContainer .moreProjectsButton {
-  width: 3.5%;
-  margin-left: 47.5%;
+.gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+  width: 4%;
   background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 50px;
   cursor: pointer;
 }
 
-.gridContainer .moreProjectsButton:hover {
-  -webkit-animation-name: scale;
-          animation-name: scale;
+.gridContainer .arrowRight {
+  -webkit-animation-name: bounceyRightReverse;
+          animation-name: bounceyRightReverse;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes scale {
+.gridContainer .arrowRight:hover {
+  -webkit-animation-name: bounceyRight;
+          animation-name: bounceyRight;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.gridContainer .arrowLeft {
+  -webkit-animation-name: bounceyLeftReverse;
+          animation-name: bounceyLeftReverse;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.gridContainer .arrowLeft:hover {
+  -webkit-animation-name: bounceyLeft;
+          animation-name: bounceyLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounceyRight {
   from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
   }
 }
 
-@keyframes scale {
+@keyframes bounceyRight {
   from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@-webkit-keyframes bounceyRightReverse {
+  from {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes bounceyRightReverse {
+  from {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes bounceyLeft {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+}
+
+@keyframes bounceyLeft {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+}
+
+@-webkit-keyframes bounceyLeftReverse {
+  from {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes bounceyLeftReverse {
+  from {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 /*# sourceMappingURL=projectGrid.module.css.map */

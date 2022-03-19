@@ -57,7 +57,7 @@ let dummySkills = [
     },
     {
         id: 2,
-        name: 'Docker',
+        name: 'OpenGL',
         chosen: false
     },
     {
@@ -94,6 +94,11 @@ let dummySkills = [
         id: 9,
         name: 'Unreal Engine 4',
         chosen: false
+    },
+    {
+        id: 10,
+        name: 'Docker',
+        chosen: false
     }
 ];
 
@@ -103,21 +108,45 @@ const dummyProjects = [
         title: "OpenFlappy",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg"
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        category: "Graphics programming",
+        skills: ["C++", "OpenGL"]
     },
     {
         id: 1,
         title: "Other",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg"
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        category: "Web application",
+        skills: ["Javascript", "Postgresql"]
     },
     {
         id: 2,
         title: "Best project",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg"
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        category: "Game programming",
+        skills: ["C#", "Unity", "PHP My Admin"]
+    },
+    {
+        id: 3,
+        title: "Another cool project",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        category: "Web application",
+        skills: ["PHP", "PHP My Admin"]
+    },
+    {
+        id: 4,
+        title: "Assassin's creed 89",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
+                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        category: "Game programming",
+        skills: ["C++", "Unreal Engine 4", "Docker"]
     }
 ];
 
@@ -156,7 +185,7 @@ function Projects({ isWhiteTheme }) {
                 <TagsBar title="Categories" tags={categories} updateTag={updateCategoryFilter} isWhiteTheme={isWhiteTheme} />
                 <TagsBar title="Skills" tags={skills} updateTag={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
             </div>
-            <ProjectsGrid projectsCard={dummyProjects} isWhiteTheme={isWhiteTheme} />
+            <ProjectsGrid projectCards={dummyProjects} isWhiteTheme={isWhiteTheme} />
         </div>
     </section>
   )
