@@ -55,7 +55,7 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
 }
 
 ProjectsGrid.propTypes = {
-    projectsCard: PropTypes.arrayOf(PropTypes.object).isRequired,
+    projectCards: PropTypes.arrayOf(PropTypes.object).isRequired,
     isWhiteTheme: PropTypes.bool.isRequired
 }
 

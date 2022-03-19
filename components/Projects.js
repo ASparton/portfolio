@@ -18,7 +18,7 @@ let dummyCategories = [
     {
         id: 1,
         name: 'Web application',
-        chosen: true
+        chosen: false
     },
     {
         id: 2,
@@ -40,7 +40,7 @@ let dummyCategories = [
     {
         id: 5,
         name: 'DevOps',
-        chosen: true
+        chosen: false
     }
 ];
 
@@ -48,7 +48,7 @@ let dummySkills = [
     {
         id: 0,
         name: 'Javascript',
-        chosen: true
+        chosen: false
     },
     {
         id: 1,
@@ -73,7 +73,7 @@ let dummySkills = [
     {
         id: 5,
         name: 'Postgresql',
-        chosen: true
+        chosen: false
     },
     {
         id: 6,
@@ -83,7 +83,7 @@ let dummySkills = [
     {
         id: 7,
         name: 'Godot',
-        chosen: true
+        chosen: false
     },
     {
         id: 8,
@@ -150,10 +150,31 @@ const dummyProjects = [
     }
 ];
 
+/* Utils contains functions */
+
+Array.prototype.contains = function(elem)
+{
+    for (let i in this)
+    {
+        if (this[i] === elem) return true;
+    }
+    return false;
+}
+
+Array.prototype.containsOneIn = function(other)
+{
+    for (let elem of other)
+    {
+        if (this.contains(elem)) return true;
+    }
+    return false;
+}
+
 function Projects({ isWhiteTheme }) {
 
-    const [categories, setCategories] = useState(dummyCategories);
-    const [skills, setSkills] = useState(dummySkills);
+    const [categories, setCategories] = useState(dummyCategories);  // to update projects and categories tags
+    const [skills, setSkills] = useState(dummySkills);  // to update projects and skills tags
+    const [projectsFiltered, setProjectsFiltered] = useState(dummyProjects);    // to update displayed projects
     
     function updateCategoryFilter(tagId) {
       const newCategories = []; // We create a copy to make the state change and re-render the component properly
@@ -163,6 +184,7 @@ function Projects({ isWhiteTheme }) {
             category.chosen = !category.chosen;
       });
       setCategories(newCategories);
+      updateProjectsFiltered();
     }
 
     function updateSkillFilter(tagId) {
@@ -173,6 +195,30 @@ function Projects({ isWhiteTheme }) {
               skill.chosen = !skill.chosen;
         });
         setSkills(newSkills);
+        updateProjectsFiltered();
+    }
+
+    function getChosenTagsName(tagsArray) {
+        const selectedTagsName = [];
+        tagsArray.map(tag => {
+            if (tag.chosen)
+                selectedTagsName.push(tag.name);
+        });
+        return selectedTagsName;
+    }
+
+    function updateProjectsFiltered() {
+        const selectedCategoriesName = getChosenTagsName(categories);
+        const selectedSkillsName = getChosenTagsName(skills);
+        
+        if (selectedCategoriesName.length === 0 && selectedSkillsName.length === 0) {
+            setProjectsFiltered(dummyProjects);
+        }
+        else {
+            setProjectsFiltered(dummyProjects.filter(project => 
+                selectedCategoriesName.contains(project.category) || selectedSkillsName.containsOneIn(project.skills)
+            ));
+        }
     }
 
   return (
@@ -185,7 +231,7 @@ function Projects({ isWhiteTheme }) {
                 <TagsBar title="Categories" tags={categories} updateTag={updateCategoryFilter} isWhiteTheme={isWhiteTheme} />
                 <TagsBar title="Skills" tags={skills} updateTag={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
             </div>
-            <ProjectsGrid projectCards={dummyProjects} isWhiteTheme={isWhiteTheme} />
+            <ProjectsGrid projectCards={projectsFiltered} isWhiteTheme={isWhiteTheme} />
         </div>
     </section>
   )
