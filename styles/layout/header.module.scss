@@ -85,3 +85,23 @@
       transform: translateY(0px)
     }
 }
+
+@media (max-width: 900px) {
+    .header {
+        height: 100vh;
+
+        .mainContainer {
+            @include flexBox(column, nowrap, flex-start, center);
+
+            .logoContainer {
+                width: 150px;
+                height: 150px;
+                padding-bottom: 5%;
+            }
+
+            .navContainer {
+                wid
+            }
+        }
+    }
+}

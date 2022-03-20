@@ -26,10 +26,11 @@
   color: #fcf7f8;
 }
 
-.themeSwitchTransition, .themeSwitchTransitionWhite, .themeSwitchTransitionBlack {
+.pageLoad {
   width: 200vw;
   height: 10000vh;
   position: fixed;
+  background-color: #151515;
   z-index: 2;
   -webkit-animation-name: slide;
           animation-name: slide;
@@ -39,15 +40,7 @@
           animation-fill-mode: forwards;
 }
 
-.themeSwitchTransitionWhite {
-  background-color: #fcf7f8;
-}
-
-.themeSwitchTransitionBlack {
-  background-color: #151515;
-}
-
-.transitionLogo {
+.pageLoadLogo {
   width: 10vw;
   margin-top: 45vh;
   margin-left: 45vw;

@@ -35,8 +35,8 @@ export default function Home() {
         <link rel="icon" href="/images/logo/logoBlack.png" />
       </Head>
 
-      <div key={isWhiteTheme} className={isWhiteTheme ? styles.themeSwitchTransitionBlack : styles.themeSwitchTransitionWhite}>
-        <div className={styles.transitionLogo}>
+      <div className={styles.pageLoad}>
+        <div className={styles.pageLoadLogo}>
           <Image src={isWhiteTheme ? logoWhite : logoBlack} alt="Logo Alexandre Sparton"/>
         </div>
       </div>

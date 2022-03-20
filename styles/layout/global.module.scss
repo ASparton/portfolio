@@ -36,10 +36,11 @@
     }
 }
 
-.themeSwitchTransition {
+.pageLoad {
     width: 200vw;
     height: 10000vh;
     position: fixed;
+    background-color: $darkness;
     z-index: 2;
 
     animation-name: slide;
@@ -47,17 +48,7 @@
     animation-fill-mode: forwards;
 }
 
-.themeSwitchTransitionWhite {
-    @extend .themeSwitchTransition;
-    background-color: $snow;
-}
-
-.themeSwitchTransitionBlack {
-    @extend .themeSwitchTransition;
-    background-color: $darkness;
-}
-
-.transitionLogo {
+.pageLoadLogo {
     width: 10vw;
     margin-top: 45vh;
     margin-left: 45vw;
