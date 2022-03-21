@@ -1,0 +1,14 @@
+@import '../../mixins';
+
+.title {
+    margin-bottom: 2%;
+}
+
+.shootEmail {
+    width: 49.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 25.25%;
+
+    @include flexBox(row, nowrap, space-between, center);
+} 

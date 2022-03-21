@@ -1,7 +1,37 @@
+@import 'animations';
+
 @mixin flexBox($direction, $wrap, $justify, $align) {
     display: flex;
     flex-direction: $direction;
     flex-wrap: $wrap;
     justify-content: $justify;
     align-items: $align;
+}
+
+
+
+/* Buttons */
+
+@mixin blackButton() {
+    animation: toBlackBtn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        animation: toWhiteBtn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@mixin whiteButton() {
+    animation: toWhiteBtn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        animation: toBlackBtn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
 }

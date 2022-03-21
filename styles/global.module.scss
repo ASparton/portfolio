@@ -1,0 +1,37 @@
+@import 'variables';
+
+.bodyWhite {
+    background-color: $snow;
+}
+
+.bodyBlack {
+    background-color: $darkness;
+}
+
+.textWhite {
+    color: $platinium;
+}
+
+.textBlack {
+    color: $darkness;
+}
+
+.link {
+    color: $middleGrey;
+}
+
+.linkWhite {
+    @extend .link;
+
+    &:hover {
+        color: $darkness;
+    }
+}
+
+.linkBlack {
+    @extend .link;
+    
+    &:hover {
+        color: $snow;
+    }
+}

@@ -1,0 +1,155 @@
+/* Scales animation */
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Background black & white animations */
+@-webkit-keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+@keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@-webkit-keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+@keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+/* Buttons */
+.form {
+  width: 60%;
+  margin-top: 3%;
+  margin-left: 20%;
+}
+
+.form .formInput, .form .messageInputContainer .messageInput, .form .submitButton, .form .submitButtonWhite, .form .submitButtonBlack {
+  width: 75%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 1.5%;
+  background-color: transparent;
+  border: 1px solid #999999;
+  border-radius: 6px;
+}
+
+.form .messageInputContainer {
+  width: 100%;
+}
+
+.form .messageInputContainer .messageInput {
+  height: 20vh;
+  resize: none;
+}
+
+.form .submitButton, .form .submitButtonWhite, .form .submitButtonBlack {
+  width: 25%;
+  cursor: pointer;
+}
+
+.form .submitButtonWhite {
+  -webkit-animation: toWhiteBtn;
+          animation: toWhiteBtn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.form .submitButtonWhite:hover {
+  -webkit-animation: toBlackBtn;
+          animation: toBlackBtn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.form .submitButtonBlack {
+  -webkit-animation: toBlackBtn;
+          animation: toBlackBtn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.form .submitButtonBlack:hover {
+  -webkit-animation: toWhiteBtn;
+          animation: toWhiteBtn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=contactForm.module.css.map */

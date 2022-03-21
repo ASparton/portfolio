@@ -1,0 +1,25 @@
+@import '../variables';
+
+.pageLoad {
+    width: 200vw;
+    height: 10000vh;
+    position: fixed;
+    background-color: $darkness;
+    z-index: 2;
+
+    animation-name: pageLoadSlideToLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.pageLoadLogo {
+    width: 10vw;
+    margin-top: 45vh;
+    margin-left: 45vw;
+}
+
+@keyframes pageLoadSlideToLeft {
+    0% {transform: translateX(0vw);}
+    60% {transform: translateX(0vw);}
+    100% {transform: translateX(-200vw);}
+}

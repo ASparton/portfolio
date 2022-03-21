@@ -1,4 +1,5 @@
-@import '../mixins';
+@import '../../mixins';
+@import '../../animations';
 
 .bannerContainer {
     width: 100%;
@@ -21,16 +22,6 @@
             animation-name: scaleUp;
             animation-duration: 0.25s;
             animation-fill-mode: forwards;
-        }
-
-        @keyframes scaleUp {
-            from { transform: scale(1); }
-            to { transform: scale(1.5); }
-        }
-
-        @keyframes scaleDown {
-            from { transform: scale(1.5); }
-            to { transform: scale(1); }
         }
     }
 }

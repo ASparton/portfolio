@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 
-// Components
+// subcomponents
 import SocialBanner from '/components/layout/SocialBanner.js';
 
 // Styles
-import footerStyles from '/styles/layout/footer.module.css';
-import globalStyles from '/styles/layout/global.module.css';
+import footerStyles from '/styles/components/layout/footer.module.css';
+import globalStyles from '/styles/global.module.css';
 
 function Footer({ isWhiteTheme }) {
   return (
     <footer className={footerStyles.footer}>
+
+      {/* Designed by me --> Link to the github repo */}
       <div className={footerStyles.repoLink}>
         <a href="https://github.com/ASparton/Portfolio" title="Portfolio repository" target="_blank" rel="noopener noreferrer">
           <h4 className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
@@ -17,6 +19,7 @@ function Footer({ isWhiteTheme }) {
           </h4>
         </a>
       </div>
+
       <SocialBanner isWhiteTheme={isWhiteTheme} />
     </footer>
   )
@@ -24,6 +27,6 @@ function Footer({ isWhiteTheme }) {
 
 Footer.propTypes = { 
   isWhiteTheme: PropTypes.bool.isRequired
-}
+};
 
 export default Footer;

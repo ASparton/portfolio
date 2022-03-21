@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react'
+
+// react dependencies
+import { useState } from 'react';
 
 // subcomponents
 import TagsBar from '/components/projects/TagsBar.js';
@@ -7,7 +9,7 @@ import ProjectsGrid from '/components/projects/ProjectsGrid.js';
 
 // styles
 import projectsStyles from '/styles/components/projects.module.css';
-import globalStyles from '/styles/layout/global.module.css';
+import globalStyles from '/styles/global.module.css';
 
 let dummyCategories = [
     {
@@ -150,6 +152,8 @@ const dummyProjects = [
     }
 ];
 
+
+
 /* Utils contains functions */
 
 Array.prototype.contains = function(elem)
@@ -170,12 +174,18 @@ Array.prototype.containsOneIn = function(other)
     return false;
 }
 
+
+
 function Projects({ isWhiteTheme }) {
 
     const [categories, setCategories] = useState(dummyCategories);  // to update projects and categories tags
     const [skills, setSkills] = useState(dummySkills);  // to update projects and skills tags
     const [projectsFiltered, setProjectsFiltered] = useState(dummyProjects);    // to update displayed projects
     
+    /**
+     * Select or unselect the category with the given id and update the projects displayed.
+     * @param {int} tagId the id of the category to select or unselect 
+     */
     function updateCategoryFilter(tagId) {
       const newCategories = []; // We create a copy to make the state change and re-render the component properly
       categories.map((category) => {
@@ -187,6 +197,10 @@ function Projects({ isWhiteTheme }) {
       updateProjectsFiltered();
     }
 
+    /**
+     * Select or unselect the skill with the given id and update the projects displayed.
+     * @param {int} tagId the id of the skill to select or unselect
+     */
     function updateSkillFilter(tagId) {
         const newSkills = []; // We create a copy to make the state change and re-render the component properly
         skills.map((skill) => {
@@ -198,6 +212,11 @@ function Projects({ isWhiteTheme }) {
         updateProjectsFiltered();
     }
 
+    /**
+     * Create an array of the current selected tag names.
+     * @param {Array} tagsArray the tag array to get the selected names.
+     * @returns an array containing the selected tag names (empty if no tag is selected).
+     */
     function getChosenTagsName(tagsArray) {
         const selectedTagsName = [];
         tagsArray.map(tag => {
@@ -207,6 +226,9 @@ function Projects({ isWhiteTheme }) {
         return selectedTagsName;
     }
 
+    /**
+     * Update the displayed project list with the current filters.
+     */
     function updateProjectsFiltered() {
         const selectedCategoriesName = getChosenTagsName(categories);
         const selectedSkillsName = getChosenTagsName(skills);
@@ -222,15 +244,20 @@ function Projects({ isWhiteTheme }) {
     }
 
   return (
-    <section className={projectsStyles.mainContainer}>
+    <section name="projects" className={projectsStyles.mainContainer}>
+
+        {/* Section title */}
         <h2 className={`${projectsStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
             Some projects I have worked on
         </h2>
+
+        {/* Projects section */}
         <div>
-            <div>
-                <TagsBar title="Categories" tags={categories} updateTag={updateCategoryFilter} isWhiteTheme={isWhiteTheme} />
-                <TagsBar title="Skills" tags={skills} updateTag={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
-            </div>
+            {/* Tags bars */}
+            <TagsBar title="Categories" tags={categories} updateTagFunction={updateCategoryFilter} isWhiteTheme={isWhiteTheme} />
+            <TagsBar title="Skills" tags={skills} updateTagFunction={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
+
+            {/* Displayed projects grid */}
             <ProjectsGrid projectCards={projectsFiltered} isWhiteTheme={isWhiteTheme} />
         </div>
     </section>
@@ -239,6 +266,6 @@ function Projects({ isWhiteTheme }) {
 
 Projects.propTypes = {
     isWhiteTheme: PropTypes.bool.isRequired
-}
+};
 
 export default Projects;

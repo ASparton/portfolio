@@ -1,0 +1,183 @@
+.tag, .tagWhite, .tagChosenWhite, .tagBlack, .tagChosenBlack {
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+.tagWhite, .tagChosenWhite {
+  border-color: #fcf7f8;
+  -webkit-animation-name: backgroundFadeOutWhite;
+          animation-name: backgroundFadeOutWhite;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.tagWhite:hover, .tagChosenWhite:hover {
+  -webkit-animation-name: backgroundFadeInWhite;
+          animation-name: backgroundFadeInWhite;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.tagBlack, .tagChosenBlack {
+  border-color: #151515;
+  -webkit-animation-name: backgroundFadeOutBlack;
+          animation-name: backgroundFadeOutBlack;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.tagBlack:hover, .tagChosenBlack:hover {
+  -webkit-animation-name: backgroundFadeInBlack;
+          animation-name: backgroundFadeInBlack;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.tagChosenWhite {
+  background-color: #fcf7f8;
+  color: #151515;
+}
+
+.tagChosenBlack {
+  background-color: #151515;
+  color: #fcf7f8;
+}
+
+@-webkit-keyframes backgroundFadeInWhite {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+}
+
+@keyframes backgroundFadeInWhite {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+}
+
+@-webkit-keyframes backgroundFadeOutWhite {
+  from {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+@keyframes backgroundFadeOutWhite {
+  from {
+    background-color: rgba(252, 247, 248, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+@-webkit-keyframes backgroundFadeInBlack {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+}
+
+@keyframes backgroundFadeInBlack {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+}
+
+@-webkit-keyframes backgroundFadeOutBlack {
+  from {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+@keyframes backgroundFadeOutBlack {
+  from {
+    background-color: rgba(5, 5, 5, 0.3);
+  }
+  to {
+    background-color: none;
+  }
+}
+
+.tagIcon, .tagIconHided {
+  width: 18px;
+  margin-top: 5px;
+  -webkit-animation-name: display Icon;
+          animation-name: display Icon;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.tagIconHided {
+  -webkit-animation-name: hideIcon;
+          animation-name: hideIcon;
+}
+
+@-webkit-keyframes displayIcon {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes displayIcon {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes hideIcon {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hideIcon {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=tag.module.css.map */

@@ -1,0 +1,29 @@
+@import 'variables';
+
+
+
+/* Scales animation */
+
+@keyframes scaleUp {
+    from { transform: scale(1); }
+    to { transform: scale(1.5); }
+}
+
+@keyframes scaleDown {
+    from { transform: scale(1.5); }
+    to { transform: scale(1); }
+}
+
+
+
+/* Background black & white animations */
+
+@keyframes toWhiteBtn {
+    from { background-color: $darkness; color: $snow; }
+    to { background-color: $snow; color: $darkness; }
+}
+
+@keyframes toBlackBtn {
+    from { background-color: $snow; color: $darkness; }
+    to { background-color: $darkness; color: $snow; }
+}

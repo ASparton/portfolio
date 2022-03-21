@@ -1,39 +1,11 @@
-.bodyWhite {
-  background-color: #fcf7f8;
-}
-
-.bodyBlack {
-  background-color: #151515;
-}
-
-.textWhite {
-  color: #E4E4E4;
-}
-
-.textBlack {
-  color: #151515;
-}
-
-.link, .linkWhite, .linkBlack {
-  color: #999999;
-}
-
-.linkWhite:hover {
-  color: #151515;
-}
-
-.linkBlack:hover {
-  color: #fcf7f8;
-}
-
 .pageLoad {
   width: 200vw;
   height: 10000vh;
   position: fixed;
   background-color: #151515;
   z-index: 2;
-  -webkit-animation-name: slide;
-          animation-name: slide;
+  -webkit-animation-name: pageLoadSlideToLeft;
+          animation-name: pageLoadSlideToLeft;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
@@ -46,7 +18,7 @@
   margin-left: 45vw;
 }
 
-@-webkit-keyframes slide {
+@-webkit-keyframes pageLoadSlideToLeft {
   0% {
     -webkit-transform: translateX(0vw);
             transform: translateX(0vw);
@@ -61,7 +33,7 @@
   }
 }
 
-@keyframes slide {
+@keyframes pageLoadSlideToLeft {
   0% {
     -webkit-transform: translateX(0vw);
             transform: translateX(0vw);
@@ -75,4 +47,4 @@
             transform: translateX(-200vw);
   }
 }
-/*# sourceMappingURL=global.module.css.map */
+/*# sourceMappingURL=index.module.css.map */

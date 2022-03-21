@@ -1,8 +1,7 @@
-@import '../variables';
 @import '../mixins';
+@import '../animations';
 
 .technosSection {
-
     text-align: center;
     
     .iconsContainer {
@@ -30,16 +29,6 @@
                 animation-duration: 0.25s;
                 animation-fill-mode: forwards;
             }
-        }
-    
-        @keyframes scaleUp {
-            from { transform: scale(1); }
-            to { transform: scale(1.15); }
-        }
-    
-        @keyframes scaleDown {
-            from { transform: scale(1.15); }
-            to { transform: scale(1); }
         }
     }
 }

@@ -1,3 +1,92 @@
+/* Scales animation */
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Background black & white animations */
+@-webkit-keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+@keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@-webkit-keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+@keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+/* Buttons */
 .header {
   width: 100%;
   padding-top: 1.5%;
@@ -58,19 +147,13 @@
           align-items: flex-end;
 }
 
-.header .navContainer .nav .navElement {
+.header .navContainer .nav .navLink {
   margin-left: 1%;
   margin-right: 1%;
   padding-bottom: 1%;
 }
 
-.header .navContainer .nav .navElement .themeSwitcher {
-  width: 25px;
-  height: 25px;
-  margin-left: 100%;
-  cursor: pointer;
-}
-
+/* Themes differences */
 .headerWhite {
   background: rgba(255, 255, 255, 0.2);
 }
@@ -79,42 +162,21 @@
   background: rgba(5, 5, 5, 0.2);
 }
 
-.hideHeader {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-name: slideout;
-          animation-name: slideout;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes slideout {
-  from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  to {
-    -webkit-transform: translateY(-125px);
-            transform: translateY(-125px);
-  }
-}
-
-@keyframes slideout {
-  from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  to {
-    -webkit-transform: translateY(-125px);
-            transform: translateY(-125px);
-  }
-}
-
+/* Display and hide animation */
 .displayHeader {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-name: slidein;
           animation-name: slidein;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.hideHeader {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: slideout;
+          animation-name: slideout;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -141,31 +203,25 @@
   }
 }
 
-@media (max-width: 900px) {
-  .header {
-    height: 100vh;
+@-webkit-keyframes slideout {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
-  .header .mainContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  to {
+    -webkit-transform: translateY(-125px);
+            transform: translateY(-125px);
   }
-  .header .mainContainer .logoContainer {
-    width: 150px;
-    height: 150px;
-    padding-bottom: 5%;
+}
+
+@keyframes slideout {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-125px);
+            transform: translateY(-125px);
   }
 }
 /*# sourceMappingURL=header.module.css.map */
