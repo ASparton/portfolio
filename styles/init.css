@@ -29,3 +29,14 @@ section {
     margin-top: 50vh;
     margin-bottom: 50vh;
 }
+
+@media screen and (max-width: 900px) {
+    h2 {
+        font-size: 2.5em;
+    }
+
+    section {
+        margin-top: 30vh;
+        margin-bottom: 30vh;
+    }
+}

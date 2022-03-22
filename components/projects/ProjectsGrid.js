@@ -41,6 +41,11 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
     }
   }
 
+  let projectIndexEnd = 3;
+  // if (window != undefined && window.innerWidth < 900) {
+  //   projectIndexEnd = 2;
+  // }
+
   return (
     <div className={pgStyles.gridContainer}>
 
@@ -51,7 +56,7 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
 
       {/* Project cards list */}
       <div className={pgStyles.grid}>
-        {projectCards.slice(projectIndexStart, projectIndexStart + 3).map((projectCard) => (
+        {projectCards.slice(projectIndexStart, projectIndexStart + projectIndexEnd).map((projectCard) => (
             <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} />
           ))}
       </div>

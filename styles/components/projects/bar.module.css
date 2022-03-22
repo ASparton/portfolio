@@ -133,4 +133,12 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+@media screen and (max-width: 900px) {
+  .mainContainer {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 2.5%;
+  }
+}
 /*# sourceMappingURL=bar.module.css.map */

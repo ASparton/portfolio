@@ -47,8 +47,7 @@ function ProjectCard({ projectCard, isWhiteTheme }) {
 
 ProjectCard.propTypes = {
     projectCard: PropTypes.object.isRequired,
-    slideleft: PropTypes.string.isRequired,
     isWhiteTheme: PropTypes.bool.isRequired
-}
+};
 
 export default ProjectCard;

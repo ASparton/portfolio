@@ -5,7 +5,7 @@ import ContactHeader from '/components/contact/ContactHeader.js';
 import ContactForm from '/components/contact/ContactForm.js';
 
 // styles
-import contactStyles from '/styles/components/contact.module.css'
+import contactStyles from '/styles/components/contact.module.css';
 
 function Contact({ isWhiteTheme }) {
   return (

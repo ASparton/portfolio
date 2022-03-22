@@ -126,4 +126,40 @@
   width: 42.5%;
   margin-left: 2.5%;
 }
+
+@media screen and (max-width: 900px) {
+  .aboutSection {
+    padding-top: 20vh;
+  }
+  .aboutSection .mainContainer {
+    width: 80%;
+    margin: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutSection .mainContainer .textContainer {
+    width: 60%;
+    margin-right: 5%;
+  }
+  .aboutSection .mainContainer .textContainer .helloWorld {
+    font-size: 3.5em;
+    margin-bottom: 2.5%;
+  }
+  .aboutSection .mainContainer .coffeeImage {
+    width: 35%;
+  }
+}
 /*# sourceMappingURL=about.module.css.map */

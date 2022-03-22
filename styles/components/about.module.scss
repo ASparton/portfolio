@@ -25,3 +25,30 @@
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    .aboutSection {
+        padding-top: 20vh;
+
+        .mainContainer {
+            width: 80%;
+            margin: 10%;
+
+            @include flexBox(row, nowrap, center, center);
+
+            .textContainer {
+                width: 60%;
+                margin-right: 5%;
+        
+                .helloWorld {
+                    font-size: 3.5em;
+                    margin-bottom: 2.5%;
+                }
+            }
+
+            .coffeeImage {
+                width: 35%;
+            }
+        }
+    }
+}

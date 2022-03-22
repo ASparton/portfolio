@@ -92,25 +92,9 @@
   margin-bottom: 2%;
 }
 
-.shootEmail {
-  width: 49.5%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 25.25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 4em;
+  }
 }
 /*# sourceMappingURL=contactHeader.module.css.map */

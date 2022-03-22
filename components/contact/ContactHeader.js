@@ -12,15 +12,13 @@ function ContactHeader({ isWhiteTheme }) {
       <h3 className={isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}>Want to propose or tell me something ?</h3>
 
       {/* Shoot me an email */}
-      <aside className={contactHeaderStyles.shootEmail}>
-        <p className={isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}>Use this form or shoot me an email directly on:</p>
-        <a href="mailto:sparton.alexandre@gmail.com?subject=From Portfolio" title="Email address" target="_blank" rel="noopener noreferrer"
-          className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
-            <h4 className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
-              sparton.alexandre@gmail.com
-            </h4>
-        </a>
-      </aside>
+      <p className={isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}>Use this form or shoot me an email directly on:</p>
+      <a href="mailto:sparton.alexandre@gmail.com?subject=From Portfolio" title="Email address" target="_blank" rel="noopener noreferrer"
+        className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
+          <h4 className={isWhiteTheme ? globalStyles.linkWhite : globalStyles.linkBlack}>
+            sparton.alexandre@gmail.com
+          </h4>
+      </a>
 
     </div>
   )
