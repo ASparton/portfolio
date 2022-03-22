@@ -19,16 +19,7 @@
     
         .icon {
             width: 15%;
-            
-            animation: scaleDown;
-            animation-duration: 0.25s;
-            animation-fill-mode: forwards;
-    
-            &:hover {
-                animation: scaleUp;
-                animation-duration: 0.25s;
-                animation-fill-mode: forwards;
-            }
+            @include scaleAnim();
         }
     }
 }

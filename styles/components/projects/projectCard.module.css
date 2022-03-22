@@ -86,7 +86,8 @@
   }
 }
 
-/* Buttons */
+/* Buttons animation */
+/* Scale up & down animation */
 .card, .cardBlack, .cardWhite {
   width: 30%;
   margin-left: 2.5%;
@@ -94,12 +95,6 @@
   margin-bottom: 2.5%;
   padding: 3%;
   border-radius: 20px;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .card .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
@@ -179,8 +174,8 @@
   background-color: #151515;
   border-color: #151515;
   color: #fcf7f8;
-  -webkit-animation: toBgBlack;
-          animation: toBgBlack;
+  -webkit-animation: toBlackBtn;
+          animation: toBlackBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -188,8 +183,8 @@
 }
 
 .card .seeMoreBlack:hover, .cardBlack .seeMoreBlack:hover, .cardWhite .seeMoreBlack:hover {
-  -webkit-animation: toBgWhite;
-          animation: toBgWhite;
+  -webkit-animation: toWhiteBtn;
+          animation: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -200,8 +195,8 @@
   background-color: #fcf7f8;
   border-color: #fcf7f8;
   color: #151515;
-  -webkit-animation: toBgWhite;
-          animation: toBgWhite;
+  -webkit-animation: toWhiteBtn;
+          animation: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -209,56 +204,12 @@
 }
 
 .card .seeMoreWhite:hover, .cardBlack .seeMoreWhite:hover, .cardWhite .seeMoreWhite:hover {
-  -webkit-animation: toBgBlack;
-          animation: toBgBlack;
+  -webkit-animation: toBlackBtn;
+          animation: toBlackBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes toBgWhite {
-  from {
-    background-color: #151515;
-    color: #E4E4E4;
-  }
-  to {
-    background-color: #E4E4E4;
-    color: #151515;
-  }
-}
-
-@keyframes toBgWhite {
-  from {
-    background-color: #151515;
-    color: #E4E4E4;
-  }
-  to {
-    background-color: #E4E4E4;
-    color: #151515;
-  }
-}
-
-@-webkit-keyframes toBgBlack {
-  from {
-    background-color: #E4E4E4;
-    color: #151515;
-  }
-  to {
-    background-color: #151515;
-    color: #E4E4E4;
-  }
-}
-
-@keyframes toBgBlack {
-  from {
-    background-color: #E4E4E4;
-    color: #151515;
-  }
-  to {
-    background-color: #151515;
-    color: #E4E4E4;
-  }
 }
 
 .cardBlack {
@@ -267,31 +218,5 @@
 
 .cardWhite {
   background-color: #E4E4E4;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0%;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  to {
-    opacity: 100%;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0%;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  to {
-    opacity: 100%;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
 }
 /*# sourceMappingURL=projectCard.module.css.map */

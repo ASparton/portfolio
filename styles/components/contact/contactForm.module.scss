@@ -35,11 +35,13 @@
 
     .submitButtonWhite {
         @extend .submitButton;
-        @include whiteButton();
+        border-color: $snow;
+        @include whiteButtonAnim();
     }
     
     .submitButtonBlack {
         @extend .submitButton;
-        @include blackButton();
+        border-color: $darkness;
+        @include blackButtonAnim();
     }
 }

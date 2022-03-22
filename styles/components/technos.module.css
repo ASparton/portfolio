@@ -86,7 +86,8 @@
   }
 }
 
-/* Buttons */
+/* Buttons animation */
+/* Scale up & down animation */
 /* Scales animation */
 @keyframes scaleUp {
   from {
@@ -165,8 +166,8 @@
 
 .technosSection .iconsContainer .icon {
   width: 15%;
-  -webkit-animation: scaleDown;
-          animation: scaleDown;
+  -webkit-animation-name: scaleDown;
+          animation-name: scaleDown;
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: forwards;
@@ -174,8 +175,8 @@
 }
 
 .technosSection .iconsContainer .icon:hover {
-  -webkit-animation: scaleUp;
-          animation: scaleUp;
+  -webkit-animation-name: scaleUp;
+          animation-name: scaleUp;
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: forwards;

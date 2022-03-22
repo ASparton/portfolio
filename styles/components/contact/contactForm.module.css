@@ -86,7 +86,8 @@
   }
 }
 
-/* Buttons */
+/* Buttons animation */
+/* Scale up & down animation */
 .form {
   width: 60%;
   margin-top: 3%;
@@ -118,6 +119,7 @@
 }
 
 .form .submitButtonWhite {
+  border-color: #fcf7f8;
   -webkit-animation: toWhiteBtn;
           animation: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
@@ -136,6 +138,7 @@
 }
 
 .form .submitButtonBlack {
+  border-color: #151515;
   -webkit-animation: toBlackBtn;
           animation: toBlackBtn;
   -webkit-animation-duration: 0.5s;

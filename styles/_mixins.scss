@@ -10,9 +10,9 @@
 
 
 
-/* Buttons */
+/* Buttons animation */
 
-@mixin blackButton() {
+@mixin blackButtonAnim() {
     animation: toBlackBtn;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -24,7 +24,7 @@
     }
 }
 
-@mixin whiteButton() {
+@mixin whiteButtonAnim() {
     animation: toWhiteBtn;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -32,6 +32,22 @@
     &:hover {
         animation: toBlackBtn;
         animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+
+/* Scale up & down animation */
+
+@mixin scaleAnim() {
+    animation-name: scaleDown;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        animation-name: scaleUp;
+        animation-duration: 0.25s;
         animation-fill-mode: forwards;
     }
 }

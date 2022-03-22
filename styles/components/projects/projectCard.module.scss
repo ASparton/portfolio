@@ -10,10 +10,6 @@
 
     border-radius: 20px;
 
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-
     .tag {
         width: max-content;
         padding: 3px;
@@ -80,7 +76,6 @@
         border: 1px solid;
         border-radius: 5px;
     }
-
     .seeMoreBlack {
         @extend .seeMore;
 
@@ -88,15 +83,7 @@
         border-color: $darkness;
         color: $snow;
         
-        animation: toBgBlack;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-
-        &:hover {
-            animation: toBgWhite;
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-        }
+        @include blackButtonAnim();
     }
     .seeMoreWhite {
         @extend .seeMore;
@@ -105,25 +92,7 @@
         border-color: $snow;
         color: $darkness;
 
-        animation: toBgWhite;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-
-        &:hover {
-            animation: toBgBlack;
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-        }
-    }
-
-    @keyframes toBgWhite {
-        from { background-color: $darkness; color: $platinium; }
-        to { background-color: $platinium; color: $darkness; }
-    }
-
-    @keyframes toBgBlack {
-        from { background-color: $platinium; color: $darkness; }
-        to { background-color: $darkness; color: $platinium; }
+        @include whiteButtonAnim();
     }
 }
 
@@ -134,10 +103,4 @@
 .cardWhite {
     @extend .card;
     background-color: $platinium;
-}
-
-
-@keyframes fadeIn {
-    from {opacity: 0%; transform: translateY(100px);}
-    to {opacity: 100%; transform: translateY(0px);}
 }
