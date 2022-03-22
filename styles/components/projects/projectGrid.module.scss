@@ -60,3 +60,19 @@
         to {transform: translateX(0);}
     }
 }
+
+@media screen and (max-width: 1200px){
+    .gridContainer {
+        .arrow {
+            width: 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 850px){
+    .gridContainer {
+        .arrow {
+            width: 6%;
+        }
+    }
+}

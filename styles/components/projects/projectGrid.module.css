@@ -255,4 +255,16 @@
             transform: translateX(0);
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+    width: 5%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+    width: 6%;
+  }
+}
 /*# sourceMappingURL=projectGrid.module.css.map */

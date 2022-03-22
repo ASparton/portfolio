@@ -96,6 +96,19 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+        width: 50%;
+        padding: 5%;
+    }
+}
+
 .cardBlack {
     @extend .card;
     background-color: $darkness;

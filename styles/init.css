@@ -30,7 +30,7 @@ section {
     margin-bottom: 50vh;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1600px) {
     h2 {
         font-size: 2.5em;
     }

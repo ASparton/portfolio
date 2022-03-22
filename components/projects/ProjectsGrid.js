@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // react dependencies
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // next dependencies
 import Image from 'next/image'
@@ -22,6 +22,7 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
 
   // To shift by 1 the projects list to the right or to the left
   const [projectIndexStart, setProjectIndexStart] = useState(0);
+  const [projectIndexEnd, setProjectIndexEnd] = useState(3);
 
   /**
    * Try to shift by 1 the projects list to the left
@@ -36,15 +37,27 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
    * Try to shift by 1 the projects list to the right
    */
   function onNextProjectClick() {
-    if (projectIndexStart + 1 < projectCards.length - 2) {
+    if (projectIndexStart + 1 < projectCards.length - projectIndexEnd + 1) {
       setProjectIndexStart(projectIndexStart + 1);
     }
   }
 
-  let projectIndexEnd = 3;
-  // if (window != undefined && window.innerWidth < 900) {
-  //   projectIndexEnd = 2;
-  // }
+  /**
+   * Determine the number of projects to display depending on the window's width
+   */
+  function onWindowResize() {
+    if (window.innerWidth < 800)
+      setProjectIndexEnd(1);
+    else if (window.innerWidth < 1200)
+      setProjectIndexEnd(2);
+    else
+      setProjectIndexEnd(3);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', onWindowResize);
+    onWindowResize();
+  }, []);
 
   return (
     <div className={pgStyles.gridContainer}>

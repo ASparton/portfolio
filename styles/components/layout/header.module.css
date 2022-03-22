@@ -225,4 +225,29 @@
             transform: translateY(-125px);
   }
 }
+
+@media screen and (max-width: 900px) {
+  .header {
+    width: 60%;
+    height: 100vh;
+    -webkit-box-shadow: 10px 0px 10px #151515;
+            box-shadow: 10px 0px 10px #151515;
+  }
+  .header .mainContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 /*# sourceMappingURL=header.module.css.map */

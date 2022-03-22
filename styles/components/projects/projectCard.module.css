@@ -212,6 +212,19 @@
           animation-fill-mode: forwards;
 }
 
+@media screen and (max-width: 1200px) {
+  .card, .cardBlack, .cardWhite {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card, .cardBlack, .cardWhite {
+    width: 50%;
+    padding: 5%;
+  }
+}
+
 .cardBlack {
   background-color: #151515;
 }

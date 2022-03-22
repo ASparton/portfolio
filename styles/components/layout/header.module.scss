@@ -73,3 +73,16 @@
     from {transform: translateY(0px);}
     to {transform: translateY(-125px);}
 }
+
+@media screen and (max-width: 900px) {
+    .header {
+        width: 60%;
+        height: 100vh;
+
+        box-shadow: 10px 0px 10px $darkness;
+
+        .mainContainer {
+            @include flexBox(column, nowrap, space-around, flex-start);
+        }
+    }
+}

@@ -9,7 +9,7 @@
   margin-left: 42%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1600px) {
   .footer .repoLink {
     width: 50%;
     margin-left: 25%;

@@ -156,7 +156,7 @@
           animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
   .form {
     width: 80%;
     margin-left: 10%;
