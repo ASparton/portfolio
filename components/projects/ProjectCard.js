@@ -9,7 +9,7 @@ function ProjectCard({ projectCard, isWhiteTheme }) {
   let skillKey = 0;
 
   return (
-    <article className={isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite}>
+    <article className={`${isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite}`}>
 
       {/* Project category */}
       <p className={isWhiteTheme ? cardStyles.tagWhite : cardStyles.tagBlack}>{projectCard.category}</p>
@@ -47,6 +47,7 @@ function ProjectCard({ projectCard, isWhiteTheme }) {
 
 ProjectCard.propTypes = {
     projectCard: PropTypes.object.isRequired,
+    slideleft: PropTypes.string.isRequired,
     isWhiteTheme: PropTypes.bool.isRequired
 }
 

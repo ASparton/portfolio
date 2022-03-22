@@ -27,16 +27,18 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
    * Try to shift by 1 the projects list to the left
    */
   function onPreviousProjectClick() {
-    if (projectIndexStart - 1 > -1)
+    if (projectIndexStart - 1 > -1) {
       setProjectIndexStart(projectIndexStart - 1)
+    }
   }
 
   /**
    * Try to shift by 1 the projects list to the right
    */
   function onNextProjectClick() {
-    if (projectIndexStart + 1 < projectCards.length - 2)
+    if (projectIndexStart + 1 < projectCards.length - 2) {
       setProjectIndexStart(projectIndexStart + 1);
+    }
   }
 
   return (

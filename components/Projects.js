@@ -258,7 +258,7 @@ function Projects({ isWhiteTheme }) {
             <TagsBar title="Skills" tags={skills} updateTagFunction={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
 
             {/* Displayed projects grid */}
-            <ProjectsGrid projectCards={projectsFiltered} isWhiteTheme={isWhiteTheme} />
+            <ProjectsGrid key={projectsFiltered.length} projectCards={projectsFiltered} isWhiteTheme={isWhiteTheme} />
         </div>
     </section>
   )
