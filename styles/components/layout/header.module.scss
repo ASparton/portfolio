@@ -1,6 +1,13 @@
 @import '../../variables';
 @import '../../mixins';
 
+.burgerButton {
+    display: none;
+    .burgerBar {
+        display: none;
+    }
+}
+
 .header {
     width: 100%;
     padding-top: 1.5%;
@@ -44,10 +51,10 @@
 /* Themes differences */
 
 .headerWhite {
-    background: $bluredSnow;
+    background-color: $bluredSnow;
 }
 .headerBlack {
-    background: $bluredDarkness;
+    background-color: $bluredDarkness;
 }
 
 
@@ -75,14 +82,85 @@
 }
 
 @media screen and (max-width: 900px) {
-    .header {
-        width: 60%;
-        height: 100vh;
+    .burgerButton {
+        position: fixed;
+        z-index: 2;
+        @include flexBox(column, nowrap, space-around, center);
 
-        box-shadow: 10px 0px 10px $darkness;
+        width: 5vh;
+        height: 5vh;
+        margin: 3%;
 
-        .mainContainer {
-            @include flexBox(column, nowrap, space-around, flex-start);
+        border: none;
+        background-color: transparent;
+
+        cursor: pointer;
+
+        .burgerBar {
+            display: block;
+            
+            width: 90%;
+            height: 5%;
+
+            border-radius: 20%;
+            background-color: $darkness;
         }
     }
+
+    .header {
+        width: 40%;
+        height: 100vh;
+
+        backdrop-filter: none;
+        box-shadow: 2px 0px 10px $darkness;
+
+        .mainContainer {
+            margin: 0;
+            @include flexBox(column, nowrap, space-around, flex-start);
+        }
+
+        .logoContainer {
+            width: 30%;
+            
+            margin-left: 35%;
+            margin-top: 5%;
+            margin-bottom: 15%;
+        }
+    
+        .navContainer {
+            width: 100%;
+    
+            .nav {
+                height: 100%;
+                @include flexBox(column, nowrap, flex-start, flex-start);
+    
+                .navLink {
+                    width: max-content;
+                    margin-left: 10%;
+                    margin-bottom: 5%;
+                    font-size: 1.6em;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    /* Themes differences */
+
+    .headerWhite {
+        background-color: $burgerSnow;
+    }
+    .headerBlack {
+        background-color: $burgerDarkness;
+    }
+
+    @keyframes slidein {
+        from {transform: translateX(-100%);}
+        to {transform: translateX(0);}
+    }
+    @keyframes slideout {
+        from {transform: translateX(0);}
+        to {transform: translateX(-100%);}
+    }
+
 }

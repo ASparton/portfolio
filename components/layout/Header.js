@@ -29,13 +29,28 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
     }
     lastScrollY = scrollY;
   }
+
+  function updateBurgerMenuPosition() {
+    if (headerClass === displayHeaderClass) {
+      setHeaderClass(hideHeaderClass);
+    } else {
+      setHeaderClass(displayHeaderClass);
+    }
+  }
   
   // Set the event listener once when the component is rendered
   useEffect(() => {
-    window.addEventListener('scroll', updateHeaderPosition);
+    if (window.innerWidth > 900)
+      window.addEventListener('scroll', updateHeaderPosition);
   }, [])
 
   return (
+    <>
+      <button onClick={updateBurgerMenuPosition} className={headerStyles.burgerButton}>
+        <div className={headerStyles.burgerBar}></div>
+        <div className={headerStyles.burgerBar}></div>
+        <div className={headerStyles.burgerBar}></div>
+      </button>
       <header className={`${headerClass} ${isWhiteTheme ? headerStyles.headerWhite : headerStyles.headerBlack}`}>
         <div className={headerStyles.mainContainer}>
 
@@ -57,6 +72,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
 
         </div>
       </header>
+    </>
     )
 }
 

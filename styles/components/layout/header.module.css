@@ -88,6 +88,14 @@
 
 /* Buttons animation */
 /* Scale up & down animation */
+.burgerButton {
+  display: none;
+}
+
+.burgerButton .burgerBar {
+  display: none;
+}
+
 .header {
   width: 100%;
   padding-top: 1.5%;
@@ -156,11 +164,11 @@
 
 /* Themes differences */
 .headerWhite {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .headerBlack {
-  background: rgba(5, 5, 5, 0.2);
+  background-color: rgba(5, 5, 5, 0.2);
 }
 
 /* Display and hide animation */
@@ -227,13 +235,47 @@
 }
 
 @media screen and (max-width: 900px) {
+  .burgerButton {
+    position: fixed;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 5vh;
+    height: 5vh;
+    margin: 3%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .burgerButton .burgerBar {
+    display: block;
+    width: 90%;
+    height: 5%;
+    border-radius: 20%;
+    background-color: #151515;
+  }
   .header {
-    width: 60%;
+    width: 40%;
     height: 100vh;
-    -webkit-box-shadow: 10px 0px 10px #151515;
-            box-shadow: 10px 0px 10px #151515;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    -webkit-box-shadow: 2px 0px 10px #151515;
+            box-shadow: 2px 0px 10px #151515;
   }
   .header .mainContainer {
+    margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -248,6 +290,89 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .header .logoContainer {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 15%;
+  }
+  .header .navContainer {
+    width: 100%;
+  }
+  .header .navContainer .nav {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header .navContainer .nav .navLink {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  /* Themes differences */
+  .headerWhite {
+    background-color: rgba(252, 247, 248, 0.9);
+  }
+  .headerBlack {
+    background-color: rgba(5, 5, 5, 0.9);
+  }
+  @-webkit-keyframes slidein {
+    from {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes slidein {
+    from {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes slideout {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+  }
+  @keyframes slideout {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
   }
 }
 /*# sourceMappingURL=header.module.css.map */

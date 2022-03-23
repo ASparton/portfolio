@@ -4,3 +4,11 @@
     margin-left: 100%;
     cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+    .themeSwitcher {
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+    }
+}
