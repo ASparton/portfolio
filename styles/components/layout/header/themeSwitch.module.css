@@ -1,15 +1,172 @@
+/* Scales animation */
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Background black & white animations */
+@-webkit-keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+@keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@-webkit-keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+@keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+/* Basic rotate animations */
+@-webkit-keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+/* Buttons animation */
+/* Scale up & down animation */
+/* 360 animation */
 .themeSwitcher {
   width: 25px;
   height: 25px;
   margin-left: 100%;
   cursor: pointer;
+  -webkit-animation-name: reverseRight180;
+          animation-name: reverseRight180;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 900px) {
+.themeSwitcher:hover {
+  -webkit-animation-name: right180;
+          animation-name: right180;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1000px) {
   .themeSwitcher {
     width: 30px;
     height: 30px;
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .themeSwitcher {
+    width: 20px;
+    height: 20px;
   }
 }
 /*# sourceMappingURL=themeSwitch.module.css.map */

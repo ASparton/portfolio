@@ -86,16 +86,53 @@
   }
 }
 
+/* Basic rotate animations */
+@-webkit-keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
 /* Buttons animation */
 /* Scale up & down animation */
-.burgerButton {
-  display: none;
-}
-
-.burgerButton .burgerBar {
-  display: none;
-}
-
+/* 360 animation */
 .header {
   width: 100%;
   padding-top: 1.5%;
@@ -234,38 +271,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  .burgerButton {
-    position: fixed;
-    z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 5vh;
-    height: 5vh;
-    margin: 3%;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .burgerButton .burgerBar {
-    display: block;
-    width: 90%;
-    height: 5%;
-    border-radius: 20%;
-    background-color: #151515;
-  }
+@media screen and (max-width: 1000px) {
   .header {
     width: 40%;
     height: 100vh;
@@ -294,7 +300,7 @@
   .header .logoContainer {
     width: 30%;
     margin-left: 35%;
-    margin-top: 5%;
+    margin-top: 25%;
     margin-bottom: 15%;
   }
   .header .navContainer {
@@ -336,8 +342,8 @@
   }
   @-webkit-keyframes slidein {
     from {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      -webkit-transform: translateX(-105%);
+              transform: translateX(-105%);
     }
     to {
       -webkit-transform: translateX(0);
@@ -346,8 +352,8 @@
   }
   @keyframes slidein {
     from {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      -webkit-transform: translateX(-105%);
+              transform: translateX(-105%);
     }
     to {
       -webkit-transform: translateX(0);
@@ -360,8 +366,8 @@
               transform: translateX(0);
     }
     to {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      -webkit-transform: translateX(-105%);
+              transform: translateX(-105%);
     }
   }
   @keyframes slideout {
@@ -370,9 +376,26 @@
               transform: translateX(0);
     }
     to {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
+      -webkit-transform: translateX(-105%);
+              transform: translateX(-105%);
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .navContainer .nav .navLink {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .header .logoContainer {
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 10%;
+  }
+  .header .navContainer .nav .navLink {
+    font-size: 0.8em;
   }
 }
 /*# sourceMappingURL=header.module.css.map */

@@ -1,13 +1,6 @@
 @import '../../variables';
 @import '../../mixins';
 
-.burgerButton {
-    display: none;
-    .burgerBar {
-        display: none;
-    }
-}
-
 .header {
     width: 100%;
     padding-top: 1.5%;
@@ -81,32 +74,7 @@
     to {transform: translateY(-125px);}
 }
 
-@media screen and (max-width: 900px) {
-    .burgerButton {
-        position: fixed;
-        z-index: 2;
-        @include flexBox(column, nowrap, space-around, center);
-
-        width: 5vh;
-        height: 5vh;
-        margin: 3%;
-
-        border: none;
-        background-color: transparent;
-
-        cursor: pointer;
-
-        .burgerBar {
-            display: block;
-            
-            width: 90%;
-            height: 5%;
-
-            border-radius: 20%;
-            background-color: $darkness;
-        }
-    }
-
+@media screen and (max-width: 1000px) {
     .header {
         width: 40%;
         height: 100vh;
@@ -123,7 +91,7 @@
             width: 30%;
             
             margin-left: 35%;
-            margin-top: 5%;
+            margin-top: 25%;
             margin-bottom: 15%;
         }
     
@@ -155,12 +123,42 @@
     }
 
     @keyframes slidein {
-        from {transform: translateX(-100%);}
+        from {transform: translateX(-105%);}
         to {transform: translateX(0);}
     }
     @keyframes slideout {
         from {transform: translateX(0);}
-        to {transform: translateX(-100%);}
+        to {transform: translateX(-105%);}
     }
+}
 
+@media screen and (max-width: 767px) {
+    .header {
+        .navContainer {
+            .nav {
+                .navLink {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .header {
+
+        .logoContainer {
+            width: 40%;
+            margin-left: 30%;
+            margin-bottom: 10%;
+        }
+
+        .navContainer {
+            .nav {
+                .navLink {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
 }

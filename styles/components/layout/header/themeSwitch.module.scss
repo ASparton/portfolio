@@ -1,14 +1,25 @@
+@import '../../../mixins';
+
 .themeSwitcher {
     width: 25px;
     height: 25px;
     margin-left: 100%;
     cursor: pointer;
+
+    @include rotate180();
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .themeSwitcher {
         width: 30px;
         height: 30px;
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .themeSwitcher {
+        width: 20px;
+        height: 20px;
     }
 }

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react'
 
 // subcomponents
+import BurgerButton from '/components/layout/header/BurgerButton.js';
 import Logo from '/components/layout/header/Logo.js';
 import NavLink from '/components/layout/header/NavLink.js';
 import ThemeSwitcher from '/components/layout/header/ThemeSwitcher.js';
@@ -18,10 +19,16 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
   const displayHeaderClass = `${headerStyles.header} ${headerStyles.displayHeader}`;
   const defaultHeaderClass = `${headerStyles.header}`;
 
-  const [headerClass, setHeaderClass] = useState(defaultHeaderClass); // To display or hide when srolling
+  const [headerClass, setHeaderClass] = useState(defaultHeaderClass); // To display or hide when scrolling in desktop mode
 
   let lastScrollY = 9999999;
+  /**
+   * Hide the header when scrolling down, and display it when scrolling up.
+   */
   function updateHeaderPosition() {
+    if (window.innerWidth <= 1000)
+      return;
+
     if (scrollY > lastScrollY && headerClass === defaultHeaderClass) {
       setHeaderClass(hideHeaderClass);
     } else if (scrollY < lastScrollY) {
@@ -30,6 +37,9 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
     lastScrollY = scrollY;
   }
 
+  /**
+   * Hide or display the burger menu on click.
+   */
   function updateBurgerMenuPosition() {
     if (headerClass === displayHeaderClass) {
       setHeaderClass(hideHeaderClass);
@@ -40,17 +50,17 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
   
   // Set the event listener once when the component is rendered
   useEffect(() => {
-    if (window.innerWidth > 900)
-      window.addEventListener('scroll', updateHeaderPosition);
+    window.addEventListener('scroll', updateHeaderPosition);
+
+    if (window.innerWidth <= 1000) {
+      setHeaderClass(hideHeaderClass);
+    } 
   }, [])
 
   return (
     <>
-      <button onClick={updateBurgerMenuPosition} className={headerStyles.burgerButton}>
-        <div className={headerStyles.burgerBar}></div>
-        <div className={headerStyles.burgerBar}></div>
-        <div className={headerStyles.burgerBar}></div>
-      </button>
+      <BurgerButton updateBurgerMenuPosition={updateBurgerMenuPosition} isWhiteTheme={isWhiteTheme} />
+      
       <header className={`${headerClass} ${isWhiteTheme ? headerStyles.headerWhite : headerStyles.headerBlack}`}>
         <div className={headerStyles.mainContainer}>
 
@@ -73,7 +83,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
         </div>
       </header>
     </>
-    )
+  )
 }
 
 Header.propTypes = {

@@ -1,0 +1,433 @@
+/* Scales animation */
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Background black & white animations */
+@-webkit-keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+@keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@-webkit-keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+@keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+/* Basic rotate animations */
+@-webkit-keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+/* Buttons animation */
+/* Scale up & down animation */
+/* 360 animation */
+.burgerButton {
+  display: none;
+}
+
+.burgerButton .burgerBar, .burgerButton .burgerBarWhite, .burgerButton .burgerBarBlack {
+  display: none;
+}
+
+.burgerButton .burgerBarWhite {
+  background-color: #fcf7f8;
+}
+
+.burgerButton .burgerBarBlack {
+  background-color: #151515;
+}
+
+@media screen and (max-width: 1000px) {
+  .burgerButton {
+    position: fixed;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 3%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .burgerButton .burgerBar, .burgerButton .burgerBarWhite, .burgerButton .burgerBarBlack {
+    display: block;
+    width: 90%;
+    height: 5%;
+    border-radius: 20%;
+  }
+  /* Burger click animations */
+  .crossDown {
+    -webkit-animation-name: crossDown;
+            animation-name: crossDown;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .crossUp {
+    -webkit-animation-name: crossUp;
+            animation-name: crossUp;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .uncrossDown {
+    -webkit-animation-name: uncrossDown;
+            animation-name: uncrossDown;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .uncrossUp {
+    -webkit-animation-name: uncrossUp;
+            animation-name: uncrossUp;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes crossDown {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(16.66667px) rotate(45deg);
+              transform: translateY(16.66667px) rotate(45deg);
+    }
+  }
+  @keyframes crossDown {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(16.66667px) rotate(45deg);
+              transform: translateY(16.66667px) rotate(45deg);
+    }
+  }
+  @-webkit-keyframes uncrossDown {
+    from {
+      -webkit-transform: translateY(16.66667px) rotate(45deg);
+              transform: translateY(16.66667px) rotate(45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes uncrossDown {
+    from {
+      -webkit-transform: translateY(16.66667px) rotate(45deg);
+              transform: translateY(16.66667px) rotate(45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @-webkit-keyframes crossUp {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(-16.66667px) rotate(-45deg);
+              transform: translateY(-16.66667px) rotate(-45deg);
+    }
+  }
+  @keyframes crossUp {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(-16.66667px) rotate(-45deg);
+              transform: translateY(-16.66667px) rotate(-45deg);
+    }
+  }
+  @-webkit-keyframes uncrossUp {
+    from {
+      -webkit-transform: translateY(-16.66667px) rotate(-45deg);
+              transform: translateY(-16.66667px) rotate(-45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes uncrossUp {
+    from {
+      -webkit-transform: translateY(-16.66667px) rotate(-45deg);
+              transform: translateY(-16.66667px) rotate(-45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @-webkit-keyframes fadeOut {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .burgerButton {
+    width: 30px;
+    height: 30px;
+  }
+  /* Burger click animations */
+  @-webkit-keyframes crossDown {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(10px) rotate(45deg);
+              transform: translateY(10px) rotate(45deg);
+    }
+  }
+  @keyframes crossDown {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(10px) rotate(45deg);
+              transform: translateY(10px) rotate(45deg);
+    }
+  }
+  @-webkit-keyframes uncrossDown {
+    from {
+      -webkit-transform: translateY(10px) rotate(45deg);
+              transform: translateY(10px) rotate(45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes uncrossDown {
+    from {
+      -webkit-transform: translateY(10px) rotate(45deg);
+              transform: translateY(10px) rotate(45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @-webkit-keyframes crossUp {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(-10px) rotate(-45deg);
+              transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+  @keyframes crossUp {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(-10px) rotate(-45deg);
+              transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+  @-webkit-keyframes uncrossUp {
+    from {
+      -webkit-transform: translateY(-10px) rotate(-45deg);
+              transform: translateY(-10px) rotate(-45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes uncrossUp {
+    from {
+      -webkit-transform: translateY(-10px) rotate(-45deg);
+              transform: translateY(-10px) rotate(-45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+}
+/*# sourceMappingURL=burgerButton.module.css.map */

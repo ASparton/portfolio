@@ -46,7 +46,7 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
    * Determine the number of projects to display depending on the window's width
    */
   function onWindowResize() {
-    if (window.innerWidth < 800)
+    if (window.innerWidth < 700)
       setProjectIndexEnd(1);
     else if (window.innerWidth < 1200)
       setProjectIndexEnd(2);

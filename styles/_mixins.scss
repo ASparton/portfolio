@@ -51,3 +51,18 @@
         animation-fill-mode: forwards;
     }
 }
+
+
+
+/* 360 animation */
+@mixin rotate180() {
+    animation-name: reverseRight180;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        animation-name: right180;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}

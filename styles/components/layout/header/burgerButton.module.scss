@@ -1,0 +1,137 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.burgerButton {
+    display: none;
+    .burgerBar {
+        display: none;
+    }
+    .burgerBarWhite {
+        @extend .burgerBar;
+        background-color: $snow;
+    }
+    .burgerBarBlack {
+        @extend .burgerBar;
+        background-color: $darkness;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    $btnSize: 50px;
+
+    .burgerButton {
+        position: fixed;
+        z-index: 2;
+        @include flexBox(column, nowrap, space-around, center);
+    
+        width: $btnSize;
+        height: $btnSize;
+        margin: 3%;
+    
+        border: none;
+        background-color: transparent;
+    
+        cursor: pointer;
+    
+        .burgerBar {
+            display: block;
+            
+            width: 90%;
+            height: 5%;
+    
+            border-radius: 20%;
+        }
+    }
+    
+    
+    /* Burger click animations */
+    
+    .crossDown {
+        animation-name: crossDown;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .crossUp {
+        animation-name: crossUp;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .fadeOut {
+        animation-name: fadeOut;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .uncrossDown {
+        animation-name: uncrossDown;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .uncrossUp {
+        animation-name: uncrossUp;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .fadeIn {
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes crossDown {
+        from {transform: translateY(0) rotate(0deg);}
+        to {transform: translateY($btnSize / 3) rotate(45deg) ;}
+    }
+    @keyframes uncrossDown {
+        from {transform: translateY($btnSize / 3) rotate(45deg);}
+        to {transform: translateY(0) rotate(0);}
+    }
+
+    @keyframes crossUp {
+        from {transform: translateY(0) rotate(0deg);}
+        to {transform: translateY(-$btnSize / 3) rotate(-45deg);}
+    }
+    @keyframes uncrossUp {
+        from {transform: translateY(-$btnSize / 3) rotate(-45deg);}
+        to {transform: translateY(0) rotate(0);}
+    }
+
+    @keyframes fadeOut {
+        from {opacity: 100%;}
+        to {opacity: 0;}
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 100%;}
+    }
+}
+
+@media screen and (max-width: 600px) {
+    $btnSize: 30px;
+
+    .burgerButton {
+        width: $btnSize;
+        height: $btnSize;
+    }
+    
+    
+    /* Burger click animations */
+    
+    @keyframes crossDown {
+        from {transform: translateY(0) rotate(0deg);}
+        to {transform: translateY($btnSize / 3) rotate(45deg) ;}
+    }
+    @keyframes uncrossDown {
+        from {transform: translateY($btnSize / 3) rotate(45deg);}
+        to {transform: translateY(0) rotate(0);}
+    }
+
+    @keyframes crossUp {
+        from {transform: translateY(0) rotate(0deg);}
+        to {transform: translateY(-$btnSize / 3) rotate(-45deg);}
+    }
+    @keyframes uncrossUp {
+        from {transform: translateY(-$btnSize / 3) rotate(-45deg);}
+        to {transform: translateY(0) rotate(0);}
+    }
+}
