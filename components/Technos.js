@@ -3,20 +3,66 @@ import PropTypes from 'prop-types';
 // subcomponents
 import TechnoIcon from '/components/technos/TechnoIcon.js';
 
-// images
-import jsLogo from '/public/images/icons/js.png';
-import reactLogo from '/public/images/icons/react.png';
-import nextLogo from '/public/images/icons/nextjs.png';
-import csharpLogo from '/public/images/icons/csharp.png';
-import unityLogo from '/public/images/icons/unity.png';
-import godotLogo from '/public/images/icons/godot.svg';
-import pythonLogo from '/public/images/icons/python.png';
-import postgresqlLogo from '/public/images/icons/postgresql.png';
-import dockerLogo from '/public/images/icons/docker.png';
-
 // styles
 import technosStyles from '/styles/components/technos.module.css';
 import globalStyles from '/styles/global.module.css';
+
+const dummyTechnos = [
+  {
+    id: 0,
+    name: "Javascript",
+    link: "https://www.javascript.com/",
+    iconLink: "https://img.icons8.com/color/240/000000/javascript--v1.png"
+  },
+  {
+    id: 1,
+    name: "React.js",
+    link: "https://reactjs.org/",
+    iconLink: "https://img.icons8.com/office/240/000000/react.png"
+  },
+  {
+    id: 2,
+    name: "Next.js",
+    link: "https://nextjs.org/",
+    iconLink: "https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png"
+  },
+  {
+    id: 3,
+    name: "C#",
+    link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+    iconLink: "https://img.icons8.com/color/240/000000/c-sharp-logo.png"
+  },
+  {
+    id: 4,
+    name: "Unity",
+    link: "https://unity.com/",
+    iconLink: "https://img.icons8.com/color/240/000000/unity.png"
+  },
+  {
+    id: 5,
+    name: "Godot",
+    link: "https://godotengine.org/",
+    iconLink: "https://user-images.githubusercontent.com/36481442/100391965-27e38c00-3046-11eb-942e-bdc85bb43cfb.png"
+  },
+  {
+    id: 6,
+    name: "Python",
+    link: "https://www.python.org/",
+    iconLink: "https://img.icons8.com/dusk/240/000000/python.png"
+  },
+  {
+    id: 7,
+    name: "Postgresql",
+    link: "https://www.postgresql.org/",
+    iconLink: "https://img.icons8.com/color/240/000000/postgreesql.png"
+  },
+  {
+    id: 8,
+    name: "Docker",
+    link: "https://www.docker.com/",
+    iconLink: "https://img.icons8.com/fluency/240/000000/docker.png"
+  }
+]
 
 function Technos({ isWhiteTheme }) {
   return (
@@ -28,25 +74,11 @@ function Technos({ isWhiteTheme }) {
 
       {/* Logos list */}
       <article className={technosStyles.iconsContainer}>
-
-        <div className={technosStyles.iconsRow}>
-          <TechnoIcon image={jsLogo} name="Javascript" websiteLink="https://www.javascript.com/" />
-          <TechnoIcon image={reactLogo} name="React.js" websiteLink="https://reactjs.org/" />
-          <TechnoIcon image={nextLogo} name="Next.js" websiteLink="https://nextjs.org/" />
-        </div>
-
-        <div className={technosStyles.iconsRow}>
-          <TechnoIcon image={csharpLogo} name="C#" websiteLink="https://docs.microsoft.com/en-us/dotnet/csharp/" />
-          <TechnoIcon image={unityLogo} name="Unity" websiteLink="https://unity.com/" />
-          <TechnoIcon image={godotLogo} name="Godot" websiteLink="https://godotengine.org/" />
-        </div>
-
-        <div className={technosStyles.iconsRow}>
-          <TechnoIcon image={pythonLogo} name="Python" websiteLink="https://www.python.org/" />
-          <TechnoIcon image={postgresqlLogo} name="Postgresql" websiteLink="https://www.postgresql.org/" />
-          <TechnoIcon image={dockerLogo} name="Docker" websiteLink="https://www.docker.com/" />
-        </div>
-
+        {
+          /*dummyTechnos.map((techno, index) => {
+            <TechnoIcon key={techno.id} techno={techno} />
+          })*/
+        }
       </article>
       
     </section>
