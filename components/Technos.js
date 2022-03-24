@@ -48,7 +48,7 @@ const dummyTechnos = [
     id: 6,
     name: "Python",
     link: "https://www.python.org/",
-    iconLink: "https://img.icons8.com/dusk/240/000000/python.png"
+    iconLink: "https://img.icons8.com/fluency/240/000000/python.png"
   },
   {
     id: 7,
@@ -74,11 +74,15 @@ function Technos({ isWhiteTheme }) {
 
       {/* Logos list */}
       <article className={technosStyles.iconsContainer}>
-        {
-          /*dummyTechnos.map((techno, index) => {
-            <TechnoIcon key={techno.id} techno={techno} />
-          })*/
-        }
+        <div className={technosStyles.iconsRow}>
+          {dummyTechnos.slice(0, 3).map((techno) => <TechnoIcon key={techno.id} techno={techno}/>)}
+        </div>
+        <div className={technosStyles.iconsRow}>
+          {dummyTechnos.slice(3, 6).map((techno) => <TechnoIcon key={techno.id} techno={techno}/>)}
+        </div>
+        <div className={technosStyles.iconsRow}>
+          {dummyTechnos.slice(6, 9).map((techno) => <TechnoIcon key={techno.id} techno={techno}/>)}
+        </div>
       </article>
       
     </section>

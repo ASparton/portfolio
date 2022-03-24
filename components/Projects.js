@@ -259,6 +259,12 @@ function Projects({ isWhiteTheme }) {
 
             {/* Displayed projects grid */}
             <ProjectsGrid key={projectsFiltered.length} projectCards={projectsFiltered} isWhiteTheme={isWhiteTheme} />
+
+            {/* All projects button */}
+            <a href="/" alt="All projects page" title="All projects page" 
+            className={isWhiteTheme ? projectsStyles.allProjectsBtnBlack : projectsStyles.allProjectsBtnWhite}>
+                See all projects
+            </a>
         </div>
     </section>
   )

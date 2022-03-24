@@ -20,8 +20,11 @@
     
         .icon {
             width: 15%;
-
             @include scaleAnim();
+
+            .iconImage {
+                width: 100%;
+            }
         }
     }
 }

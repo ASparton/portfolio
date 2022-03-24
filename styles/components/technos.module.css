@@ -251,6 +251,10 @@
           animation-fill-mode: forwards;
 }
 
+.technosSection .iconsContainer .icon .iconImage {
+  width: 100%;
+}
+
 @media screen and (max-width: 1600px) {
   .technosSection .iconsContainer {
     width: 75%;

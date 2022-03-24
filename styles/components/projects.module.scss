@@ -1,9 +1,32 @@
+@import '../mixins';
+
 .mainContainer {
     width: 70%;
     margin-left: 15%;
 
     .title {
         text-align: center;
+    }
+
+    .allProjectsBtn {
+        width: 20%;
+        margin-left: 43%;
+        padding: 1%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        
+        border: 1px solid;
+        border-radius: 6px;
+    }
+    .allProjectsBtnWhite {
+        @extend .allProjectsBtn;
+        @include whiteButtonAnim();
+        border-color: $snow;
+    }
+    .allProjectsBtnBlack {
+        @extend .allProjectsBtn;
+        @include blackButtonAnim();
+        border-color: $darkness;
     }
 }
 
@@ -15,6 +38,14 @@
         .title {
             margin-bottom: 5%;
         }
+
+        .allProjectsBtn {
+            width: 20%;
+            margin-left: 38%;
+            padding: 1.5%;
+            padding-left: 3.5%;
+            padding-right: 3.5%;
+        }
     }
 }
 
@@ -25,6 +56,13 @@
 
         .title {
             margin-bottom: 5%;
+        }
+
+        .allProjectsBtn {
+            margin-left: 35%;
+            padding: 2%;
+            padding-left: 3.5%;
+            padding-right: 3.5%;
         }
     }
 }

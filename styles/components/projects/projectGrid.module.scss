@@ -3,6 +3,7 @@
 
 .gridContainer {
     width: 100%;
+    margin-bottom: 2%;
     @include flexBox(row, nowrap, space-between, center);
 
     .grid {
@@ -71,6 +72,7 @@
 
 @media screen and (max-width: 850px){
     .gridContainer {
+        margin-bottom: 6%;
         .arrow {
             width: 6%;
         }
@@ -79,6 +81,7 @@
 
 @media screen and (max-width: 500px){
     .gridContainer {
+        margin-bottom: 10%;
         .arrow {
             width: 8%;
         }

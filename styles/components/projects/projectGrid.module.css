@@ -135,6 +135,7 @@
 /* 360 animation */
 .gridContainer {
   width: 100%;
+  margin-bottom: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,12 +309,18 @@
 }
 
 @media screen and (max-width: 850px) {
+  .gridContainer {
+    margin-bottom: 6%;
+  }
   .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
     width: 6%;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .gridContainer {
+    margin-bottom: 10%;
+  }
   .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
     width: 8%;
   }
