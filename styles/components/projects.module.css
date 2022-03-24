@@ -16,4 +16,14 @@
     margin-bottom: 5%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .mainContainer {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mainContainer .title {
+    margin-bottom: 5%;
+  }
+}
 /*# sourceMappingURL=projects.module.css.map */

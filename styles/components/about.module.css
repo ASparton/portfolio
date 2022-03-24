@@ -207,4 +207,44 @@
     width: 35%;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .aboutSection {
+    padding-top: 5vh;
+  }
+  .aboutSection .mainContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutSection .mainContainer .textContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+  .aboutSection .mainContainer .coffeeImage {
+    width: 70%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .aboutSection {
+    padding-top: 2vh;
+  }
+  .aboutSection .mainContainer .textContainer .helloWorld {
+    font-size: 2.75em;
+  }
+}
 /*# sourceMappingURL=about.module.css.map */

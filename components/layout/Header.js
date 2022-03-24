@@ -29,11 +29,11 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
     if (window.innerWidth <= 1000)
       return;
 
-    if (scrollY > lastScrollY && headerClass === defaultHeaderClass) {
+    if (scrollY > lastScrollY && headerClass === defaultHeaderClass)
       setHeaderClass(hideHeaderClass);
-    } else if (scrollY < lastScrollY) {
+    else if (scrollY < lastScrollY)
       setHeaderClass(displayHeaderClass);
-    }
+
     lastScrollY = scrollY;
   }
 
@@ -41,25 +41,25 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
    * Hide or display the burger menu on click.
    */
   function updateBurgerMenuPosition() {
-    if (headerClass === displayHeaderClass) {
+    if (headerClass === displayHeaderClass)
       setHeaderClass(hideHeaderClass);
-    } else {
+    else
       setHeaderClass(displayHeaderClass);
-    }
   }
   
   // Set the event listener once when the component is rendered
   useEffect(() => {
     window.addEventListener('scroll', updateHeaderPosition);
 
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1000)
       setHeaderClass(hideHeaderClass);
-    } 
   }, [])
 
   return (
     <>
-      <BurgerButton updateBurgerMenuPosition={updateBurgerMenuPosition} isWhiteTheme={isWhiteTheme} />
+      <BurgerButton updateBurgerMenuPosition={updateBurgerMenuPosition}
+                    isClicked={headerClass === displayHeaderClass ? true : false}
+                    isWhiteTheme={isWhiteTheme} />
       
       <header className={`${headerClass} ${isWhiteTheme ? headerStyles.headerWhite : headerStyles.headerBlack}`}>
         <div className={headerStyles.mainContainer}>

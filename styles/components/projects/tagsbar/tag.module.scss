@@ -12,6 +12,32 @@
     font-size: 0.85em;
 }
 
+
+
+.tagIcon {
+    width: 18px;
+    margin-top: 5px;
+
+    animation-name: display Icon;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 600px) {
+    .tag {
+        padding: 3px;
+        padding-left: 7px;
+        padding-right: 7px;
+        font-size: 0.75em;
+    }
+
+    .tagIcon {
+        display: none;
+    }
+}
+
+
+
 .tagWhite {
     @extend .tag;
     border-color: $snow;
@@ -70,15 +96,6 @@
 @keyframes backgroundFadeOutBlack {
     from {background-color: $tagHoveredDarkness;}
     to {background-color: none;}
-}
-
-.tagIcon {
-    width: 18px;
-    margin-top: 5px;
-
-    animation-name: display Icon;
-    animation-duration: 0.25s;
-    animation-fill-mode: forwards;
 }
 
 .tagIconHided {

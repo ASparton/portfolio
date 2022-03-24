@@ -52,3 +52,18 @@
         margin-left: 10%;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form {
+        .formInput {
+            width: 80%;
+        }
+    }
+}

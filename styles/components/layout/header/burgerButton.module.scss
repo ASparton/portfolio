@@ -135,3 +135,33 @@
         to {transform: translateY(0) rotate(0);}
     }
 }
+
+@media screen and (max-width: 500px) {
+    $btnSize: 20px;
+
+    .burgerButton {
+        width: $btnSize;
+        height: $btnSize;
+    }
+    
+    
+    /* Burger click animations */
+    
+    @keyframes crossDown {
+        from {transform: translateY(0) rotate(0deg);}
+        to {transform: translateY($btnSize / 3) rotate(45deg) ;}
+    }
+    @keyframes uncrossDown {
+        from {transform: translateY($btnSize / 3) rotate(45deg);}
+        to {transform: translateY(0) rotate(0);}
+    }
+
+    @keyframes crossUp {
+        from {transform: translateY(0) rotate(0deg);}
+        to {transform: translateY(-$btnSize / 3) rotate(-45deg);}
+    }
+    @keyframes uncrossUp {
+        from {transform: translateY(-$btnSize / 3) rotate(-45deg);}
+        to {transform: translateY(0) rotate(0);}
+    }
+}

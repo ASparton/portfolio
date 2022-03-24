@@ -312,4 +312,10 @@
     width: 6%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+    width: 8%;
+  }
+}
 /*# sourceMappingURL=projectGrid.module.css.map */

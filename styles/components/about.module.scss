@@ -52,3 +52,35 @@
         }
     }
 }
+
+@media screen and (max-width: 720px) {
+    .aboutSection {
+        padding-top: 5vh;
+        .mainContainer {
+            @include flexBox(column, nowrap, center, center);
+
+            .textContainer {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .coffeeImage {
+                width: 70%;
+                margin-top: 10%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .aboutSection {
+        padding-top: 2vh;
+        .mainContainer {
+            .textContainer {
+                .helloWorld {
+                    font-size: 2.75em;
+                }
+            }
+        }
+    }
+}

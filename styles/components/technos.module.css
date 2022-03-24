@@ -257,4 +257,11 @@
     margin-left: 12.5%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .technosSection .iconsContainer {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
 /*# sourceMappingURL=technos.module.css.map */

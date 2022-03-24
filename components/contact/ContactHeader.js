@@ -6,7 +6,7 @@ import globalStyles from '/styles/global.module.css';
 
 function ContactHeader({ isWhiteTheme }) {
   return (
-    <div>
+    <div className={contactHeaderStyles.mainContainer}>
       {/* Title */}
       <h1 className={`${contactHeaderStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>Contact</h1>
       <h3 className={isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}>Want to propose or tell me something ?</h3>

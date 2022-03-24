@@ -40,3 +40,62 @@ section {
         margin-bottom: 30vh;
     }
 }
+
+@media screen and (max-width: 720px) {
+    h1 {
+        font-size: 3.75em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    section {
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    section {
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2.75em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    section {
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.05em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}

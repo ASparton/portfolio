@@ -1,3 +1,4 @@
+@import '../variables';
 @import '../mixins';
 @import '../animations';
 
@@ -19,6 +20,7 @@
     
         .icon {
             width: 15%;
+
             @include scaleAnim();
         }
     }
@@ -29,6 +31,15 @@
         .iconsContainer {
             width: 75%;
             margin-left: 12.5%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .technosSection {
+        .iconsContainer {
+            width: 90%;
+            margin-left: 5%;
         }
     }
 }

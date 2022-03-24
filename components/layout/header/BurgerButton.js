@@ -6,12 +6,9 @@ import { useState } from 'react';
 // styles
 import burgerBtnStyles from '/styles/components/layout/header/burgerButton.module.css';
 
-function BurgerButton({ updateBurgerMenuPosition, isWhiteTheme }) {
-
-  const [isClicked, setIsClicked] = useState(false);
-
+function BurgerButton({ updateBurgerMenuPosition, isClicked, isWhiteTheme }) {
   return (
-    <button onClick={() => {updateBurgerMenuPosition(); setIsClicked((prev) => !prev)}} className={burgerBtnStyles.burgerButton}>
+    <button onClick={updateBurgerMenuPosition} className={burgerBtnStyles.burgerButton}>
       <div className={`${isWhiteTheme ? burgerBtnStyles.burgerBarBlack : burgerBtnStyles.burgerBarWhite}
                        ${isClicked ? burgerBtnStyles.crossDown : burgerBtnStyles.uncrossDown}`}></div>
       <div className={`${isWhiteTheme ? burgerBtnStyles.burgerBarBlack : burgerBtnStyles.burgerBarWhite}
@@ -24,6 +21,7 @@ function BurgerButton({ updateBurgerMenuPosition, isWhiteTheme }) {
 
 BurgerButton.propTypes = {
     updateBurgerMenuPosition: PropTypes.func.isRequired,
+    isClicked: PropTypes.bool.isRequired,
     isWhiteTheme: PropTypes.bool.isRequired
 };
 

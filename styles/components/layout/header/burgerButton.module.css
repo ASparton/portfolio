@@ -430,4 +430,92 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .burgerButton {
+    width: 20px;
+    height: 20px;
+  }
+  /* Burger click animations */
+  @-webkit-keyframes crossDown {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(6.66667px) rotate(45deg);
+              transform: translateY(6.66667px) rotate(45deg);
+    }
+  }
+  @keyframes crossDown {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(6.66667px) rotate(45deg);
+              transform: translateY(6.66667px) rotate(45deg);
+    }
+  }
+  @-webkit-keyframes uncrossDown {
+    from {
+      -webkit-transform: translateY(6.66667px) rotate(45deg);
+              transform: translateY(6.66667px) rotate(45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes uncrossDown {
+    from {
+      -webkit-transform: translateY(6.66667px) rotate(45deg);
+              transform: translateY(6.66667px) rotate(45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @-webkit-keyframes crossUp {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(-6.66667px) rotate(-45deg);
+              transform: translateY(-6.66667px) rotate(-45deg);
+    }
+  }
+  @keyframes crossUp {
+    from {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateY(-6.66667px) rotate(-45deg);
+              transform: translateY(-6.66667px) rotate(-45deg);
+    }
+  }
+  @-webkit-keyframes uncrossUp {
+    from {
+      -webkit-transform: translateY(-6.66667px) rotate(-45deg);
+              transform: translateY(-6.66667px) rotate(-45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes uncrossUp {
+    from {
+      -webkit-transform: translateY(-6.66667px) rotate(-45deg);
+              transform: translateY(-6.66667px) rotate(-45deg);
+    }
+    to {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+  }
+}
 /*# sourceMappingURL=burgerButton.module.css.map */

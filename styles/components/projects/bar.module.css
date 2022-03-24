@@ -186,4 +186,25 @@
     margin-bottom: 2.5%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mainContainer .tagsContainer .tagContainer {
+    display: block;
+    height: 20px;
+    margin-bottom: 2.5%;
+  }
+  .title {
+    margin-bottom: 1.5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainContainer {
+    padding-bottom: 2.5%;
+  }
+}
 /*# sourceMappingURL=bar.module.css.map */

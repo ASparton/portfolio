@@ -12,7 +12,8 @@ function TagsBar({ title, tags, updateTagFunction, isWhiteTheme }) {
     <div className={barStyles.mainContainer}>
 
       {/* Tags bar title */}
-      <h4 className={isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}>{title}</h4>
+      <h4 className={`${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}
+                      ${barStyles.title}`}>{title}</h4>
 
       {/* Tags list */}
       <ul className={barStyles.tagsContainer}>

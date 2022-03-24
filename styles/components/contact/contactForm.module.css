@@ -207,4 +207,17 @@
     margin-left: 10%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form .formInput, .form .messageInputContainer .messageInput, .form .submitButton, .form .submitButtonWhite, .form .submitButtonBlack {
+    width: 80%;
+  }
+}
 /*# sourceMappingURL=contactForm.module.css.map */

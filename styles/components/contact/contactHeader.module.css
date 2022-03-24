@@ -137,9 +137,10 @@
   margin-bottom: 2%;
 }
 
-@media screen and (max-width: 1600px) {
-  .title {
-    font-size: 4em;
+@media screen and (max-width: 500px) {
+  .mainContainer {
+    width: 90%;
+    margin-left: 5%;
   }
 }
 /*# sourceMappingURL=contactHeader.module.css.map */

@@ -248,7 +248,7 @@ function Projects({ isWhiteTheme }) {
 
         {/* Section title */}
         <h2 className={`${projectsStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
-            Some projects I have worked on
+            Some projects <br/> I have worked on
         </h2>
 
         {/* Projects section */}
