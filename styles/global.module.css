@@ -16,6 +16,7 @@
 
 .link, .linkWhite, .linkBlack {
   color: #999999;
+  cursor: pointer;
 }
 
 .linkWhite:hover {

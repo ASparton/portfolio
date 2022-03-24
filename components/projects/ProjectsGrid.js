@@ -18,7 +18,7 @@ import leftArrowWhite from '/public/images/icons/leftArrowWhite.png';
 // styles
 import pgStyles from '/styles/components/projects/projectGrid.module.css';
 
-function ProjectsGrid({projectCards, isWhiteTheme }) {
+function ProjectsGrid({projectCards, isWhiteTheme, inSection }) {
 
   // To shift by 1 the projects list to the right or to the left
   const [projectIndexStart, setProjectIndexStart] = useState(0);
@@ -55,29 +55,40 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
   }
 
   useEffect(() => {
-    window.addEventListener('resize', onWindowResize);
-    onWindowResize();
+    if (inSection) {
+      window.addEventListener('resize', onWindowResize);
+      onWindowResize();
+    }
   }, []);
 
   return (
     <div className={pgStyles.gridContainer}>
 
       {/* Previous project button */}
-      <button className={pgStyles.arrowLeft} title="Previous project" onClick={onPreviousProjectClick}>
-        <Image src={isWhiteTheme ? leftArrowBlack : leftArrowWhite} alt="Left arrow" />
-      </button>
+      { inSection && 
+        <button className={pgStyles.arrowLeft} title="Previous project" onClick={onPreviousProjectClick}>
+          <Image src={isWhiteTheme ? leftArrowBlack : leftArrowWhite} alt="Left arrow" />
+        </button>
+      }
 
       {/* Project cards list */}
-      <div className={pgStyles.grid}>
-        {projectCards.slice(projectIndexStart, projectIndexStart + projectIndexEnd).map((projectCard) => (
-            <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} />
-          ))}
+      <div className={inSection ? pgStyles.gridSection : pgStyles.grid}>
+        {inSection ? 
+          projectCards.slice(projectIndexStart, projectIndexStart + projectIndexEnd).map((projectCard) => (
+            <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} inSection={true} />
+          )) :
+          projectCards.map((projectCard) => (
+            <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} inSection={false} />
+          ))
+        }
       </div>
 
       {/* Next project button */}
-      <button className={pgStyles.arrowRight} title="Next project" onClick={onNextProjectClick}>
-        <Image src={isWhiteTheme ? rightArrowBlack : rightArrowWhite} alt="Right arrow" />
-      </button>
+      { inSection &&
+        <button className={pgStyles.arrowRight} title="Next project" onClick={onNextProjectClick}>
+          <Image src={isWhiteTheme ? rightArrowBlack : rightArrowWhite} alt="Right arrow" />
+        </button>
+      }
 
     </div>
   )
@@ -85,7 +96,8 @@ function ProjectsGrid({projectCards, isWhiteTheme }) {
 
 ProjectsGrid.propTypes = {
     projectCards: PropTypes.arrayOf(PropTypes.object).isRequired,
-    isWhiteTheme: PropTypes.bool.isRequired
+    isWhiteTheme: PropTypes.bool.isRequired,
+    inSection: PropTypes.bool.isRequired
 };
 
 export default ProjectsGrid;

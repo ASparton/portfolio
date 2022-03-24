@@ -52,6 +52,7 @@
 
     .cover {
         width: 100%;
+        cursor: pointer;
 
         .coverImage {
             width: 100%;
@@ -69,12 +70,17 @@
     }
 
     .seeMore {
+        width: 40%;
         padding: 2%;
         padding-left: 5%;
         padding-right: 5%;
+        
+        text-align: center;
 
         border: 1px solid;
         border-radius: 5px;
+
+        cursor: pointer;
     }
     .seeMoreBlack {
         @extend .seeMore;
@@ -96,9 +102,24 @@
     }
 }
 
+.cardNoSection {
+    @extend .card;
+    width: 15%;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1600px) {
+    .cardNoSection {
+        width: 30%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .card {
         width: 45%;
+    }
+    .cardNoSection {
+        width: 30%;
     }
 }
 
@@ -107,12 +128,25 @@
         width: 50%;
         padding: 5%;
     }
+    .cardNoSection {
+        width: 30%;
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .cardNoSection {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .card {
         width: 70%;
         padding: 8%;
+    }
+    .cardNoSection {
+        width: 60%;
     }
 }
 

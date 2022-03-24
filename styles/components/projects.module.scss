@@ -1,6 +1,6 @@
 @import '../mixins';
 
-.mainContainer {
+.mainContainerSection {
     width: 70%;
     margin-left: 15%;
 
@@ -9,14 +9,18 @@
     }
 
     .allProjectsBtn {
-        width: 20%;
-        margin-left: 43%;
+        width: 15%;
+        margin-left: 42.5%;
         padding: 1%;
         padding-left: 2.5%;
         padding-right: 2.5%;
         
+        text-align: center;
+
         border: 1px solid;
         border-radius: 6px;
+
+        cursor: pointer;
     }
     .allProjectsBtnWhite {
         @extend .allProjectsBtn;
@@ -30,8 +34,14 @@
     }
 }
 
+.mainContainer {
+    @extend .mainContainerSection;
+    width: 100%;
+    margin: 0;
+}
+
 @media screen and (max-width: 1600px) {
-    .mainContainer {
+    .mainContainerSection {
         width: 80%;
         margin-left: 10%;
 
@@ -40,9 +50,21 @@
         }
 
         .allProjectsBtn {
-            width: 20%;
-            margin-left: 38%;
+            width: 25%;
+            margin-left: 37.5%;
             padding: 1.5%;
+            padding-left: 2.75%;
+            padding-right: 2.75%;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .mainContainerSection {
+        .allProjectsBtn {
+            width: 30%;
+            margin-left: 35%;
+            padding: 2%;
             padding-left: 3.5%;
             padding-right: 3.5%;
         }
@@ -50,19 +72,36 @@
 }
 
 @media screen and (max-width: 600px) {
-    .mainContainer {
+    .mainContainerSection {
         width: 90%;
         margin-left: 5%;
 
         .title {
             margin-bottom: 5%;
         }
+    }
+}
 
+@media screen and (max-width: 570px) {
+    .mainContainerSection {
         .allProjectsBtn {
-            margin-left: 35%;
-            padding: 2%;
-            padding-left: 3.5%;
-            padding-right: 3.5%;
+            width: 40%;
+            margin-left: 30%;
+            padding: 2.3%;
+            padding-left: 4%;
+            padding-right: 4%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mainContainerSection {
+        .allProjectsBtn {
+            width: 45%;
+            margin-left: 27.5%;
+            padding: 2.8%;
+            padding-left: 4.5%;
+            padding-right: 4.5%;
         }
     }
 }

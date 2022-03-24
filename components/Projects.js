@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 // react dependencies
 import { useState } from 'react';
 
+// next dependencies
+import Link from 'next/link';
+
 // subcomponents
 import TagsBar from '/components/projects/TagsBar.js';
 import ProjectsGrid from '/components/projects/ProjectsGrid.js';
@@ -176,7 +179,7 @@ Array.prototype.containsOneIn = function(other)
 
 
 
-function Projects({ isWhiteTheme }) {
+function Projects({ isWhiteTheme, isSection }) {
 
     const [categories, setCategories] = useState(dummyCategories);  // to update projects and categories tags
     const [skills, setSkills] = useState(dummySkills);  // to update projects and skills tags
@@ -244,12 +247,15 @@ function Projects({ isWhiteTheme }) {
     }
 
   return (
-    <section name="projects" className={projectsStyles.mainContainer}>
+    <section name="projects" className={isSection ? projectsStyles.mainContainerSection : projectsStyles.mainContainer}>
 
         {/* Section title */}
-        <h2 className={`${projectsStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
-            Some projects <br/> I have worked on
-        </h2>
+        {isSection && 
+            <h2 className={`${projectsStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
+                Some projects <br/> I have worked on
+            </h2>
+        }
+        
 
         {/* Projects section */}
         <div>
@@ -258,20 +264,23 @@ function Projects({ isWhiteTheme }) {
             <TagsBar title="Skills" tags={skills} updateTagFunction={updateSkillFilter} isWhiteTheme={isWhiteTheme} />
 
             {/* Displayed projects grid */}
-            <ProjectsGrid key={projectsFiltered.length} projectCards={projectsFiltered} isWhiteTheme={isWhiteTheme} />
+            <ProjectsGrid key={projectsFiltered.length} projectCards={projectsFiltered} isWhiteTheme={isWhiteTheme} inSection={isSection}/>
 
             {/* All projects button */}
-            <a href="/" alt="All projects page" title="All projects page" 
-            className={isWhiteTheme ? projectsStyles.allProjectsBtnBlack : projectsStyles.allProjectsBtnWhite}>
-                See all projects
-            </a>
+            { isSection && 
+                <button title="All projects page" 
+                        className={isWhiteTheme ? projectsStyles.allProjectsBtnBlack : projectsStyles.allProjectsBtnWhite}>
+                    <Link href="/projects/" alt="All projects page"><p>See all projects</p></Link>
+                </button>
+            }
         </div>
     </section>
   )
 }
 
 Projects.propTypes = {
-    isWhiteTheme: PropTypes.bool.isRequired
+    isWhiteTheme: PropTypes.bool.isRequired,
+    isSection: PropTypes.bool.isRequired
 };
 
 export default Projects;
