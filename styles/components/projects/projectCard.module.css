@@ -166,6 +166,25 @@
   color: #151515;
 }
 
+.card .catAndYearContainer, .cardNoSection .catAndYearContainer, .cardBlack .catAndYearContainer, .cardWhite .catAndYearContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .card .skillsContainer, .cardNoSection .skillsContainer, .cardBlack .skillsContainer, .cardWhite .skillsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,7 +219,7 @@
 }
 
 .card .title, .cardNoSection .title, .cardBlack .title, .cardWhite .title {
-  margin-top: 6%;
+  margin-top: 4%;
   margin-bottom: 2%;
 }
 
@@ -262,8 +281,9 @@
 }
 
 .cardNoSection {
-  width: 15%;
+  width: 18%;
   margin-bottom: 5%;
+  padding: 1.75%;
 }
 
 @media screen and (max-width: 1600px) {

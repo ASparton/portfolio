@@ -113,6 +113,7 @@ const dummyProjects = [
         title: "OpenFlappy",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        year: 2020,
         imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Graphics programming",
         skills: ["C++", "OpenGL"]
@@ -122,6 +123,7 @@ const dummyProjects = [
         title: "Other",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        year: 2002,
         imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Web application",
         skills: ["Javascript", "Postgresql"]
@@ -131,6 +133,7 @@ const dummyProjects = [
         title: "Best project",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        year: 2022,
         imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Game programming",
         skills: ["C#", "Unity", "PHP My Admin"]
@@ -140,6 +143,7 @@ const dummyProjects = [
         title: "Another cool project",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        year: 3356,
         imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Web application",
         skills: ["PHP", "PHP My Admin"]
@@ -149,6 +153,7 @@ const dummyProjects = [
         title: "Assassin's creed 89",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        year: 772,
         imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Game programming",
         skills: ["C++", "Unreal Engine 4", "Docker"]

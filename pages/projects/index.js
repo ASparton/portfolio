@@ -1,5 +1,5 @@
 /* React dependencies */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 /* Next dependencies */
 import Head from 'next/head';

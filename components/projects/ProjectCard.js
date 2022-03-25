@@ -15,7 +15,10 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
     <article className={`${isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite} ${!inSection && cardStyles.cardNoSection}`}>
 
       {/* Project category */}
-      <p className={isWhiteTheme ? cardStyles.tagWhite : cardStyles.tagBlack}>{projectCard.category}</p>
+      <div className={cardStyles.catAndYearContainer}>
+        <p className={isWhiteTheme ? cardStyles.tagWhite : cardStyles.tagBlack}>{projectCard.category}</p>
+        <p className={isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack}><b><i>{projectCard.year}</i></b></p>
+      </div>
 
       {/* Project skills */}
       <ul className={cardStyles.skillsContainer}>
