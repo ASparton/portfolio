@@ -1,3 +1,8 @@
+import PropTypes from 'prop-types';
+
+/* JS dependencies */
+import fs from 'fs';
+
 /* React dependencies */
 import { useState } from 'react';
 
@@ -20,10 +25,8 @@ import indexStyles from '/styles/pages/index.module.css';
 import globalStyles from '/styles/global.module.css';
 
 /* Images */
-import logoBlack from '/public/images/logo/logoBlack.png';
-import logoWhite from '/public/images/logo/logoWhite.png';
-
-
+import logoBlack from '/public/logo/logoBlack.png';
+import logoWhite from '/public/logo/logoWhite.png';
 
 /* Header navigation links */
 const navLinks = [
@@ -53,7 +56,7 @@ const navLinks = [
   }
 ];
 
-export default function Home() {
+export default function Home({ aboutText }) {
   
   // offers the possibility to change the theme from white to black and vice versa
   const [isWhiteTheme, setIsWhiteTheme] = useState(true);
@@ -82,7 +85,7 @@ export default function Home() {
 
       <Header links={navLinks} isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
       <main>
-        <About isWhiteTheme={isWhiteTheme} />
+        <About aboutText={aboutText} isWhiteTheme={isWhiteTheme} />
         <Technos isWhiteTheme={isWhiteTheme} />
         <Projects isWhiteTheme={isWhiteTheme} isSection={true} />
         <Contact isWhiteTheme={isWhiteTheme} />
@@ -91,4 +94,24 @@ export default function Home() {
 
     </div>
   )
+}
+
+Home.propTypes = {
+  aboutText: PropTypes.string.isRequired
+};
+
+/**
+ * Get the about text and the last added projects
+ */
+export function getStaticProps() {
+
+  // read the about text file
+  let aboutText = fs.readFileSync('private/persistance/about.txt').toString();
+
+  return {
+    props: {
+      aboutText: aboutText
+    },
+    revalidate: 60
+  };
 }

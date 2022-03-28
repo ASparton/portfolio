@@ -7,10 +7,10 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 // images
-import plusBlack from '/public/images/icons/plusBlack.png';
-import plusWhite from '/public/images/icons/plusWhite.png';
-import minusBlack from '/public/images/icons/minusBlack.png';
-import minusWhite from '/public/images/icons/minusWhite.png';
+import plusBlack from '/public/icons/plusBlack.png';
+import plusWhite from '/public/icons/plusWhite.png';
+import minusBlack from '/public/icons/minusBlack.png';
+import minusWhite from '/public/icons/minusWhite.png';
 
 // styles
 import tagStyles from '/styles/components/projects/tagsbar/tag.module.css';

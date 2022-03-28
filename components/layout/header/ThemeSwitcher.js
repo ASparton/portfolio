@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 // images
-import themeSwitcherBlack from '/public/images/icons/color-adjust-black.png';
-import themeSwitcherWhite from '/public/images/icons/color-adjust-white.png';
+import themeSwitcherBlack from '/public/icons/color-adjust-black.png';
+import themeSwitcherWhite from '/public/icons/color-adjust-white.png';
 
 // styles
 import themeSwitchStyles from '/styles/components/layout/header/themeSwitch.module.css';

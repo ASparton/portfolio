@@ -10,10 +10,10 @@ import Image from 'next/image'
 import ProjectCard from '/components/projects/ProjectCard.js';
 
 // images
-import rightArrowBlack from '/public/images/icons/rightArrowBlack.png';
-import rightArrowWhite from '/public/images/icons/rightArrowWhite.png';
-import leftArrowBlack from '/public/images/icons/leftArrowBlack.png';
-import leftArrowWhite from '/public/images/icons/leftArrowWhite.png';
+import rightArrowBlack from '/public/icons/rightArrowBlack.png';
+import rightArrowWhite from '/public/icons/rightArrowWhite.png';
+import leftArrowBlack from '/public/icons/leftArrowBlack.png';
+import leftArrowWhite from '/public/icons/leftArrowWhite.png';
 
 // styles
 import pgStyles from '/styles/components/projects/projectGrid.module.css';

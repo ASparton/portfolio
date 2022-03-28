@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 // images
-import githubWhiteIcon from '/public/images/icons/github-white.png';
-import linkedinWhiteIcon from '/public/images/icons/linkedin-white.png';
-import githubBlackIcon from '/public/images/icons/github-black.png';
-import linkedinBlackIcon from '/public/images/icons/linkedin-black.png';
+import githubWhiteIcon from '/public/icons/github-white.png';
+import linkedinWhiteIcon from '/public/icons/linkedin-white.png';
+import githubBlackIcon from '/public/icons/github-black.png';
+import linkedinBlackIcon from '/public/icons/linkedin-black.png';
 
 // styles
 import socialBannerStyles from '/styles/components/layout/socialBanner.module.css'

@@ -5,8 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // images
-import blackLogo from '/public/images/logo/logoBlack.png';
-import whiteLogo from '/public/images/logo/logoWhite.png';
+import blackLogo from '/public/logo/logoBlack.png';
+import whiteLogo from '/public/logo/logoWhite.png';
 
 function Logo({ isWhiteTheme }) {
   return (
