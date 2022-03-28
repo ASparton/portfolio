@@ -20,8 +20,38 @@ import indexStyles from '/styles/pages/index.module.css';
 import globalStyles from '/styles/global.module.css';
 
 /* Images */
-import logoBlack from '/public/images/logo/logoBlack.png'
-import logoWhite from '/public/images/logo/logoWhite.png'
+import logoBlack from '/public/images/logo/logoBlack.png';
+import logoWhite from '/public/images/logo/logoWhite.png';
+
+
+
+/* Header navigation links */
+const navLinks = [
+  {
+    id: 0,
+    name: 'About',
+    ref: '/#about',
+    title: 'About section'
+  },
+  {
+    id: 1,
+    name: 'Technologies & Tools',
+    ref: '/#technos',
+    title: 'Technologies & Tools section'
+  },
+  {
+    id: 2,
+    name: 'Projects',
+    ref: '/#projects',
+    title: 'Projects section'
+  },
+  {
+    id: 3,
+    name: 'Contact',
+    ref: '/#contact',
+    title: 'Contact section'
+  }
+];
 
 export default function Home() {
   
@@ -50,7 +80,7 @@ export default function Home() {
         </div>
       </aside>
 
-      <Header isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
+      <Header links={navLinks} isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
       <main>
         <About isWhiteTheme={isWhiteTheme} />
         <Technos isWhiteTheme={isWhiteTheme} />

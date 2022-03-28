@@ -149,7 +149,7 @@
   background-color: #151515;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .burgerButton {
     position: fixed;
     z-index: 2;

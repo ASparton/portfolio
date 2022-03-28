@@ -1,0 +1,29 @@
+.mainContainer {
+  width: 50%;
+  margin: 0;
+  margin-left: 25%;
+  margin-bottom: 10vh;
+}
+
+.mainContainer .title {
+  margin-bottom: 1.5%;
+}
+
+.mainContainer .text {
+  font-size: 1.15em;
+}
+
+@media screen and (max-width: 1200px) {
+  .mainContainer {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainContainer {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+/*# sourceMappingURL=projectSection.module.css.map */

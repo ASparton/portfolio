@@ -1,0 +1,206 @@
+/* Scales animation */
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Background black & white animations */
+@-webkit-keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+@keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@-webkit-keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+@keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+/* Basic rotate animations */
+@-webkit-keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+/* Buttons animation */
+/* Scale up & down animation */
+/* 360 animation */
+.mainContainer {
+  width: 50%;
+  margin: 0;
+  margin-left: 25%;
+}
+
+.mainContainer .title {
+  margin-bottom: 2%;
+}
+
+.mainContainer .bundleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mainContainer .bundleContainer .imageContainer {
+  width: 30%;
+  margin: 1%;
+}
+
+.mainContainer .bundleContainer .imageContainer .image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.mainContainer .bundleContainer .videoContainer {
+  width: 30%;
+  margin: 1%;
+}
+
+.mainContainer .bundleContainer .videoContainer .video {
+  width: 100%;
+  border-style: none;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .mainContainer {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mainContainer .bundleContainer .videoContainer {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mainContainer .bundleContainer .imageContainer {
+    width: 100%;
+  }
+  .mainContainer .bundleContainer .videoContainer {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=inImages.module.css.map */

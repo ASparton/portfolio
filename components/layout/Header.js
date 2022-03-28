@@ -12,7 +12,7 @@ import ThemeSwitcher from '/components/layout/header/ThemeSwitcher.js';
 // styles
 import headerStyles from '/styles/components/layout/header.module.css';
 
-function Header({ isWhiteTheme, switchThemeFunction }) {
+function Header({ links, isWhiteTheme, switchThemeFunction }) {
 
   // Header classes
   const hideHeaderClass = `${headerStyles.header} ${headerStyles.hideHeader}`;
@@ -26,7 +26,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
    * Hide the header when scrolling down, and display it when scrolling up.
    */
   function updateHeaderPosition() {
-    if (window.innerWidth <= 1000)
+    if (window.innerWidth <= 1200)
       return;
 
     if (scrollY > lastScrollY && headerClass === defaultHeaderClass)
@@ -51,7 +51,7 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
   useEffect(() => {
     window.addEventListener('scroll', updateHeaderPosition);
 
-    if (window.innerWidth <= 1000)
+    if (window.innerWidth <= 1200)
       setHeaderClass(hideHeaderClass);
   }, [])
 
@@ -72,10 +72,11 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
           {/* Navigation links */}
           <nav className={headerStyles.navContainer}>
             <ul className={headerStyles.nav}>
-              <li className={headerStyles.navLink}><NavLink pageRef="/#about" name="About" isWhiteTheme={isWhiteTheme} /></li>
-              <li className={headerStyles.navLink}><NavLink pageRef="/#technos" name="Technologies & Tools" isWhiteTheme={isWhiteTheme} /></li>
-              <li className={headerStyles.navLink}><NavLink pageRef="/#projects" name="Projects" isWhiteTheme={isWhiteTheme} /></li>
-              <li className={headerStyles.navLink}><NavLink pageRef="/#contact" name="Contact" isWhiteTheme={isWhiteTheme} /></li>
+              {links.map(link => (
+                <li key={link.id} className={headerStyles.navLink}>
+                  <NavLink pageRef={link.ref} name={link.name} title={link.title} isWhiteTheme={isWhiteTheme} />
+                </li>
+              ))}
               <li className={headerStyles.navLink}><ThemeSwitcher switchThemeFunction={switchThemeFunction} isWhiteTheme={isWhiteTheme} /></li>
             </ul>
           </nav>
@@ -87,8 +88,9 @@ function Header({ isWhiteTheme, switchThemeFunction }) {
 }
 
 Header.propTypes = {
-    isWhiteTheme: PropTypes.bool.isRequired,
-    switchThemeFunction: PropTypes.func.isRequired
+  links: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isWhiteTheme: PropTypes.bool.isRequired,
+  switchThemeFunction: PropTypes.func.isRequired
 };
 
 export default Header;

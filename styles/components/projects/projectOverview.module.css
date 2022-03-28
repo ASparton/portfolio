@@ -1,0 +1,327 @@
+/* Scales animation */
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Background black & white animations */
+@-webkit-keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+@keyframes toWhiteBtn {
+  from {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+  to {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+}
+
+@-webkit-keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+@keyframes toBlackBtn {
+  from {
+    background-color: #fcf7f8;
+    color: #151515;
+  }
+  to {
+    background-color: #151515;
+    color: #fcf7f8;
+  }
+}
+
+/* Basic rotate animations */
+@-webkit-keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@keyframes right180 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes reverseRight180 {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+/* Buttons animation */
+/* Scale up & down animation */
+/* 360 animation */
+.mainContainer {
+  width: 75%;
+  margin: 0;
+  margin-left: 12.5%;
+  margin-bottom: 15vh;
+  padding-top: 15vh;
+}
+
+.mainContainer .title {
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.mainContainer .tag, .mainContainer .tagWhite, .mainContainer .skillsContainer .skillWhite, .mainContainer .tagBlack, .mainContainer .skillsContainer .skillBlack {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  font-size: 1em;
+}
+
+.mainContainer .tagWhite, .mainContainer .skillsContainer .skillWhite {
+  border-color: #fcf7f8;
+  color: #fcf7f8;
+}
+
+.mainContainer .tagBlack, .mainContainer .skillsContainer .skillBlack {
+  border-color: #151515;
+  color: #151515;
+}
+
+.mainContainer .catAndYearContainer {
+  width: 49%;
+  margin-left: 25.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.mainContainer .catAndYearContainer .year {
+  font-size: 1.1em;
+}
+
+.mainContainer .coverImageContainer {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.mainContainer .coverImageContainer .coverImage {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.mainContainer .description {
+  width: 49%;
+  margin-left: 25.5%;
+  color: #999999;
+}
+
+.mainContainer .skillsContainer {
+  width: 49%;
+  margin-left: 25.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mainContainer .skillsContainer .skill, .mainContainer .skillsContainer .skillWhite, .mainContainer .skillsContainer .skillBlack {
+  margin-right: 3%;
+  margin-bottom: 3%;
+}
+
+@media screen and (max-width: 1200px) {
+  .mainContainer {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContainer .catAndYearContainer {
+    width: 70%;
+    margin-left: 15%;
+  }
+  .mainContainer .coverImageContainer {
+    width: 70%;
+    margin-left: 15%;
+  }
+  .mainContainer .description {
+    width: 70%;
+    margin-left: 15%;
+  }
+  .mainContainer .skillsContainer {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainContainer {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-bottom: 10vh;
+  }
+  .mainContainer .catAndYearContainer {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mainContainer .coverImageContainer {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mainContainer .description {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mainContainer .skillsContainer {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mainContainer .coverImageContainer {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mainContainer .tag, .mainContainer .tagWhite, .mainContainer .skillsContainer .skillWhite, .mainContainer .tagBlack, .mainContainer .skillsContainer .skillBlack {
+    font-size: 0.85em;
+    padding: 2.5px;
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+  .mainContainer .catAndYearContainer .year {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .mainContainer .catAndYearContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .mainContainer .catAndYearContainer .year {
+    margin-left: 2.5%;
+    font-size: 0.9em;
+  }
+}
+/*# sourceMappingURL=projectOverview.module.css.map */

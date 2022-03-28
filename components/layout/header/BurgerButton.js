@@ -1,8 +1,5 @@
 import PropTypes from 'prop-types';
 
-// react dependencies
-import { useState } from 'react';
-
 // styles
 import burgerBtnStyles from '/styles/components/layout/header/burgerButton.module.css';
 

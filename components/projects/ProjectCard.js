@@ -14,7 +14,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
   return (
     <article className={`${isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite} ${!inSection && cardStyles.cardNoSection}`}>
 
-      {/* Project category */}
+      {/* Project year & category */}
       <div className={cardStyles.catAndYearContainer}>
         <p className={isWhiteTheme ? cardStyles.tagWhite : cardStyles.tagBlack}>{projectCard.category}</p>
         <p className={isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack}><b><i>{projectCard.year}</i></b></p>
@@ -32,7 +32,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
       {/* Project image cover */}
       <div className={cardStyles.cover} title={projectCard.title + " project"}>
         <Link href={"/projects/" + projectCard.id}>
-          <img src={projectCard.imageUrl} alt={projectCard.title + " cover"} className={cardStyles.coverImage} />
+          <img src={projectCard.coverUrl} alt={projectCard.title + " cover"} className={cardStyles.coverImage} />
         </Link>
       </div>
 

@@ -114,7 +114,7 @@ const dummyProjects = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         year: 2020,
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Graphics programming",
         skills: ["C++", "OpenGL"]
     },
@@ -124,7 +124,7 @@ const dummyProjects = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         year: 2002,
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Web application",
         skills: ["Javascript", "Postgresql"]
     },
@@ -134,7 +134,7 @@ const dummyProjects = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         year: 2022,
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Game programming",
         skills: ["C#", "Unity", "PHP My Admin"]
     },
@@ -144,7 +144,7 @@ const dummyProjects = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         year: 3356,
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Web application",
         skills: ["PHP", "PHP My Admin"]
     },
@@ -154,7 +154,7 @@ const dummyProjects = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
                      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         year: 772,
-        imageUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
+        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
         category: "Game programming",
         skills: ["C++", "Unreal Engine 4", "Docker"]
     }
@@ -257,7 +257,7 @@ function Projects({ isWhiteTheme, isSection }) {
         {/* Section title */}
         {isSection && 
             <h2 className={`${projectsStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
-                Some projects <br/> I have worked on
+                Some cool projects I built
             </h2>
         }
         
