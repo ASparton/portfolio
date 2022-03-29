@@ -4,26 +4,26 @@ import PropTypes from 'prop-types';
 import contactFormStyles from '/styles/components/contact/contactForm.module.css';
 import globalStyles from '/styles/global.module.css';
 
-function ContactForm({ isWhiteTheme }) {
+function ContactForm({ onSubmitFunction, isWhiteTheme }) {
   return (
-    <form className={contactFormStyles.form}>
+    <form className={contactFormStyles.form} onSubmit={onSubmitFunction}>
 
       {/* Name */}
       <label htmlFor="name" hidden></label>
-      <input name="name" id="name" placeholder="Name" autoComplete="on" 
+      <input type="text" name="name" id="name" placeholder="Name" autoComplete="name" required
              className={`${contactFormStyles.formInput} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
       </input>
 
       {/* Email */}
       <label htmlFor="email" hidden></label>
-      <input name="email" id="email" placeholder="Email" autoComplete="on"
+      <input type="email" name="email" id="email" placeholder="Email" autoComplete="email" required
              className={`${contactFormStyles.formInput} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
       </input>
 
       {/* Message content */}
       <div className={contactFormStyles.messageInputContainer}>
         <label htmlFor="message" hidden></label>
-        <textarea name="message" id="message" placeholder="Message" 
+        <textarea name="message" id="message" placeholder="Message" required
                   className={`${contactFormStyles.messageInput} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
         </textarea>
       </div>
@@ -39,7 +39,8 @@ function ContactForm({ isWhiteTheme }) {
 }
 
 ContactForm.propTypes = {
-    isWhiteTheme: PropTypes.bool.isRequired
+  onSubmitFunction: PropTypes.func.isRequired,
+  isWhiteTheme: PropTypes.bool.isRequired
 };
 
 export default ContactForm;
