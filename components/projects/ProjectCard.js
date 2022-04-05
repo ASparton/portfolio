@@ -20,6 +20,13 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
         <p className={isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack}><b><i>{projectCard.year}</i></b></p>
       </div>
 
+      {/* Project image cover */}
+      <div className={cardStyles.cover} title={projectCard.title + " project"}>
+        <Link href={"/projects/" + projectCard.id}>
+          <img src={projectCard.cover_url} alt={projectCard.title + " cover"} className={cardStyles.coverImage} />
+        </Link>
+      </div>
+
       {/* Project skills */}
       <ul className={cardStyles.skillsContainer}>
         {projectCard.skills.map((projectSkill) =>
@@ -28,13 +35,6 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
           </li>
         )}
       </ul>
-
-      {/* Project image cover */}
-      <div className={cardStyles.cover} title={projectCard.title + " project"}>
-        <Link href={"/projects/" + projectCard.id}>
-          <img src={projectCard.coverUrl} alt={projectCard.title + " cover"} className={cardStyles.coverImage} />
-        </Link>
-      </div>
 
       {/* Project title */}
       <div title={projectCard.title + " project"}>

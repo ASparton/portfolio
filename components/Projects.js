@@ -14,153 +14,6 @@ import ProjectsGrid from '/components/projects/ProjectsGrid.js';
 import projectsStyles from '/styles/components/projects.module.css';
 import globalStyles from '/styles/global.module.css';
 
-let dummyCategories = [
-    {
-        id: 0,
-        name: 'Game programming',
-        chosen: false
-    },
-    {
-        id: 1,
-        name: 'Web application',
-        chosen: false
-    },
-    {
-        id: 2,
-        name: 'Graphics programming',
-        chosen: false
-    },
-    {
-        id: 3,
-        name: 'Artificial Intelligence',
-        chosen: false
-    }
-    ,
-    {
-        id: 4,
-        name: 'Virtual Reality',
-        chosen: false
-    }
-    ,
-    {
-        id: 5,
-        name: 'DevOps',
-        chosen: false
-    }
-];
-
-let dummySkills = [
-    {
-        id: 0,
-        name: 'Javascript',
-        chosen: false
-    },
-    {
-        id: 1,
-        name: 'C++',
-        chosen: false
-    },
-    {
-        id: 2,
-        name: 'OpenGL',
-        chosen: false
-    },
-    {
-        id: 3,
-        name: 'PHP',
-        chosen: false
-    },
-    {
-        id: 4,
-        name: 'C#',
-        chosen: false
-    },
-    {
-        id: 5,
-        name: 'Postgresql',
-        chosen: false
-    },
-    {
-        id: 6,
-        name: 'PHP My Admin',
-        chosen: false
-    },
-    {
-        id: 7,
-        name: 'Godot',
-        chosen: false
-    },
-    {
-        id: 8,
-        name: 'Unity',
-        chosen: false
-    },
-    {
-        id: 9,
-        name: 'Unreal Engine 4',
-        chosen: false
-    },
-    {
-        id: 10,
-        name: 'Docker',
-        chosen: false
-    }
-];
-
-const dummyProjects = [
-    {
-        id: 0,
-        title: "OpenFlappy",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
-                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        year: 2020,
-        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
-        category: "Graphics programming",
-        skills: ["C++", "OpenGL"]
-    },
-    {
-        id: 1,
-        title: "Other",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
-                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        year: 2002,
-        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
-        category: "Web application",
-        skills: ["Javascript", "Postgresql"]
-    },
-    {
-        id: 2,
-        title: "Best project",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
-                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        year: 2022,
-        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
-        category: "Game programming",
-        skills: ["C#", "Unity", "PHP My Admin"]
-    },
-    {
-        id: 3,
-        title: "Another cool project",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
-                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        year: 3356,
-        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
-        category: "Web application",
-        skills: ["PHP", "PHP My Admin"]
-    },
-    {
-        id: 4,
-        title: "Assassin's creed 89",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
-                     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        year: 772,
-        coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
-        category: "Game programming",
-        skills: ["C++", "Unreal Engine 4", "Docker"]
-    }
-];
-
-
 
 /* Utils contains functions */
 
@@ -184,11 +37,11 @@ Array.prototype.containsOneIn = function(other)
 
 
 
-function Projects({ isWhiteTheme, isSection }) {
+function Projects({ dbCategories, dbSkills, dbProjects, isWhiteTheme, isSection }) {
 
-    const [categories, setCategories] = useState(dummyCategories);  // to update projects and categories tags
-    const [skills, setSkills] = useState(dummySkills);  // to update projects and skills tags
-    const [projectsFiltered, setProjectsFiltered] = useState(dummyProjects);    // to update displayed projects
+    const [categories, setCategories] = useState(dbCategories);  // to update projects and categories tags
+    const [skills, setSkills] = useState(dbSkills);  // to update projects and skills tags
+    const [projectsFiltered, setProjectsFiltered] = useState(dbProjects);    // to update displayed projects
     
     /**
      * Select or unselect the category with the given id and update the projects displayed.
@@ -242,10 +95,10 @@ function Projects({ isWhiteTheme, isSection }) {
         const selectedSkillsName = getChosenTagsName(skills);
         
         if (selectedCategoriesName.length === 0 && selectedSkillsName.length === 0) {
-            setProjectsFiltered(dummyProjects);
+            setProjectsFiltered(dbProjects);
         }
         else {
-            setProjectsFiltered(dummyProjects.filter(project => 
+            setProjectsFiltered(dbProjects.filter(project => 
                 selectedCategoriesName.contains(project.category) || selectedSkillsName.containsOneIn(project.skills)
             ));
         }
@@ -284,6 +137,9 @@ function Projects({ isWhiteTheme, isSection }) {
 }
 
 Projects.propTypes = {
+    dbCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
+    dbSkills: PropTypes.arrayOf(PropTypes.object).isRequired,
+    dbProjects: PropTypes.arrayOf(PropTypes.object).isRequired,
     isWhiteTheme: PropTypes.bool.isRequired,
     isSection: PropTypes.bool.isRequired
 };

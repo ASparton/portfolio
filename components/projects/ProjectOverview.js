@@ -26,7 +26,7 @@ function ProjectOverview({ projectHeader, isWhiteTheme }) {
   
       {/* Cover image */}
       <div className={pHeaderStyles.coverImageContainer} title={projectHeader.title + " cover image"}>
-        <img src={projectHeader.coverUrl} alt={projectHeader.title + " cover image"} className={pHeaderStyles.coverImage} />
+        <img src={projectHeader.cover_url} alt={projectHeader.title + " cover image"} className={pHeaderStyles.coverImage} />
       </div>
   
       {/* Skills */}

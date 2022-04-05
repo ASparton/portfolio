@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
 // react dependencies
-import { useState } from 'react'
+import { useState } from 'react';
 
 // next dependencies
-import Image from 'next/image'
+import Image from 'next/image';
 
 // images
 import plusBlack from '/public/icons/plusBlack.png';
@@ -20,7 +20,7 @@ function Tag({ tag, updateTagFunction, isWhiteTheme }) {
   
   // to update the tag style when its selected or unselected
   const [tagStatus, setTagStatus] = useState({tagId: -1, 
-                                              showIcon: false});
+                                              showIcon: tag.chosen});
 
   /**
    * Show the plus or minus icon.
@@ -29,6 +29,7 @@ function Tag({ tag, updateTagFunction, isWhiteTheme }) {
   function onTagEnter(event) {
     setTagStatus({tagId: parseInt(event.currentTarget.id),
                   showIcon: true});
+    
   }
 
   /**

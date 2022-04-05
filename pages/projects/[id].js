@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
+
 /* React dependencies */
 import { useState } from 'react';
 
 /* Next dependencies */
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 /* Components */
@@ -19,69 +20,7 @@ import Contact from '/components/Contact.js';
 /* Styles */
 import globalStyles from '/styles/global.module.css';
 
-let dummyProject = {
-  id: 0,
-
-  header: {
-    title: "OpenFlappy",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +
-                 "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    year: 2020,
-    coverUrl: "https://img.phonandroid.com/2014/05/flappy-bird.jpg",
-    category: "Graphics programming",
-    skills: ["C++", "OpenGL"]
-  },
-
-  details: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-  experience: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-  images: ["https://www.spriters-resource.com/resources/sheet_icons/56/59537.png", 
-           "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png"],
-  videos: ["https://www.youtube.com/embed/NrJiXKwUjPI"]
-}
-
-function ProjectPage() {
-
-  dummyProject.id = useRouter().query.id;
-
-  /* Header navigation links */
-  const navLinks = [
-    {
-      id: 0,
-      name: 'Home',
-      ref: '/',
-      title: 'Home page'
-    },
-    {
-      id: 1,
-      name: 'Projects',
-      ref: '/projects/',
-      title: 'Projects Page'
-    },
-    {
-      id: 2,
-      name: 'Overview',
-      ref: '/projects/' + dummyProject.id + '/#overview',
-      title: 'Overview section'
-    },
-    {
-      id: 3,
-      name: 'More about',
-      ref: '/projects/' + dummyProject.id + '/#more',
-      title: 'More about section'
-    },
-    {
-      id: 4,
-      name: 'My experience',
-      ref: '/projects/' + dummyProject.id + '/#experience',
-      title: 'My experience section'
-    },
-    {
-      id: 5,
-      name: 'Project in images',
-      ref: '/projects/' + dummyProject.id + '/#inimages',
-      title: 'Project in images section'
-    }
-  ];
+export default function ProjectPage({headerNavLinks, projectInfos}) {
 
   // offers the possibility to change the theme from white to black and vice versa
   const [isWhiteTheme, setIsWhiteTheme] = useState(true);
@@ -98,12 +37,12 @@ function ProjectPage() {
    */
   function getImagesAndVideosBundle() {
     let bundle = []
-    const iMax = dummyProject.images.length > dummyProject.videos.length ? dummyProject.images.length : dummyProject.videos.length;
+    const iMax = projectInfos.images.length > projectInfos.videos.length ? projectInfos.images.length : projectInfos.videos.length;
     for (let i = 0; i < iMax; i++) {
-      if (i < dummyProject.videos.length)
-        bundle.push(dummyProject.videos[i]);
-      if (i < dummyProject.images.length)
-        bundle.push(dummyProject.images[i]);
+      if (i < projectInfos.videos.length)
+        bundle.push(projectInfos.videos[i]);
+      if (i < projectInfos.images.length)
+        bundle.push(projectInfos.images[i]);
     }
     return bundle;
   }
@@ -116,20 +55,20 @@ function ProjectPage() {
         <link rel="icon" href="/images/logo/logoBlack.png" />
       </Head>
 
-      <Header links={navLinks} isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
+      <Header links={headerNavLinks} isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
       <main>
         {/* Overview */}
-        <ProjectOverview projectHeader={dummyProject.header} isWhiteTheme={isWhiteTheme} />
+        <ProjectOverview projectHeader={projectInfos.header} isWhiteTheme={isWhiteTheme} />
 
         {/* Project details */}
-        <ProjectSection sectionName={"more"} title={"More about " + dummyProject.header.title} 
-                        text={dummyProject.details} isWhiteTheme={isWhiteTheme} />
+        <ProjectSection sectionName={"more"} title={"More about " + projectInfos.header.title} 
+                        text={projectInfos.details} isWhiteTheme={isWhiteTheme} />
 
         {/* Project experience */}
-        <ProjectSection sectionName={"experience"} title={"My experience"} text={dummyProject.experience} isWhiteTheme={isWhiteTheme} />
+        <ProjectSection sectionName={"experience"} title={"My experience"} text={projectInfos.experience} isWhiteTheme={isWhiteTheme} />
 
         {/* Project images & videos */}
-        <ProjectInImages projectTitle={dummyProject.header.title} 
+        <ProjectInImages projectTitle={projectInfos.header.title} 
                          imagesAndVideosBundle={getImagesAndVideosBundle()} 
                          isWhiteTheme={isWhiteTheme} />
 
@@ -141,4 +80,161 @@ function ProjectPage() {
   )
 }
 
-export default ProjectPage;
+ProjectPage.propTypes = {
+  headerNavLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  projectInfos: PropTypes.object.isRequired
+};
+
+export async function getServerSideProps(context) {
+
+  // connect to db
+  const pgp = require('pg-promise')({
+    noWarnings: true
+  })
+  const db = pgp({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PSWD
+  });
+
+  // Get project infos
+  const projectId = parseInt(context.params.id);
+
+  // If the id is not a number, redirect to all projects page
+  if (isNaN(projectId)) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/projects/'
+      },
+    };
+  }
+
+  const projectInfos = await getProjectInfos(db, projectId);
+
+  // If project is undefined, it means that the project with the given id does not exist in db, so redirect to all projects
+  if (projectInfos === null) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/projects/'
+      }
+    };
+  }
+
+  // Otherwise render the page
+  return {
+    props: {
+      headerNavLinks: getHeaderNavLinks(projectId),
+      projectInfos: projectInfos
+    }
+  }
+}
+
+/**
+ * @param {int} projectId the id of the project the page is about
+ * @returns the header navigation links with the right project id.
+ */
+function getHeaderNavLinks(projectId) {
+  /* Header navigation links */
+  return  [
+    {
+      id: 0,
+      name: 'Home',
+      ref: '/',
+      title: 'Home page'
+    },
+    {
+      id: 1,
+      name: 'Projects',
+      ref: '/projects/',
+      title: 'Projects Page'
+    },
+    {
+      id: 2,
+      name: 'Overview',
+      ref: '/projects/' + projectId + '/#overview',
+      title: 'Overview section'
+    },
+    {
+      id: 3,
+      name: 'More about',
+      ref: '/projects/' + projectId + '/#more',
+      title: 'More about section'
+    },
+    {
+      id: 4,
+      name: 'My experience',
+      ref: '/projects/' + projectId + '/#experience',
+      title: 'My experience section'
+    },
+    {
+      id: 5,
+      name: 'Project in images',
+      ref: '/projects/' + projectId + '/#inimages',
+      title: 'Project in images section'
+    }
+  ];
+}
+
+/**
+ * @param {*} db the pg-promise db instance
+ * @param {int} projectId the project id to get the infos
+ * @returns the needed informations about the project with the given id, null if the project does not exists.
+ */
+async function getProjectInfos(db, projectId) {
+
+  let projectInfos = null;
+
+  // Try to get the project infos
+  await db.one('SELECT projects.title, projects.description, projects.year, projects.cover_url, ' +
+                      'projects.details, projects.experience, categories.name ' +
+               'FROM projects INNER JOIN categories ON projects.category_id = categories.id ' +
+               'WHERE projects.id = $1', [projectId])
+  .then(async standardInfos => {
+
+    projectInfos = {
+      header: {
+        title: standardInfos.title,
+        description: standardInfos.description,
+        year: standardInfos.year.getFullYear(),
+        cover_url: standardInfos.cover_url,
+        category: standardInfos.name,
+        skills: []
+      },
+  
+      details: standardInfos.details,
+      experience: standardInfos.experience,
+      images: [],
+      videos: []
+    };
+  
+    // Set project skills
+    let query = 'SELECT skills.name ' + 
+                'FROM project_skills INNER JOIN skills on project_skills.skill_id = skills.id ' +
+                'WHERE project_skills.project_id = $1';
+    const skills = await db.any(query, [projectId]);
+    skills.map(skill => projectInfos.header.skills.push(skill.name));
+  
+    // Set project images
+    query = 'SELECT project_images.image_url ' +
+            'FROM project_images ' +
+            'WHERE project_images.project_id = $1';
+    const images = await db.any(query, [projectId]);
+    images.map(image => projectInfos.images.push(image.image_url));
+  
+    // Set project videos
+    query = 'SELECT project_videos.video_url ' +
+            'FROM project_videos ' +
+            'WHERE project_videos.project_id = $1';
+    const videos = await db.any(query, [projectId]);
+    videos.map(video => projectInfos.videos.push(video.video_url));
+
+  })
+  // Means that the project with the given id doesn't exist in db
+  .catch(() => (console.error('Project with id ' + projectId + ' does not exists.')));
+
+  return projectInfos;
+}

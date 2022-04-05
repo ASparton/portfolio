@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 /* React dependencies */
 import { useState } from 'react'
 
@@ -47,7 +49,7 @@ const navLinks = [
   }
 ];
 
-function ProjectsIndex() {
+export default function ProjectsIndex({categories, skills, projects}) {
 
   // offers the possibility to change the theme from white to black and vice versa
   const [isWhiteTheme, setIsWhiteTheme] = useState(true);
@@ -72,7 +74,7 @@ function ProjectsIndex() {
         <h1 name="filters" className={`${projectsIndexStyles.title} ${isWhiteTheme ? globalStyles.textBlack : globalStyles.textWhite}`}>
           Explore my projects
         </h1>
-        <Projects isWhiteTheme={isWhiteTheme} isSection={false} />
+        <Projects dbCategories={categories} dbSkills={skills} dbProjects={projects} isWhiteTheme={isWhiteTheme} isSection={false} />
         <Contact isWhiteTheme={isWhiteTheme} />
       </main>
       <Footer isWhiteTheme={isWhiteTheme} />
@@ -80,5 +82,116 @@ function ProjectsIndex() {
     </div>
   )
 }
-  
-export default ProjectsIndex;
+
+ProjectsIndex.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  skills: PropTypes.arrayOf(PropTypes.object).isRequired,
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired
+};
+
+export async function getStaticProps() {
+
+  // connect to db
+  const pgp = require('pg-promise')({
+    noWarnings: true
+  })
+  const db = pgp({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PSWD
+  });
+
+  // Get the needed data from db
+  let categories = await getAllCategories(db);
+  let skills = await getAllSkills(db);
+  let projects = await getAllProjects(db, categories, skills);
+
+  return {
+    props: {
+      categories: categories,
+      skills: skills,
+      projects: projects
+    },
+    revalidate: 60
+  };
+}
+
+/**
+ * @param {*} db pg-promise db instance
+ * @returns all the categories registered in the database.
+ */
+ async function getAllCategories(db) {
+  let categories = [];
+
+  await db.any('SELECT * FROM categories')
+  .then(function(dbCategories) {
+    dbCategories.map(category => categories.push({
+      id: parseInt(category.id),
+      name: category.name,
+      chosen: false
+    }));
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
+
+  return categories;
+}
+
+/**
+ * @param {*} db pg-promise db instance
+ * @returns all the skills registered in the database.
+ */
+ async function getAllSkills(db) {
+  let skills = [];
+
+  await db.any('SELECT * FROM skills')
+  .then(function(dbSkills) {
+    dbSkills.map(skill => skills.push({
+      id: parseInt(skill.id),
+      name: skill.name,
+      chosen: false
+    }));
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
+
+  return skills;
+}
+
+/**
+ * @param {*} db the pg-promise db instance
+ * @param {array} categories all the categories registered in db
+ * @param {array} skills all the skills registered in db
+ * @returns all the projects registered in the database with their skills.
+ */
+ async function getAllProjects(db, categories, skills) {
+  let projects = [];
+
+  let dbProjects = await db.any('SELECT id, title, description, year, cover_url, category_id FROM projects');
+  dbProjects.map(function (project) {
+    projects.push({
+      id: parseInt(project.id),
+      title: project.title,
+      description: project.description,
+      year: project.year.getFullYear(),
+      cover_url: project.cover_url,
+      category: categories.find(category => category.id === parseInt(project.category_id)).name,
+      skills: []
+    })
+  });
+
+  // Set project skills
+  for (let project of projects) {
+    await db.any('SELECT * FROM project_skills WHERE project_id = $1', [project.id])
+    .then(dbProjectSkills => {
+      dbProjectSkills.map(projectSkill => project.skills.push(skills.find(skill => skill.id === parseInt(projectSkill.skill_id)).name));
+    })
+    .catch(error => console.error(error));
+  }
+
+  return projects;
+}

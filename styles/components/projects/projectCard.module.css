@@ -186,6 +186,7 @@
 }
 
 .card .skillsContainer, .cardNoSection .skillsContainer, .cardBlack .skillsContainer, .cardWhite .skillsContainer {
+  margin-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,7 +206,6 @@
 
 .card .skillsContainer .skill, .cardNoSection .skillsContainer .skill, .cardBlack .skillsContainer .skill, .cardWhite .skillsContainer .skill, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
   margin-right: 3%;
-  margin-bottom: 6%;
 }
 
 .card .cover, .cardNoSection .cover, .cardBlack .cover, .cardWhite .cover {
