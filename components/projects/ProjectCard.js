@@ -17,7 +17,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
       {/* Project year & category */}
       <div className={cardStyles.catAndYearContainer}>
         <p className={isWhiteTheme ? cardStyles.tagWhite : cardStyles.tagBlack}>{projectCard.category}</p>
-        <p className={isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack}><b><i>{projectCard.year}</i></b></p>
+        <p className={`${isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack} ${cardStyles.year}`}><b><i>{projectCard.year}</i></b></p>
       </div>
 
       {/* Project image cover */}

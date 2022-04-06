@@ -328,6 +328,35 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .card, .cardNoSection, .cardBlack, .cardWhite {
+    width: 80%;
+  }
+  .card .catAndYearContainer .year, .cardNoSection .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
+    font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card .tag, .cardNoSection .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardNoSection .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardNoSection .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+    font-size: 0.75em;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .card, .cardNoSection, .cardBlack, .cardWhite {
+    padding: 8.5%;
+  }
+  .card .catAndYearContainer .year, .cardNoSection .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
+    font-size: 0.65em;
+  }
+  .card .tag, .cardNoSection .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardNoSection .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardNoSection .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+    font-size: 0.7em;
+  }
+}
+
 .cardBlack {
   background-color: #151515;
 }

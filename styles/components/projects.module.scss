@@ -105,3 +105,12 @@
         }
     }
 }
+
+@media screen and (max-width: 350px) {
+    .mainContainerSection {
+        .allProjectsBtn {
+            width: 60%;
+            margin-left: 20%;
+        }
+    }
+}

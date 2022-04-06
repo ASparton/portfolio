@@ -174,4 +174,13 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+
+@media screen and (max-width: 500px) {
+  .bannerContainer .bannerIcon {
+    width: 25px;
+    height: 25px;
+    margin-left: 4.25px;
+    margin-right: 4.25px;
+  }
+}
 /*# sourceMappingURL=socialBanner.module.css.map */

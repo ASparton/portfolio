@@ -253,4 +253,11 @@
     padding-right: 4.5%;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .mainContainerSection .allProjectsBtn, .mainContainer .allProjectsBtn, .mainContainerSection .allProjectsBtnWhite, .mainContainer .allProjectsBtnWhite, .mainContainerSection .allProjectsBtnBlack, .mainContainer .allProjectsBtnBlack {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
 /*# sourceMappingURL=projects.module.css.map */

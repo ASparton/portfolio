@@ -162,3 +162,27 @@
         }
     }
 }
+
+@media screen and (max-width: 375px) {
+    .header {
+        .navContainer {
+            .nav {
+                .navLink {
+                    font-size: 0.7em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .header {
+        .navContainer {
+            .nav {
+                .navLink {
+                    font-size: 0.6em;
+                }
+            }
+        }
+    }
+}

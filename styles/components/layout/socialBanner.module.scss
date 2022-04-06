@@ -16,3 +16,15 @@
         @include scaleAnim();
     }
 }
+
+@media screen and (max-width: 500px) {
+    .bannerContainer {
+        .bannerIcon {
+            width: 25px;
+            height: 25px;
+
+            margin-left: 4.25px;
+            margin-right: 4.25px;
+        }
+    }
+}

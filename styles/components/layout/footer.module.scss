@@ -36,3 +36,13 @@
         }
     }
 }
+
+@media screen and (max-width: 310px) {
+    .footer {
+        .repoLink {
+            width: 98%;
+            margin-left: 1%;
+            font-size: 0.9em;
+        }
+    }
+}

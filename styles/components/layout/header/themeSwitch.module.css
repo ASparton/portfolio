@@ -169,4 +169,11 @@
     height: 20px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .themeSwitcher {
+    width: 15px;
+    height: 15px;
+  }
+}
 /*# sourceMappingURL=themeSwitch.module.css.map */
