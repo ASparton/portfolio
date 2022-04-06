@@ -110,7 +110,7 @@ Home.propTypes = {
 export async function getStaticProps() {
 
   // read the about text file
-  const aboutText = fs.readFileSync('private/persistance/about.txt').toString();
+  const aboutText = fs.readFileSync('persistance/about.txt').toString();
 
   /* connect to db */
   const pgp = require('pg-promise')({
