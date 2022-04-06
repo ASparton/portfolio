@@ -12,8 +12,8 @@
 .tagIcon, .tagIconHided {
   width: 18px;
   margin-top: 5px;
-  -webkit-animation-name: display Icon;
-          animation-name: display Icon;
+  -webkit-animation-name: displayIcon;
+          animation-name: displayIcon;
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: forwards;

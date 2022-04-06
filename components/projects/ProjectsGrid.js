@@ -59,7 +59,7 @@ function ProjectsGrid({projectCards, isWhiteTheme, inSection }) {
       window.addEventListener('resize', onWindowResize);
       onWindowResize();
     }
-  }, []);
+  }, [inSection]);
 
   return (
     <div className={pgStyles.gridContainer}>

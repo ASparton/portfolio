@@ -128,7 +128,7 @@ function Projects({ dbCategories, dbSkills, dbProjects, isWhiteTheme, isSection 
             { isSection && 
                 <button title="All projects page" 
                         className={isWhiteTheme ? projectsStyles.allProjectsBtnBlack : projectsStyles.allProjectsBtnWhite}>
-                    <Link href="/projects/" alt="All projects page"><p>See all projects</p></Link>
+                    <Link href="/projects/" alt="All projects page" passHref><p>See all projects</p></Link>
                 </button>
             }
         </div>

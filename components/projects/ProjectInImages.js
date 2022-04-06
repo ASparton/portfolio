@@ -45,7 +45,7 @@ function ProjectInImages({ projectTitle, imagesAndVideosBundle, isWhiteTheme }) 
     }
     else {
       return <li key={bundleKey++} className={inImagesStyles.imageContainer}>
-               <img src={item} title={projectTitle + " image"} className={inImagesStyles.image} />
+               <img src={item} title={projectTitle + " image"} className={inImagesStyles.image} alt={projectTitle + " image"} />
              </li>
     }
   }

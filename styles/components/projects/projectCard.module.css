@@ -242,8 +242,8 @@
   background-color: #151515;
   border-color: #151515;
   color: #fcf7f8;
-  -webkit-animation: toBlackBtn;
-          animation: toBlackBtn;
+  -webkit-animation-name: toBlackBtn;
+          animation-name: toBlackBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -251,8 +251,8 @@
 }
 
 .card .seeMoreBlack:hover, .cardNoSection .seeMoreBlack:hover, .cardBlack .seeMoreBlack:hover, .cardWhite .seeMoreBlack:hover {
-  -webkit-animation: toWhiteBtn;
-          animation: toWhiteBtn;
+  -webkit-animation-name: toWhiteBtn;
+          animation-name: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -263,8 +263,8 @@
   background-color: #fcf7f8;
   border-color: #fcf7f8;
   color: #151515;
-  -webkit-animation: toWhiteBtn;
-          animation: toWhiteBtn;
+  -webkit-animation-name: toWhiteBtn;
+          animation-name: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -272,8 +272,8 @@
 }
 
 .card .seeMoreWhite:hover, .cardNoSection .seeMoreWhite:hover, .cardBlack .seeMoreWhite:hover, .cardWhite .seeMoreWhite:hover {
-  -webkit-animation: toBlackBtn;
-          animation: toBlackBtn;
+  -webkit-animation-name: toBlackBtn;
+          animation-name: toBlackBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;

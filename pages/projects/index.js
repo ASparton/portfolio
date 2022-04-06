@@ -91,17 +91,14 @@ ProjectsIndex.propTypes = {
 
 export async function getStaticProps() {
 
-  // connect to db
+  /* connect to db */
   const pgp = require('pg-promise')({
     noWarnings: true
   })
+  
   const db = pgp({
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    database: process.env.DB_NAME,
-    user: process.env.DB_USER,
-    password: process.env.DB_PSWD,
-    ssl: { rejectUnauthorized: false }
+    connectionString: process.env.DATABASE_URL,
+    ssl: {rejectUnauthorized: false}
   });
 
   // Get the needed data from db

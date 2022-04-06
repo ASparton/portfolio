@@ -155,8 +155,8 @@
 }
 
 .mainContainerSection .allProjectsBtnWhite, .mainContainer .allProjectsBtnWhite {
-  -webkit-animation: toWhiteBtn;
-          animation: toWhiteBtn;
+  -webkit-animation-name: toWhiteBtn;
+          animation-name: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -165,8 +165,8 @@
 }
 
 .mainContainerSection .allProjectsBtnWhite:hover, .mainContainer .allProjectsBtnWhite:hover {
-  -webkit-animation: toBlackBtn;
-          animation: toBlackBtn;
+  -webkit-animation-name: toBlackBtn;
+          animation-name: toBlackBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -174,8 +174,8 @@
 }
 
 .mainContainerSection .allProjectsBtnBlack, .mainContainer .allProjectsBtnBlack {
-  -webkit-animation: toBlackBtn;
-          animation: toBlackBtn;
+  -webkit-animation-name: toBlackBtn;
+          animation-name: toBlackBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -184,8 +184,8 @@
 }
 
 .mainContainerSection .allProjectsBtnBlack:hover, .mainContainer .allProjectsBtnBlack:hover {
-  -webkit-animation: toWhiteBtn;
-          animation: toWhiteBtn;
+  -webkit-animation-name: toWhiteBtn;
+          animation-name: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;

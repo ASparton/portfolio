@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
 
 html, body, div, a, h1, h2, h3, h4, p, img, ul, li, input, textarea, footer, header, nav, section, span, button {
     margin: 0;
@@ -8,7 +8,7 @@ html, body, div, a, h1, h2, h3, h4, p, img, ul, li, input, textarea, footer, hea
     list-style: none; 
     text-decoration: none;
     font-size: 100%;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
     scroll-behavior: smooth;
 }
 

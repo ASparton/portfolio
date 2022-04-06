@@ -22,7 +22,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
 
       {/* Project image cover */}
       <div className={cardStyles.cover} title={projectCard.title + " project"}>
-        <Link href={"/projects/" + projectCard.id}>
+        <Link href={"/projects/" + projectCard.id} passHref>
           <img src={projectCard.cover_url} alt={projectCard.title + " cover"} className={cardStyles.coverImage} />
         </Link>
       </div>
@@ -38,7 +38,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
 
       {/* Project title */}
       <div title={projectCard.title + " project"}>
-        <Link href={"/projects/" + projectCard.id}>
+        <Link href={"/projects/" + projectCard.id} passHref>
           <h3 className={`${cardStyles.title} ${isWhiteTheme ? globalStyles.linkBlack : globalStyles.linkWhite}`}>{projectCard.title}</h3>
         </Link>
       </div>
@@ -48,7 +48,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
 
       {/* See more button */}
       <div title={projectCard.title + " project"} className={isWhiteTheme ? cardStyles.seeMoreWhite : cardStyles.seeMoreBlack}>
-        <Link href={"/projects/" + projectCard.id}><p>See more</p></Link>
+        <Link href={"/projects/" + projectCard.id} passHref><p>See more</p></Link>
       </div>
 
     </article>
