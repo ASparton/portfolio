@@ -9,6 +9,16 @@ import globalStyles from '/styles/global.module.css';
 
 function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
 
+  /**
+   * Create a new string equal to given sting but sliced from character 0 to character limit with a '...' added at the end.
+   * @param {string} text the text to crop
+   * @param {int} limit the characters limit
+   * @returns a new string equal to given sting but sliced from character 0 to character limit with a '...' added at the end.
+   */
+  function getCropedText(text, limit) {
+    return text.slice(0, limit) + '...';
+  }
+
   let skillKey = 0;
 
   return (
@@ -44,7 +54,9 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
       </div>
 
       {/* Project description */}
-      <p className={`${cardStyles.description} ${isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack}`}>{projectCard.description}</p>
+      <p className={`${cardStyles.description} ${isWhiteTheme ? globalStyles.textWhite : globalStyles.textBlack}`}>
+        {getCropedText(projectCard.description, 300)}
+      </p>
 
       {/* See more button */}
       <div title={projectCard.title + " project"} className={isWhiteTheme ? cardStyles.seeMoreWhite : cardStyles.seeMoreBlack}>
