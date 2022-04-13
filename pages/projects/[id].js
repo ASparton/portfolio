@@ -193,7 +193,7 @@ async function getProjectInfos(db, projectId) {
 
   // Try to get the project infos
   await db.one('SELECT projects.title, projects.description, projects.year, projects.cover_url, ' +
-                      'projects.details, projects.experience, categories.name ' +
+                      'projects.details, projects.experience, projects.repo_url, categories.name ' +
                'FROM projects INNER JOIN categories ON projects.category_id = categories.id ' +
                'WHERE projects.id = $1', [projectId])
   .then(async standardInfos => {
@@ -205,6 +205,7 @@ async function getProjectInfos(db, projectId) {
         year: standardInfos.year.getFullYear(),
         cover_url: standardInfos.cover_url,
         category: standardInfos.name,
+        repo_url: standardInfos.repo_url,
         skills: []
       },
   

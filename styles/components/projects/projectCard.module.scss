@@ -76,37 +76,53 @@
         margin-bottom: 10%;
     }
 
-    .seeMore {
-        width: 40%;
-        padding: 2%;
-        padding-left: 5%;
-        padding-right: 5%;
-        
-        text-align: center;
+    .seeMoreGitContainer {
+        width: 100%;
+        margin-bottom: -2.5%;
+        @include flexBox(row, nowrap, space-between, flex-start);
 
-        border: 1px solid;
-        border-radius: 5px;
+        .seeMore {
+            width: 40%;
+            padding: 2%;
+            padding-left: 5%;
+            padding-right: 5%;
+            
+            text-align: center;
+    
+            border: 1px solid;
+            border-radius: 5px;
+    
+            cursor: pointer;
+        }
+        .seeMoreBlack {
+            @extend .seeMore;
+    
+            background-color: $darkness;
+            border-color: $darkness;
+            color: $snow;
+            
+            @include blackButtonAnim();
+        }
+        .seeMoreWhite {
+            @extend .seeMore;
+    
+            background-color: $snow;
+            border-color: $snow;
+            color: $darkness;
+    
+            @include whiteButtonAnim();
+        }
 
-        cursor: pointer;
+        .git {
+            width: 13%;
+            @include scaleAnim();
+
+            .gitIcon {
+                width: 100%;
+            }
+        }
     }
-    .seeMoreBlack {
-        @extend .seeMore;
 
-        background-color: $darkness;
-        border-color: $darkness;
-        color: $snow;
-        
-        @include blackButtonAnim();
-    }
-    .seeMoreWhite {
-        @extend .seeMore;
-
-        background-color: $snow;
-        border-color: $snow;
-        color: $darkness;
-
-        @include whiteButtonAnim();
-    }
 }
 
 .cardNoSection {

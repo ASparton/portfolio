@@ -1,8 +1,5 @@
 import PropTypes from 'prop-types';
 
-/* External dependencies */
-import fs from 'fs';
-
 /* React dependencies */
 import { useState } from 'react';
 
@@ -115,6 +112,7 @@ Home.propTypes = {
 export async function getStaticProps() {
 
   // read the about text file
+  const fs = require('fs');
   const aboutText = fs.readFileSync('persistance/about.txt').toString();
 
   /* connect to db */
@@ -221,7 +219,7 @@ async function getAllTechnos(db) {
 async function getAllProjects(db, categories, skills) {
   let projects = [];
 
-  let dbProjects = await db.any('SELECT id, title, description, year, cover_url, category_id FROM projects');
+  let dbProjects = await db.any('SELECT id, title, description, year, cover_url, category_id, repo_url FROM projects');
   dbProjects.map(function (project) {
     projects.push({
       id: parseInt(project.id),
@@ -230,6 +228,7 @@ async function getAllProjects(db, categories, skills) {
       year: project.year.getFullYear(),
       cover_url: project.cover_url,
       category: categories.find(category => category.id === parseInt(project.category_id)).name,
+      repo_url: project.repo_url,
       skills: []
     })
   });
