@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 /* React dependencies */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 /* Next dependencies */
 import Head from 'next/head';
@@ -56,10 +56,25 @@ export default function ProjectsIndex({categories, skills, projects}) {
 
   /**
    * Changes the current theme from white to black or from black to white.
+   * Also update the session theme variable.
    */
   function switchTheme() {
     setIsWhiteTheme((prev) => !prev);
+    window !== undefined && sessionStorage.setItem('selectedTheme', isWhiteTheme ? 'white' : 'black');
   }
+
+  /**
+   * If the theme is not set in session variables, add it with white by default.
+   */
+  useEffect(() => {
+    let selectedTheme = sessionStorage.getItem('selectedTheme');
+    if (selectedTheme === null) {
+      sessionStorage.setItem('selectedTheme', 'white');
+      setIsWhiteTheme(true);
+    } else {
+      setIsWhiteTheme(sessionStorage.getItem('selectedTheme') === 'white' ? true : false);
+    }
+  }, [])
 
   return (
     <div className={isWhiteTheme ? globalStyles.bodyWhite : globalStyles.bodyBlack}>
@@ -174,7 +189,7 @@ export async function getStaticProps() {
  async function getAllProjects(db, categories, skills) {
   let projects = [];
 
-  let dbProjects = await db.any('SELECT id, title, description, year, cover_url, category_id, repo_url FROM projects');
+  let dbProjects = await db.any('SELECT id, title, description, year, cover_url, category_id, repo_url FROM projects  ORDER BY id DESC');
   dbProjects.map(function (project) {
     projects.push({
       id: parseInt(project.id),

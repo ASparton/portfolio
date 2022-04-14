@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 /* React dependencies */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /* Next dependencies */
 import Head from 'next/head';
@@ -27,10 +27,25 @@ export default function ProjectPage({headerNavLinks, projectInfos}) {
 
   /**
    * Changes the current theme from white to black or from black to white.
+   * Also update the session theme variable.
    */
   function switchTheme() {
     setIsWhiteTheme((prev) => !prev);
+    window !== undefined && sessionStorage.setItem('selectedTheme', isWhiteTheme ? 'white' : 'black');
   }
+
+  /**
+   * If the theme is not set in session variables, add it with white by default.
+   */
+  useEffect(() => {
+    let selectedTheme = sessionStorage.getItem('selectedTheme');
+    if (selectedTheme === null) {
+      sessionStorage.setItem('selectedTheme', 'white');
+      setIsWhiteTheme(true);
+    } else {
+      setIsWhiteTheme(sessionStorage.getItem('selectedTheme') === 'white' ? true : false);
+    }
+  }, [])
 
   /**
    * @returns {array} containing the images and videos of the project completely shuffled.
