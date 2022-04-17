@@ -1,18 +1,63 @@
 @import "../../mixins";
 
-.gridContainer {
+.mainContainer {
     width: 100%;
     margin-bottom: 2%;
     @include flexBox(row, nowrap, space-between, center);
 
-    .gridSection {
+    .gridContainer {
         width: 100%;
-        @include flexBox(row, nowrap, center, center);
-    }
+        margin-right: 8%;
+        
+        .gridSection {
+            width: 100%;
+            @include flexBox(row, nowrap, center, center);
+        }
+    
+        .grid {
+            width: 100%;
+            @include flexBox(row, wrap, center, center);
+        }
 
-    .grid {
-        width: 100%;
-        @include flexBox(row, wrap, center, center);
+        .cardContainer {
+            width: 26%;
+            margin-left: 3.5%;
+            margin-right: 3.5%;
+        }
+
+        .dotsContainer {
+            width: 75%;
+            margin-left: 12.5%;
+            margin-top: 3%;
+
+            @include flexBox(row, nowrap, space-around, center);
+
+            .dot {
+                width: 1.5vh;
+                height: 1.5vh;
+                margin-left: 5%;
+                margin-right: 5%;
+
+                border: 1px solid;
+                border-radius: 50%;
+            }
+            .dotBlack {
+                @extend .dot;
+                border-color: $darkness;
+            }
+            .dotBlackFilled {
+                @extend .dotBlack;
+                background-color: $darkness;
+            }
+            .dotWhite {
+                @extend .dot;
+                border-color: $snow;
+            }
+            .dotWhiteFilled {
+                @extend .dotWhite;
+                background-color: $snow;
+            }
+        }
     }
 
     .arrow {
@@ -67,7 +112,7 @@
 }
 
 @media screen and (max-width: 1200px){
-    .gridContainer {
+    .mainContainer {
         .arrow {
             width: 5%;
         }
@@ -75,7 +120,7 @@
 }
 
 @media screen and (max-width: 850px){
-    .gridContainer {
+    .mainContainer {
         margin-bottom: 6%;
         .arrow {
             width: 6%;
@@ -84,7 +129,7 @@
 }
 
 @media screen and (max-width: 500px){
-    .gridContainer {
+    .mainContainer {
         margin-bottom: 10%;
         .arrow {
             width: 8%;

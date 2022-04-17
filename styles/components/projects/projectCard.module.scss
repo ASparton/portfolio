@@ -2,12 +2,8 @@
 @import "../../mixins";
 
 .card {
-    width: 30%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-bottom: 2.5%;
-    padding: 3%;
-
+    width: 100%;
+    padding: 8%;
     border-radius: 20px;
 
     .tag {

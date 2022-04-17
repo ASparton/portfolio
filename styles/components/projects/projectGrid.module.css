@@ -133,7 +133,7 @@
 /* Buttons animation */
 /* Scale up & down animation */
 /* 360 animation */
-.gridContainer {
+.mainContainer {
   width: 100%;
   margin-bottom: 2%;
   display: -webkit-box;
@@ -153,7 +153,12 @@
           align-items: center;
 }
 
-.gridContainer .gridSection {
+.mainContainer .gridContainer {
+  width: 100%;
+  margin-right: 8%;
+}
+
+.mainContainer .gridContainer .gridSection {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,7 +177,7 @@
           align-items: center;
 }
 
-.gridContainer .grid {
+.mainContainer .gridContainer .grid {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,13 +196,64 @@
           align-items: center;
 }
 
-.gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+.mainContainer .gridContainer .cardContainer {
+  width: 26%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+
+.mainContainer .gridContainer .dotsContainer {
+  width: 75%;
+  margin-left: 12.5%;
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainContainer .gridContainer .dotsContainer .dot, .mainContainer .gridContainer .dotsContainer .dotBlack, .mainContainer .gridContainer .dotsContainer .dotBlackFilled, .mainContainer .gridContainer .dotsContainer .dotWhite, .mainContainer .gridContainer .dotsContainer .dotWhiteFilled {
+  width: 1.5vh;
+  height: 1.5vh;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.mainContainer .gridContainer .dotsContainer .dotBlack, .mainContainer .gridContainer .dotsContainer .dotBlackFilled {
+  border-color: #151515;
+}
+
+.mainContainer .gridContainer .dotsContainer .dotBlackFilled {
+  background-color: #151515;
+}
+
+.mainContainer .gridContainer .dotsContainer .dotWhite, .mainContainer .gridContainer .dotsContainer .dotWhiteFilled {
+  border-color: #fcf7f8;
+}
+
+.mainContainer .gridContainer .dotsContainer .dotWhiteFilled {
+  background-color: #fcf7f8;
+}
+
+.mainContainer .arrow, .mainContainer .arrowRight, .mainContainer .arrowLeft {
   width: 4%;
   background-color: transparent;
   cursor: pointer;
 }
 
-.gridContainer .arrowRight {
+.mainContainer .arrowRight {
   -webkit-animation-name: bounceyRightReverse;
           animation-name: bounceyRightReverse;
   -webkit-animation-duration: 0.5s;
@@ -206,7 +262,7 @@
           animation-fill-mode: forwards;
 }
 
-.gridContainer .arrowRight:hover {
+.mainContainer .arrowRight:hover {
   -webkit-animation-name: bounceyRight;
           animation-name: bounceyRight;
   -webkit-animation-duration: 0.5s;
@@ -215,7 +271,7 @@
           animation-fill-mode: forwards;
 }
 
-.gridContainer .arrowLeft {
+.mainContainer .arrowLeft {
   -webkit-animation-name: bounceyLeftReverse;
           animation-name: bounceyLeftReverse;
   -webkit-animation-duration: 0.5s;
@@ -224,7 +280,7 @@
           animation-fill-mode: forwards;
 }
 
-.gridContainer .arrowLeft:hover {
+.mainContainer .arrowLeft:hover {
   -webkit-animation-name: bounceyLeft;
           animation-name: bounceyLeft;
   -webkit-animation-duration: 0.5s;
@@ -322,25 +378,25 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+  .mainContainer .arrow, .mainContainer .arrowRight, .mainContainer .arrowLeft {
     width: 5%;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .gridContainer {
+  .mainContainer {
     margin-bottom: 6%;
   }
-  .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+  .mainContainer .arrow, .mainContainer .arrowRight, .mainContainer .arrowLeft {
     width: 6%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .gridContainer {
+  .mainContainer {
     margin-bottom: 10%;
   }
-  .gridContainer .arrow, .gridContainer .arrowRight, .gridContainer .arrowLeft {
+  .mainContainer .arrow, .mainContainer .arrowRight, .mainContainer .arrowLeft {
     width: 8%;
   }
 }

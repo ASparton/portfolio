@@ -42,6 +42,18 @@ function ProjectsGrid({projectCards, isWhiteTheme, inSection }) {
     }
   }
 
+  function displayDots() {
+    const dotsList = [];
+    for (let i = 0; i < projectCards.length; i++) {
+      const isFilled = i >= projectIndexStart && i < projectIndexStart + projectIndexEnd
+      dotsList.push(<li className={isWhiteTheme ? 
+                                    isFilled ? pgStyles.dotBlackFilled : pgStyles.dotBlack : 
+                                    isFilled ? pgStyles.dotWhiteFilled : pgStyles.dotWhite}>              
+                    </li>)
+    }
+    return dotsList;
+  }
+
   /**
    * Determine the number of projects to display depending on the window's width
    */
@@ -62,7 +74,7 @@ function ProjectsGrid({projectCards, isWhiteTheme, inSection }) {
   }, [inSection]);
 
   return (
-    <div className={pgStyles.gridContainer}>
+    <div className={pgStyles.mainContainer}>
 
       {/* Previous project button */}
       { inSection && 
@@ -72,14 +84,25 @@ function ProjectsGrid({projectCards, isWhiteTheme, inSection }) {
       }
 
       {/* Project cards list */}
-      <div className={inSection ? pgStyles.gridSection : pgStyles.grid}>
-        {inSection ? 
-          projectCards.slice(projectIndexStart, projectIndexStart + projectIndexEnd).map((projectCard) => (
-            <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} inSection={true} />
-          )) :
-          projectCards.map((projectCard) => (
-            <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} inSection={false} />
-          ))
+      <div className={pgStyles.gridContainer}>
+        <ol className={inSection ? pgStyles.gridSection : pgStyles.grid}>
+          {inSection ? 
+            projectCards.slice(projectIndexStart, projectIndexStart + projectIndexEnd).map((projectCard) => (
+              <li className={pgStyles.cardContainer}>
+                <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} inSection={true} />
+              </li>
+            )) :
+            projectCards.map((projectCard) => (
+              <li className={pgStyles.cardContainer}>
+                <ProjectCard key={projectCard.id} projectCard={projectCard} isWhiteTheme={isWhiteTheme} inSection={false} />
+              </li>
+            ))
+          }
+        </ol>
+        {inSection && 
+          <ol className={pgStyles.dotsContainer}>
+            {displayDots()}
+          </ol>
         }
       </div>
 
