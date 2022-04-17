@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 /* React dependencies */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /* Next dependencies */
 import Head from 'next/head';
@@ -27,10 +27,25 @@ export default function ProjectPage({headerNavLinks, projectInfos}) {
 
   /**
    * Changes the current theme from white to black or from black to white.
+   * Also update the session theme variable.
    */
   function switchTheme() {
     setIsWhiteTheme((prev) => !prev);
+    window !== undefined && sessionStorage.setItem('selectedTheme', isWhiteTheme ? 'white' : 'black');
   }
+
+  /**
+   * If the theme is not set in session variables, add it with white by default.
+   */
+  useEffect(() => {
+    let selectedTheme = sessionStorage.getItem('selectedTheme');
+    if (selectedTheme === null) {
+      sessionStorage.setItem('selectedTheme', 'white');
+      setIsWhiteTheme(true);
+    } else {
+      setIsWhiteTheme(sessionStorage.getItem('selectedTheme') === 'white' ? true : false);
+    }
+  }, [])
 
   /**
    * @returns {array} containing the images and videos of the project completely shuffled.
@@ -193,7 +208,7 @@ async function getProjectInfos(db, projectId) {
 
   // Try to get the project infos
   await db.one('SELECT projects.title, projects.description, projects.year, projects.cover_url, ' +
-                      'projects.details, projects.experience, categories.name ' +
+                      'projects.details, projects.experience, projects.repo_url, categories.name ' +
                'FROM projects INNER JOIN categories ON projects.category_id = categories.id ' +
                'WHERE projects.id = $1', [projectId])
   .then(async standardInfos => {
@@ -205,6 +220,7 @@ async function getProjectInfos(db, projectId) {
         year: standardInfos.year.getFullYear(),
         cover_url: standardInfos.cover_url,
         category: standardInfos.name,
+        repo_url: standardInfos.repo_url,
         skills: []
       },
   

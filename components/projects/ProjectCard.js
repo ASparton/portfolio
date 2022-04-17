@@ -2,10 +2,15 @@ import PropTypes from 'prop-types';
 
 // next dependencies
 import Link from 'next/link';
+import Image from 'next/image';
 
 // styles
 import cardStyles from '/styles/components/projects/projectCard.module.css';
 import globalStyles from '/styles/global.module.css';
+
+// images
+import githubBlackIcon from '/public/icons/github-black.png';
+import githubWhiteIcon from '/public/icons/github-white.png';
 
 function ProjectCard({ projectCard, isWhiteTheme }) {
 
@@ -58,9 +63,15 @@ function ProjectCard({ projectCard, isWhiteTheme }) {
         {getCropedText(projectCard.description, 300)}
       </p>
 
-      {/* See more button */}
-      <div title={projectCard.title + " project"} className={isWhiteTheme ? cardStyles.seeMoreWhite : cardStyles.seeMoreBlack}>
-        <Link href={"/projects/" + projectCard.id} passHref><p>See more</p></Link>
+      {/* See more button & repository link */}
+      <div className={cardStyles.seeMoreGitContainer}>
+        <div title={projectCard.title + " project"} className={isWhiteTheme ? cardStyles.seeMoreWhite : cardStyles.seeMoreBlack}>
+          <Link href={"/projects/" + projectCard.id} passHref><p>See more</p></Link>
+        </div>
+        <a href={projectCard.repo_url} title={projectCard.title + " github repository"} target="_blank" rel="noopener noreferrer" 
+           className={cardStyles.git}>
+          <Image src={isWhiteTheme ? githubWhiteIcon : githubBlackIcon} alt="Github icon" className={cardStyles.gitIcon} />
+        </a>
       </div>
 
     </article>
