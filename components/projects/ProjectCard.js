@@ -7,7 +7,7 @@ import Link from 'next/link';
 import cardStyles from '/styles/components/projects/projectCard.module.css';
 import globalStyles from '/styles/global.module.css';
 
-function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
+function ProjectCard({ projectCard, isWhiteTheme }) {
 
   /**
    * Create a new string equal to given sting but sliced from character 0 to character limit with a '...' added at the end.
@@ -22,7 +22,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
   let skillKey = 0;
 
   return (
-    <article className={`${isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite} ${!inSection && cardStyles.cardNoSection}`}>
+    <article className={isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite}>
 
       {/* Project year & category */}
       <div className={cardStyles.catAndYearContainer}>
@@ -69,8 +69,7 @@ function ProjectCard({ projectCard, isWhiteTheme, inSection }) {
 
 ProjectCard.propTypes = {
     projectCard: PropTypes.object.isRequired,
-    isWhiteTheme: PropTypes.bool.isRequired,
-    inSection: PropTypes.bool.isRequired
+    isWhiteTheme: PropTypes.bool.isRequired
 };
 
 export default ProjectCard;

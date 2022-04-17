@@ -133,13 +133,13 @@
 /* Buttons animation */
 /* Scale up & down animation */
 /* 360 animation */
-.card, .cardNoSection, .cardBlack, .cardWhite {
+.card, .cardBlack, .cardWhite {
   width: 100%;
   padding: 8%;
   border-radius: 20px;
 }
 
-.card .tag, .cardNoSection .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardNoSection .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardNoSection .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+.card .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -153,17 +153,17 @@
   font-size: 0.85em;
 }
 
-.card .tagWhite, .cardNoSection .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite {
+.card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite {
   border-color: #fcf7f8;
   color: #fcf7f8;
 }
 
-.card .tagBlack, .cardNoSection .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+.card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
   border-color: #151515;
   color: #151515;
 }
 
-.card .catAndYearContainer, .cardNoSection .catAndYearContainer, .cardBlack .catAndYearContainer, .cardWhite .catAndYearContainer {
+.card .catAndYearContainer, .cardBlack .catAndYearContainer, .cardWhite .catAndYearContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,7 +182,7 @@
           align-items: flex-start;
 }
 
-.card .skillsContainer, .cardNoSection .skillsContainer, .cardBlack .skillsContainer, .cardWhite .skillsContainer {
+.card .skillsContainer, .cardBlack .skillsContainer, .cardWhite .skillsContainer {
   margin-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,32 +201,32 @@
           align-items: flex-start;
 }
 
-.card .skillsContainer .skill, .cardNoSection .skillsContainer .skill, .cardBlack .skillsContainer .skill, .cardWhite .skillsContainer .skill, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+.card .skillsContainer .skill, .cardBlack .skillsContainer .skill, .cardWhite .skillsContainer .skill, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
   margin-right: 3%;
 }
 
-.card .cover, .cardNoSection .cover, .cardBlack .cover, .cardWhite .cover {
+.card .cover, .cardBlack .cover, .cardWhite .cover {
   width: 100%;
   cursor: pointer;
 }
 
-.card .cover .coverImage, .cardNoSection .cover .coverImage, .cardBlack .cover .coverImage, .cardWhite .cover .coverImage {
+.card .cover .coverImage, .cardBlack .cover .coverImage, .cardWhite .cover .coverImage {
   height: auto;
   width: auto;
   max-width: 100%;
   border-radius: 20px;
 }
 
-.card .title, .cardNoSection .title, .cardBlack .title, .cardWhite .title {
+.card .title, .cardBlack .title, .cardWhite .title {
   margin-top: 4%;
   margin-bottom: 2%;
 }
 
-.card .description, .cardNoSection .description, .cardBlack .description, .cardWhite .description {
+.card .description, .cardBlack .description, .cardWhite .description {
   margin-bottom: 10%;
 }
 
-.card .seeMore, .cardNoSection .seeMore, .cardBlack .seeMore, .cardWhite .seeMore, .card .seeMoreBlack, .cardNoSection .seeMoreBlack, .cardBlack .seeMoreBlack, .cardWhite .seeMoreBlack, .card .seeMoreWhite, .cardNoSection .seeMoreWhite, .cardBlack .seeMoreWhite, .cardWhite .seeMoreWhite {
+.card .seeMore, .cardBlack .seeMore, .cardWhite .seeMore, .card .seeMoreBlack, .cardBlack .seeMoreBlack, .cardWhite .seeMoreBlack, .card .seeMoreWhite, .cardBlack .seeMoreWhite, .cardWhite .seeMoreWhite {
   width: 40%;
   padding: 2%;
   padding-left: 5%;
@@ -237,7 +237,7 @@
   cursor: pointer;
 }
 
-.card .seeMoreBlack, .cardNoSection .seeMoreBlack, .cardBlack .seeMoreBlack, .cardWhite .seeMoreBlack {
+.card .seeMoreBlack, .cardBlack .seeMoreBlack, .cardWhite .seeMoreBlack {
   background-color: #151515;
   border-color: #151515;
   color: #fcf7f8;
@@ -249,7 +249,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreBlack:hover, .cardNoSection .seeMoreBlack:hover, .cardBlack .seeMoreBlack:hover, .cardWhite .seeMoreBlack:hover {
+.card .seeMoreBlack:hover, .cardBlack .seeMoreBlack:hover, .cardWhite .seeMoreBlack:hover {
   -webkit-animation-name: toWhiteBtn;
           animation-name: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
@@ -258,7 +258,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreWhite, .cardNoSection .seeMoreWhite, .cardBlack .seeMoreWhite, .cardWhite .seeMoreWhite {
+.card .seeMoreWhite, .cardBlack .seeMoreWhite, .cardWhite .seeMoreWhite {
   background-color: #fcf7f8;
   border-color: #fcf7f8;
   color: #151515;
@@ -270,7 +270,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreWhite:hover, .cardNoSection .seeMoreWhite:hover, .cardBlack .seeMoreWhite:hover, .cardWhite .seeMoreWhite:hover {
+.card .seeMoreWhite:hover, .cardBlack .seeMoreWhite:hover, .cardWhite .seeMoreWhite:hover {
   -webkit-animation-name: toBlackBtn;
           animation-name: toBlackBtn;
   -webkit-animation-duration: 0.5s;
@@ -279,65 +279,20 @@
           animation-fill-mode: forwards;
 }
 
-.cardNoSection {
-  width: 18%;
-  margin-bottom: 5%;
-  padding: 1.75%;
-}
-
-@media screen and (max-width: 1600px) {
-  .cardNoSection {
-    width: 30%;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .card, .cardNoSection, .cardBlack, .cardWhite {
-    width: 45%;
-  }
-  .cardNoSection {
-    width: 30%;
-  }
-}
-
 @media screen and (max-width: 850px) {
-  .card, .cardNoSection, .cardBlack, .cardWhite {
-    width: 50%;
-    padding: 5%;
-  }
-  .cardNoSection {
-    width: 30%;
-    margin-bottom: 10%;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .cardNoSection {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .card, .cardNoSection, .cardBlack, .cardWhite {
-    width: 70%;
+  .card, .cardBlack, .cardWhite {
     padding: 8%;
-  }
-  .cardNoSection {
-    width: 60%;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .card, .cardNoSection, .cardBlack, .cardWhite {
-    width: 80%;
-  }
-  .card .catAndYearContainer .year, .cardNoSection .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
+  .card .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
     font-size: 0.85em;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .card .tag, .cardNoSection .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardNoSection .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardNoSection .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+  .card .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
     font-size: 0.75em;
     padding-left: 5px;
     padding-right: 5px;
@@ -345,13 +300,13 @@
 }
 
 @media screen and (max-width: 310px) {
-  .card, .cardNoSection, .cardBlack, .cardWhite {
+  .card, .cardBlack, .cardWhite {
     padding: 8.5%;
   }
-  .card .catAndYearContainer .year, .cardNoSection .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
+  .card .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
     font-size: 0.65em;
   }
-  .card .tag, .cardNoSection .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardNoSection .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardNoSection .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardNoSection .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardNoSection .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+  .card .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
     font-size: 0.7em;
   }
 }

@@ -7,28 +7,34 @@
 
     .gridContainer {
         width: 100%;
-        margin-right: 8%;
         
         .gridSection {
             width: 100%;
-            @include flexBox(row, nowrap, center, center);
+            @include flexBox(row, nowrap, space-around, center);
         }
     
         .grid {
-            width: 100%;
-            @include flexBox(row, wrap, center, center);
+            width: 75%;
+            margin-left: 12.5%;
+            @include flexBox(row, wrap, space-around, center);
+
+            .cardContainer {
+                width: 25%;
+                margin-right: 2%;
+                margin-bottom: 4%;
+            }
         }
 
-        .cardContainer {
+        .cardContainerSection {
             width: 26%;
-            margin-left: 3.5%;
-            margin-right: 3.5%;
+            margin-right: 2%;
         }
 
         .dotsContainer {
             width: 75%;
             margin-left: 12.5%;
-            margin-top: 3%;
+            margin-top: 5%;
+            margin-bottom: 5%;
 
             @include flexBox(row, nowrap, space-around, center);
 
@@ -111,8 +117,49 @@
     }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1600px) {
     .mainContainer {
+        .gridContainer {
+            .grid {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .mainContainer {
+        .gridContainer {
+            .grid {
+                width: 95%;
+                margin-left: 2.5%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1225px){
+    .mainContainer {
+
+        .gridContainer {
+            .cardContainerSection {
+                width: 35%;
+            }
+
+            .dotsContainer {
+                margin-top: 4%;
+                margin-bottom: 5%;
+            }
+
+            .grid {
+                .cardContainer {
+                    width: 35%;
+                    margin-right: 5%;
+                }
+            }
+        }
+
         .arrow {
             width: 5%;
         }
@@ -122,17 +169,88 @@
 @media screen and (max-width: 850px){
     .mainContainer {
         margin-bottom: 6%;
+
+        .gridContainer {
+            .cardContainerSection {
+                width: 39%;
+                margin-right: 3%;
+            }
+
+            .dotsContainer {
+                margin-bottom: 2%;
+            }
+
+            .grid {
+                width: 100%;
+                margin-left: 0;
+
+                .cardContainer {
+                    width: 38%;
+                }
+            }
+        }
+
         .arrow {
             width: 6%;
         }
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 700px){
     .mainContainer {
         margin-bottom: 10%;
+
+        .gridContainer {
+            margin-top: 5%;
+
+            .cardContainerSection {
+                width: 60%;
+                margin-right: 4.25%;
+            }
+
+            .dotsContainer {
+                margin-top: 8%;
+            }
+
+            .grid {
+                .cardContainer {
+                    margin-right: 8%;
+                    margin-bottom: 10%;
+                }
+            }
+        }
+
         .arrow {
             width: 8%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mainContainer {
+        .gridContainer {
+            .cardContainerSection {
+                width: 70%;
+                margin-right: 10%;
+            }
+
+            .grid {
+                .cardContainer {
+                    width: 75%;
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .mainContainer {
+        .gridContainer {
+            .cardContainerSection {
+                width: 75%;
+                margin-right: 7%;
+            }
         }
     }
 }
