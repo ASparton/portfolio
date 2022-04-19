@@ -88,12 +88,16 @@ function ProjectsGrid({projectCards, isWhiteTheme, inSection }) {
         <ol className={inSection ? pgStyles.gridSection : pgStyles.grid}>
           {inSection ? 
             projectCards.slice(projectIndexStart, projectIndexStart + projectIndexEnd).map((projectCard) => (
-              <li key={projectCard.id} className={inSection ? pgStyles.cardContainerSection : pgStyles.cardContainer}>
+              <li key={projectCard.id} className={inSection ? 
+                                                    isWhiteTheme ? pgStyles.cardContainerSectionBlack : pgStyles.cardContainerSectionWhite :
+                                                    isWhiteTheme ? pgStyles.cardContainerBlack : pgStyles.cardContainerWhite}>
                 <ProjectCard projectCard={projectCard} isWhiteTheme={isWhiteTheme} />
               </li>
             )) :
             projectCards.map((projectCard) => (
-              <li key={projectCard.id} className={inSection ? pgStyles.cardContainerSection : pgStyles.cardContainer}>
+              <li key={projectCard.id} className={inSection ? 
+                                                    isWhiteTheme ? pgStyles.cardContainerSectionBlack : pgStyles.cardContainerSectionWhite :
+                                                    isWhiteTheme ? pgStyles.cardContainerBlack : pgStyles.cardContainerWhite}>
                 <ProjectCard projectCard={projectCard} isWhiteTheme={isWhiteTheme} />
               </li>
             ))

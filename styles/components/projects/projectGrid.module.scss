@@ -15,9 +15,7 @@
             .cardContainerSection {
                 width: 26%;
                 padding: 2%;
-    
                 border-radius: 20px;
-                background-color: $darkness;
             }
         }
     
@@ -30,9 +28,7 @@
                 width: 26%;
                 margin-bottom: 4%;
                 padding: 2%;
-
                 border-radius: 20px;
-                background-color: $darkness;
             }
         }
 
@@ -295,4 +291,22 @@
             }
         }
     }
+}
+
+.cardContainerBlack {
+    @extend .cardContainer;
+    background-color: $darkness;
+}
+.cardContainerWhite {
+    @extend .cardContainer;
+    background-color: $snow;
+}
+
+.cardContainerSectionBlack {
+    @extend .cardContainerSection;
+    background-color: $darkness;
+}
+.cardContainerSectionWhite {
+    @extend .cardContainerSection;
+    background-color: $snow;
 }
