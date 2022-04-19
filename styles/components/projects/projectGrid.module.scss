@@ -11,6 +11,14 @@
         .gridSection {
             width: 100%;
             @include flexBox(row, nowrap, space-around, center);
+
+            .cardContainerSection {
+                width: 26%;
+                padding: 2%;
+    
+                border-radius: 20px;
+                background-color: $darkness;
+            }
         }
     
         .grid {
@@ -19,15 +27,13 @@
             @include flexBox(row, wrap, space-around, center);
 
             .cardContainer {
-                width: 25%;
-                margin-right: 2%;
+                width: 26%;
                 margin-bottom: 4%;
-            }
-        }
+                padding: 2%;
 
-        .cardContainerSection {
-            width: 26%;
-            margin-right: 2%;
+                border-radius: 20px;
+                background-color: $darkness;
+            }
         }
 
         .dotsContainer {
@@ -143,20 +149,23 @@
     .mainContainer {
 
         .gridContainer {
-            .cardContainerSection {
-                width: 35%;
-            }
-
-            .dotsContainer {
-                margin-top: 4%;
-                margin-bottom: 5%;
-            }
-
             .grid {
                 .cardContainer {
                     width: 35%;
-                    margin-right: 5%;
+                    padding: 3%;
                 }
+            }
+
+            .gridSection {
+                .cardContainerSection {
+                    width: 35%;
+                    padding: 3%;
+                }
+            }
+            
+            .dotsContainer {
+                margin-top: 4%;
+                margin-bottom: 5%;
             }
         }
 
@@ -171,22 +180,25 @@
         margin-bottom: 6%;
 
         .gridContainer {
-            .cardContainerSection {
-                width: 39%;
-                margin-right: 3%;
-            }
-
-            .dotsContainer {
-                margin-bottom: 2%;
-            }
-
             .grid {
                 width: 100%;
                 margin-left: 0;
 
                 .cardContainer {
                     width: 38%;
+                    padding: 4%;
                 }
+            }
+
+            .gridSection {
+                .cardContainerSection {
+                    width: 39%;
+                    padding: 4%;
+                }
+            }
+
+            .dotsContainer {
+                margin-bottom: 2%;
             }
         }
 
@@ -202,21 +214,23 @@
 
         .gridContainer {
             margin-top: 5%;
+            
+            .grid {
+                .cardContainer {
+                    margin-bottom: 10%;
+                    padding: 4.5%;
+                }
+            }
 
-            .cardContainerSection {
-                width: 60%;
-                margin-right: 4.25%;
+            .gridSection {
+                .cardContainerSection {
+                    width: 60%;
+                    padding: 5%;
+                }
             }
 
             .dotsContainer {
                 margin-top: 8%;
-            }
-
-            .grid {
-                .cardContainer {
-                    margin-right: 8%;
-                    margin-bottom: 10%;
-                }
             }
         }
 
@@ -229,15 +243,35 @@
 @media screen and (max-width: 550px) {
     .mainContainer {
         .gridContainer {
-            .cardContainerSection {
-                width: 70%;
-                margin-right: 10%;
-            }
-
             .grid {
                 .cardContainer {
                     width: 75%;
-                    margin-right: 10%;
+                    padding: 5%;
+                }
+            }
+
+            .gridSection {
+                .cardContainerSection {
+                    width: 70%;
+                    padding: 6%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mainContainer {
+        .gridContainer {
+            .grid {
+                .cardContainer {
+                    padding: 6%;
+                }
+            }
+
+            .gridSection {
+                .cardContainerSection {
+                    padding: 6.5%;
                 }
             }
         }
@@ -247,9 +281,17 @@
 @media screen and (max-width: 300px) {
     .mainContainer {
         .gridContainer {
-            .cardContainerSection {
-                width: 75%;
-                margin-right: 7%;
+            .grid {
+                .cardContainer {
+                    padding: 7%;
+                }
+            }
+
+            .gridSection {
+                .cardContainerSection {
+                    width: 75%;
+                    padding: 7.5%;
+                }
             }
         }
     }

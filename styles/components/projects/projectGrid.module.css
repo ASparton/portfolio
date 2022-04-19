@@ -175,6 +175,13 @@
           align-items: center;
 }
 
+.mainContainer .gridContainer .gridSection .cardContainerSection {
+  width: 26%;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: #151515;
+}
+
 .mainContainer .gridContainer .grid {
   width: 75%;
   margin-left: 12.5%;
@@ -195,14 +202,11 @@
 }
 
 .mainContainer .gridContainer .grid .cardContainer {
-  width: 25%;
-  margin-right: 2%;
-  margin-bottom: 4%;
-}
-
-.mainContainer .gridContainer .cardContainerSection {
   width: 26%;
-  margin-right: 2%;
+  margin-bottom: 4%;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: #151515;
 }
 
 .mainContainer .gridContainer .dotsContainer {
@@ -396,16 +400,17 @@
 }
 
 @media screen and (max-width: 1225px) {
-  .mainContainer .gridContainer .cardContainerSection {
+  .mainContainer .gridContainer .grid .cardContainer {
     width: 35%;
+    padding: 3%;
+  }
+  .mainContainer .gridContainer .gridSection .cardContainerSection {
+    width: 35%;
+    padding: 3%;
   }
   .mainContainer .gridContainer .dotsContainer {
     margin-top: 4%;
     margin-bottom: 5%;
-  }
-  .mainContainer .gridContainer .grid .cardContainer {
-    width: 35%;
-    margin-right: 5%;
   }
   .mainContainer .arrow, .mainContainer .arrowRight, .mainContainer .arrowLeft {
     width: 5%;
@@ -416,19 +421,20 @@
   .mainContainer {
     margin-bottom: 6%;
   }
-  .mainContainer .gridContainer .cardContainerSection {
-    width: 39%;
-    margin-right: 3%;
-  }
-  .mainContainer .gridContainer .dotsContainer {
-    margin-bottom: 2%;
-  }
   .mainContainer .gridContainer .grid {
     width: 100%;
     margin-left: 0;
   }
   .mainContainer .gridContainer .grid .cardContainer {
     width: 38%;
+    padding: 4%;
+  }
+  .mainContainer .gridContainer .gridSection .cardContainerSection {
+    width: 39%;
+    padding: 4%;
+  }
+  .mainContainer .gridContainer .dotsContainer {
+    margin-bottom: 2%;
   }
   .mainContainer .arrow, .mainContainer .arrowRight, .mainContainer .arrowLeft {
     width: 6%;
@@ -442,16 +448,16 @@
   .mainContainer .gridContainer {
     margin-top: 5%;
   }
-  .mainContainer .gridContainer .cardContainerSection {
+  .mainContainer .gridContainer .grid .cardContainer {
+    margin-bottom: 10%;
+    padding: 4.5%;
+  }
+  .mainContainer .gridContainer .gridSection .cardContainerSection {
     width: 60%;
-    margin-right: 4.25%;
+    padding: 5%;
   }
   .mainContainer .gridContainer .dotsContainer {
     margin-top: 8%;
-  }
-  .mainContainer .gridContainer .grid .cardContainer {
-    margin-right: 8%;
-    margin-bottom: 10%;
   }
   .mainContainer .arrow, .mainContainer .arrowRight, .mainContainer .arrowLeft {
     width: 8%;
@@ -459,20 +465,32 @@
 }
 
 @media screen and (max-width: 550px) {
-  .mainContainer .gridContainer .cardContainerSection {
-    width: 70%;
-    margin-right: 10%;
-  }
   .mainContainer .gridContainer .grid .cardContainer {
     width: 75%;
-    margin-right: 10%;
+    padding: 5%;
+  }
+  .mainContainer .gridContainer .gridSection .cardContainerSection {
+    width: 70%;
+    padding: 6%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mainContainer .gridContainer .grid .cardContainer {
+    padding: 6%;
+  }
+  .mainContainer .gridContainer .gridSection .cardContainerSection {
+    padding: 6.5%;
   }
 }
 
 @media screen and (max-width: 300px) {
-  .mainContainer .gridContainer .cardContainerSection {
+  .mainContainer .gridContainer .grid .cardContainer {
+    padding: 7%;
+  }
+  .mainContainer .gridContainer .gridSection .cardContainerSection {
     width: 75%;
-    margin-right: 7%;
+    padding: 7.5%;
   }
 }
 /*# sourceMappingURL=projectGrid.module.css.map */

@@ -133,13 +133,12 @@
 /* Buttons animation */
 /* Scale up & down animation */
 /* 360 animation */
-.card, .cardBlack, .cardWhite {
+.card {
   width: 100%;
-  padding: 8%;
   border-radius: 20px;
 }
 
-.card .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+.card .tag, .card .tagWhite, .card .skillsContainer .skillWhite, .card .tagBlack, .card .skillsContainer .skillBlack {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -153,17 +152,17 @@
   font-size: 0.85em;
 }
 
-.card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite {
+.card .tagWhite, .card .skillsContainer .skillWhite {
   border-color: #fcf7f8;
   color: #fcf7f8;
 }
 
-.card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+.card .tagBlack, .card .skillsContainer .skillBlack {
   border-color: #151515;
   color: #151515;
 }
 
-.card .catAndYearContainer, .cardBlack .catAndYearContainer, .cardWhite .catAndYearContainer {
+.card .catAndYearContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,7 +181,7 @@
           align-items: flex-start;
 }
 
-.card .skillsContainer, .cardBlack .skillsContainer, .cardWhite .skillsContainer {
+.card .skillsContainer {
   margin-top: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,32 +200,32 @@
           align-items: flex-start;
 }
 
-.card .skillsContainer .skill, .cardBlack .skillsContainer .skill, .cardWhite .skillsContainer .skill, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+.card .skillsContainer .skill, .card .skillsContainer .skillWhite, .card .skillsContainer .skillBlack {
   margin-right: 3%;
 }
 
-.card .cover, .cardBlack .cover, .cardWhite .cover {
+.card .cover {
   width: 100%;
   cursor: pointer;
 }
 
-.card .cover .coverImage, .cardBlack .cover .coverImage, .cardWhite .cover .coverImage {
+.card .cover .coverImage {
   height: auto;
   width: auto;
   max-width: 100%;
   border-radius: 20px;
 }
 
-.card .title, .cardBlack .title, .cardWhite .title {
+.card .title {
   margin-top: 4%;
   margin-bottom: 2%;
 }
 
-.card .description, .cardBlack .description, .cardWhite .description {
+.card .description {
   margin-bottom: 10%;
 }
 
-.card .seeMoreGitContainer, .cardBlack .seeMoreGitContainer, .cardWhite .seeMoreGitContainer {
+.card .seeMoreGitContainer {
   width: 100%;
   margin-bottom: -2.5%;
   display: -webkit-box;
@@ -246,7 +245,7 @@
           align-items: flex-start;
 }
 
-.card .seeMoreGitContainer .seeMore, .cardBlack .seeMoreGitContainer .seeMore, .cardWhite .seeMoreGitContainer .seeMore, .card .seeMoreGitContainer .seeMoreBlack, .cardBlack .seeMoreGitContainer .seeMoreBlack, .cardWhite .seeMoreGitContainer .seeMoreBlack, .card .seeMoreGitContainer .seeMoreWhite, .cardBlack .seeMoreGitContainer .seeMoreWhite, .cardWhite .seeMoreGitContainer .seeMoreWhite {
+.card .seeMoreGitContainer .seeMore, .card .seeMoreGitContainer .seeMoreBlack, .card .seeMoreGitContainer .seeMoreWhite {
   width: 40%;
   padding: 2%;
   padding-left: 5%;
@@ -257,7 +256,7 @@
   cursor: pointer;
 }
 
-.card .seeMoreGitContainer .seeMoreBlack, .cardBlack .seeMoreGitContainer .seeMoreBlack, .cardWhite .seeMoreGitContainer .seeMoreBlack {
+.card .seeMoreGitContainer .seeMoreBlack {
   background-color: #151515;
   border-color: #151515;
   color: #fcf7f8;
@@ -269,7 +268,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreGitContainer .seeMoreBlack:hover, .cardBlack .seeMoreGitContainer .seeMoreBlack:hover, .cardWhite .seeMoreGitContainer .seeMoreBlack:hover {
+.card .seeMoreGitContainer .seeMoreBlack:hover {
   -webkit-animation-name: toWhiteBtn;
           animation-name: toWhiteBtn;
   -webkit-animation-duration: 0.5s;
@@ -278,7 +277,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreGitContainer .seeMoreWhite, .cardBlack .seeMoreGitContainer .seeMoreWhite, .cardWhite .seeMoreGitContainer .seeMoreWhite {
+.card .seeMoreGitContainer .seeMoreWhite {
   background-color: #fcf7f8;
   border-color: #fcf7f8;
   color: #151515;
@@ -290,7 +289,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreGitContainer .seeMoreWhite:hover, .cardBlack .seeMoreGitContainer .seeMoreWhite:hover, .cardWhite .seeMoreGitContainer .seeMoreWhite:hover {
+.card .seeMoreGitContainer .seeMoreWhite:hover {
   -webkit-animation-name: toBlackBtn;
           animation-name: toBlackBtn;
   -webkit-animation-duration: 0.5s;
@@ -299,7 +298,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreGitContainer .git, .cardBlack .seeMoreGitContainer .git, .cardWhite .seeMoreGitContainer .git {
+.card .seeMoreGitContainer .git {
   width: 13%;
   -webkit-animation-name: scaleDown;
           animation-name: scaleDown;
@@ -309,7 +308,7 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreGitContainer .git:hover, .cardBlack .seeMoreGitContainer .git:hover, .cardWhite .seeMoreGitContainer .git:hover {
+.card .seeMoreGitContainer .git:hover {
   -webkit-animation-name: scaleUp;
           animation-name: scaleUp;
   -webkit-animation-duration: 0.25s;
@@ -318,24 +317,18 @@
           animation-fill-mode: forwards;
 }
 
-.card .seeMoreGitContainer .git .gitIcon, .cardBlack .seeMoreGitContainer .git .gitIcon, .cardWhite .seeMoreGitContainer .git .gitIcon {
+.card .seeMoreGitContainer .git .gitIcon {
   width: 100%;
 }
 
-@media screen and (max-width: 850px) {
-  .card, .cardBlack, .cardWhite {
-    padding: 8%;
-  }
-}
-
 @media screen and (max-width: 450px) {
-  .card .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
+  .card .catAndYearContainer .year {
     font-size: 0.85em;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .card .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+  .card .tag, .card .tagWhite, .card .skillsContainer .skillWhite, .card .tagBlack, .card .skillsContainer .skillBlack {
     font-size: 0.75em;
     padding-left: 5px;
     padding-right: 5px;
@@ -343,22 +336,11 @@
 }
 
 @media screen and (max-width: 310px) {
-  .card, .cardBlack, .cardWhite {
-    padding: 8.5%;
-  }
-  .card .catAndYearContainer .year, .cardBlack .catAndYearContainer .year, .cardWhite .catAndYearContainer .year {
+  .card .catAndYearContainer .year {
     font-size: 0.65em;
   }
-  .card .tag, .cardBlack .tag, .cardWhite .tag, .card .tagWhite, .cardBlack .tagWhite, .cardWhite .tagWhite, .card .skillsContainer .skillWhite, .cardBlack .skillsContainer .skillWhite, .cardWhite .skillsContainer .skillWhite, .card .tagBlack, .cardBlack .tagBlack, .cardWhite .tagBlack, .card .skillsContainer .skillBlack, .cardBlack .skillsContainer .skillBlack, .cardWhite .skillsContainer .skillBlack {
+  .card .tag, .card .tagWhite, .card .skillsContainer .skillWhite, .card .tagBlack, .card .skillsContainer .skillBlack {
     font-size: 0.7em;
   }
-}
-
-.cardBlack {
-  background-color: #151515;
-}
-
-.cardWhite {
-  background-color: #fcf7f8;
 }
 /*# sourceMappingURL=projectCard.module.css.map */

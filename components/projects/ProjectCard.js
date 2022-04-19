@@ -27,7 +27,7 @@ function ProjectCard({ projectCard, isWhiteTheme }) {
   let skillKey = 0;
 
   return (
-    <article className={isWhiteTheme ? cardStyles.cardBlack : cardStyles.cardWhite}>
+    <article className={cardStyles.card}>
 
       {/* Project year & category */}
       <div className={cardStyles.catAndYearContainer}>

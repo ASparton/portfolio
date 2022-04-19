@@ -3,7 +3,6 @@
 
 .card {
     width: 100%;
-    padding: 8%;
     border-radius: 20px;
 
     .tag {
@@ -121,12 +120,6 @@
 
 }
 
-@media screen and (max-width: 850px) {
-    .card {
-        padding: 8%;
-    }
-}
-
 @media screen and (max-width: 450px) {
     .card {
         .catAndYearContainer {
@@ -149,8 +142,6 @@
 
 @media screen and (max-width: 310px) {
     .card {
-        padding: 8.5%;
-
         .catAndYearContainer {
             .year {
                 font-size: 0.65em;
@@ -161,15 +152,4 @@
             font-size: 0.7em;
         }
     }
-}
-
-
-
-.cardBlack {
-    @extend .card;
-    background-color: $darkness;
-}
-.cardWhite {
-    @extend .card;
-    background-color: $snow;
 }
