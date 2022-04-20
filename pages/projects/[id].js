@@ -31,7 +31,7 @@ export default function ProjectPage({headerNavLinks, projectInfos}) {
    */
   function switchTheme() {
     setIsWhiteTheme((prev) => !prev);
-    window !== undefined && sessionStorage.setItem('selectedTheme', isWhiteTheme ? 'white' : 'black');
+    sessionStorage.setItem('selectedTheme', isWhiteTheme ? 'black' : 'white');
   }
 
   /**
