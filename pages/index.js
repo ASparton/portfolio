@@ -84,13 +84,17 @@ export default function Home({ aboutText, technos, categories, skills, projects 
     <div className={isWhiteTheme ? globalStyles.bodyWhite : globalStyles.bodyBlack}>
       
       <Head>
-        <title>Alexandre Sparton</title>
+        <title>Alexandre Sparton - Portfolio</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="theme-color" content="#fcf7f8" />
+        <meta name="description" content="Hello, I'm Alexandre Sparton, an innovative IT student and software developer currently specialized in fullstack web development. This portfolio gathers some of the projects I built over the years and also my areas of interest in the current moment." />
+        <meta name="robots" content="index, follow" />*
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="charset" content="utf-8" />
       </Head>
       
       {/* Transition on page load */}
