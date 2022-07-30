@@ -53,7 +53,7 @@ const navLinks = [
   }
 ];
 
-export default function Home({ aboutText, technos, categories, skills, projects }) {
+export default function Home({ technos, categories, skills, projects }) {
   
   // offers the possibility to change the theme from white to black and vice versa
   const [isWhiteTheme, setIsWhiteTheme] = useState(true);
@@ -106,7 +106,7 @@ export default function Home({ aboutText, technos, categories, skills, projects 
 
       <Header links={navLinks} isWhiteTheme={isWhiteTheme} switchThemeFunction={switchTheme} />
       <main>
-        <About aboutText={aboutText} isWhiteTheme={isWhiteTheme} />
+        <About isWhiteTheme={isWhiteTheme} />
         <Technos technos={technos} isWhiteTheme={isWhiteTheme} />
         <Projects dbCategories={categories} dbSkills={skills} dbProjects={projects} isWhiteTheme={isWhiteTheme} isSection={true} />
         <Contact isWhiteTheme={isWhiteTheme} />
@@ -130,10 +130,6 @@ Home.propTypes = {
  */
 export async function getStaticProps() {
 
-  // read the about text file
-  const fs = require('fs');
-  const aboutText = fs.readFileSync('persistance/about.txt').toString();
-
   /* connect to db */
   const pgp = require('pg-promise')({
     noWarnings: true
@@ -152,7 +148,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      aboutText: aboutText,
       technos: technos,
       categories: categories,
       skills: skills,

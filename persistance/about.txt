@@ -1,6 +1,0 @@
-I am Alexandre Sparton, a french IT student and a passionate software developer.
-"Try, fail, learn, succeed, repeat". That's a maxim I intend to stick to especially when talking about software 
-development. Indeed, in this always evolving industry I think it's a priority to innovate, and that's what I try to do when 
-I am working on a project. Wether it's working or not, I get out of my comfort zone and learn a lot in order to improve the 
-final user experience. On this website you will be able to take a look at some of my work and get to know the technologies 
-I am currently interested in. Don't hesitate to contact me if you want to give a feedback or say watherver you want !
