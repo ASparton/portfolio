@@ -118,7 +118,6 @@ export default function Home({ technos, categories, skills, projects }) {
 }
 
 Home.propTypes = {
-  aboutText: PropTypes.string.isRequired,
   technos: PropTypes.arrayOf(PropTypes.object).isRequired,
   categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   skills: PropTypes.arrayOf(PropTypes.object).isRequired,
