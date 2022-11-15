@@ -1,0 +1,23 @@
+.about {
+    width: 70vw;
+    margin-left: 15vw;
+    margin-top: 20vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.aboutText {
+    width: 50%;
+    margin-right: 10%;
+}
+
+div.aboutText>p {
+    font-size: 1.25em;
+}
+
+h2.quote {
+    margin-left: 1em;
+    color: #343a40;
+}

@@ -1,0 +1,33 @@
+@keyframes sendAbove {
+    from { margin-bottom: 0px; }
+    to { margin-bottom: 10px; }
+}
+@keyframes sendBelow {
+    from { margin-bottom: 10px; }
+    to { margin-bottom: 0px; }
+}
+
+.header {
+    height: '10vh';
+    box-shadow: '5px 0px 20px grey';
+    padding-left: '3em';
+    padding-right: '3em';
+    display: 'flex';
+    flex-flow: 'row nowrap';
+    justify-content: 'space-between';
+    align-items: 'center';
+}
+
+nav a {
+    animation-name: sendBelow;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+nav a:hover {
+    animation-name: sendAbove;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+}

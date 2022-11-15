@@ -1,0 +1,68 @@
+#experiences {
+    width: 50vw;
+    margin-left: 30vw;
+}
+
+.tab {
+    font-family: 'Jost' sans-serif;
+    font-size: 1.5em;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 100; }
+}
+@keyframes fade-out {
+    from { opacity: 100; }
+    to { opacity: 0; }
+}
+
+.experience {
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+.experience>div {
+    margin-bottom: 1.5em;
+}
+
+.website {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+@keyframes to-indigo {
+    from { color: #12b886; }
+    to { color: #4c6ef5; }
+}
+
+@keyframes to-teal {
+    from { color: #4c6ef5; }
+    to { color: #12b886; }
+}
+
+.website a {
+    animation-name: to-indigo;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    color: #4c6ef5;
+
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 0.2em;
+}
+.website a:hover {
+    animation-name: to-teal;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.experience>div>p {
+    font-size: 1.1em;
+    margin-top: 0.5em;
+}
+
+.experience>ul {
+    font-size: 1.2em;
+}
