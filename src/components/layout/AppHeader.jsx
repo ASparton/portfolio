@@ -21,7 +21,7 @@ const AppHeader = () => {
           <a href='#about'>About me</a>
           <a href='#experiences'>Experiences</a>
           <a href='#projects'>Projects</a>
-          <a href='#contacts'>Contacts</a>
+          <a href='#contact'>Contacts</a>
         </Group>
       </nav>
     </Header>

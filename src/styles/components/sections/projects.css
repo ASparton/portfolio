@@ -1,0 +1,48 @@
+.projects {
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+.project {
+    height: 70vh;
+    padding: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    text-align: center;
+}
+
+.project .name {
+    margin-bottom: 1.5em;
+}
+
+.project a {
+    margin-bottom: 0.5em;
+}
+
+.project .description {
+    flex-grow: 1;
+    font-size: 1.25em;
+    margin-top: 1em;
+}
+
+.topics {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.alice-carousel__prev-btn-item {
+    font-size: 2em;
+    font-weight: 600;
+}
+.alice-carousel__next-btn-item {
+    font-size: 2em;
+    font-weight: 600;
+}

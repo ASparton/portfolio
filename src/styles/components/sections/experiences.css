@@ -1,6 +1,8 @@
-#experiences {
+.experiences {
     width: 50vw;
     margin-left: 30vw;
+    margin-top: 40vh;
+    margin-bottom: 40vh;
 }
 
 .tab {

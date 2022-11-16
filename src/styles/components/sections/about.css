@@ -8,6 +8,55 @@
     align-items: center;
 }
 
+@keyframes fade-in-left {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+@keyframes fade-in-right {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+@keyframes fade-in-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+.coffee {
+    animation-name: fade-in-right;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+
+    opacity: 0;
+}
+
+h2.quote {
+    animation-name: fade-in-left;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+
+    opacity: 0;
+    margin-left: 1em;
+    color: #343a40;
+}
+
 div.aboutText {
     width: 50%;
     margin-right: 10%;
@@ -15,9 +64,10 @@ div.aboutText {
 
 div.aboutText>p {
     font-size: 1.25em;
-}
+    opacity: 0;
 
-h2.quote {
-    margin-left: 1em;
-    color: #343a40;
+    animation-name: fade-in-up;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.65s;
 }

@@ -10,7 +10,7 @@ const Experience = ({experience}) => {
         <h1>{experience.title}</h1>
         <div className='website'>
           <IconWorld />
-          <a href={experience.companyUrl} target='_blank' rel='noreferrer'>
+          <a href={experience.companyUrl} target='_blank' rel='noreferrer noopener'>
             {experience.companyName}
           </a>
         </div>

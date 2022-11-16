@@ -4,7 +4,7 @@
     scroll-behavior: smooth;
 }
 
-body, header, h1, h2, h3, div, a, p, img {
+body, header, h1, h2, h3, div, a, p, img, ul, li, i {
     margin: 0;
     padding: 0;
 }
@@ -13,7 +13,7 @@ body {
     background-color: #f8f9fa;
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, i {
     font-family: 'Jost', sans-serif;
     color: #212529;
 }
@@ -29,4 +29,8 @@ a {
 section {
     margin-top: 20vh;
     margin-bottom: 20vh;
+}
+
+ul {
+    list-style: none;
 }
