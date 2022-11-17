@@ -5,11 +5,11 @@ import Experience from "./Experience";
 
 import '../../styles/components/sections/experiences.css';
 
-export const Experiences = () => {
+export const Experiences = ({windowWidth}) => {
   return (
-    <section className='experiences' id='experiences'>
+    <section className='experiences'>
       <Tabs 
-        orientation='vertical'
+        orientation={windowWidth <= 500 ? 'horizontal' : 'vertical'}
         color='dark'
         defaultValue={experiences[0].sectionName}
       >

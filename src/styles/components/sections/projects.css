@@ -5,9 +5,10 @@
 
 .project {
     height: 70vh;
-    padding: 2em;
+    padding-top: 2em;
     padding-left: 4em;
     padding-right: 4em;
+    padding-bottom: 1em;
     background-color: white;
     border-radius: 10px;
 
@@ -23,6 +24,12 @@
 
 .project a {
     margin-bottom: 0.5em;
+}
+
+.cover-container {
+    width: 90%;
+    height: 40%;
+    margin-left: 5%;
 }
 
 .project .description {
@@ -45,4 +52,63 @@
 .alice-carousel__next-btn-item {
     font-size: 2em;
     font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+    .projects {
+        width: 70vw;
+        margin-left: 15vw;
+    }
+
+    .project {
+        height: 60vh;
+        padding: 1.5em;
+    }
+
+    .project a {
+        font-size: 0.8em;
+        margin-bottom: 0.25em;
+    }
+
+    .project .description {
+        font-size: 1.2em;
+    }
+
+    .alice-carousel__prev-btn-item {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+    .alice-carousel__next-btn-item {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project {
+        height: 50vh;
+    }
+
+    .project a {
+        font-size: 0.65em;
+    }
+
+    .cover-container {
+        height: 25%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .projects {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+
+    .project {
+        height: 60vh;
+    }
+
+    .project .description {
+        font-size: 1.1em;
+    }
 }

@@ -1,33 +1,99 @@
-@keyframes sendAbove {
-    from { margin-bottom: 0px; }
-    to { margin-bottom: 10px; }
-}
-@keyframes sendBelow {
-    from { margin-bottom: 10px; }
-    to { margin-bottom: 0px; }
+@keyframes slide-down {
+    from { transform: translateY(-10vh); }
+    to { transform: translateY(0vh); }
 }
 
 .header {
-    height: '10vh';
-    box-shadow: '5px 0px 20px grey';
-    padding-left: '3em';
-    padding-right: '3em';
-    display: 'flex';
-    flex-flow: 'row nowrap';
-    justify-content: 'space-between';
-    align-items: 'center';
+    height: 10vh;
+    box-shadow: 5px 0px 20px grey;
+    padding-left: 3em;
+    padding-right: 3em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    transform: translateY(-10vh);
+
+    animation-name: slide-down;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
-nav a {
-    animation-name: sendBelow;
-    animation-duration: 0.15s;
-    animation-fill-mode: forwards;
+.links-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links-container>a {
     font-size: 1.2em;
     font-weight: 500;
+    margin-left: 2em;
+    padding-bottom: 0.1em;
+
+    background:
+        linear-gradient(
+          to right,
+          #4c6ef5,
+          #4c6ef5
+        ),
+        linear-gradient(
+          to right,
+          #4c6ef5,
+          #12b886,
+          #12b886
+        );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
 }
 
-nav a:hover {
-    animation-name: sendAbove;
-    animation-duration: 0.15s;
-    animation-fill-mode: forwards;
+.links-container>a:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        margin: 0;
+        padding: 0 !important;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        z-index: 1;
+
+        background-color: white;
+    }
+
+    .links-container {
+        flex-flow: column nowrap;
+    }
+
+    .links-container>a {
+        width: 100%;
+        padding: 0.5em;
+        margin-left: 0;
+        text-align: center;
+
+        background: none;
+        transition: background-color 0.1s, color 0.1s;
+    }
+    .links-container>a:hover {
+        background-color: #212529;
+        color: whitesmoke;
+    }
+
+    .nav-hidden {
+        top: -100vh;
+    }
+
+    .nav-displayed {
+        top: 9vh;
+        padding-left: 1em;
+    }
 }

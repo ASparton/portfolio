@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { List } from '@mantine/core';
 import { IconPrompt, IconWorld } from '@tabler/icons';
 
+import '../../styles/components/sections/experiences.css';
+
 const Experience = ({experience}) => {
   return (
     <article className='experience'>

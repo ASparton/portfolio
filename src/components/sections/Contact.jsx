@@ -15,7 +15,6 @@ const Contact = () => {
         <Button 
           variant='gradient' 
           gradient={{ from: 'indigo', to: 'teal' }} 
-          size='xl'
         >
           Say hi!
         </Button>
@@ -27,7 +26,7 @@ const Contact = () => {
             target='_blank'
             rel='noreferrer noopener'
           >
-            <IconBrandGithub size={50} />
+            <IconBrandGithub size={40} />
           </a>
         </li>
         <li>
@@ -36,7 +35,7 @@ const Contact = () => {
             target='_blank'
             rel='noreferrer noopener'
           >
-            <IconBrandLinkedin size={50} />
+            <IconBrandLinkedin size={40} />
           </a>
         </li>
       </ul>

@@ -40,7 +40,7 @@ const Projects = () => {
   }, [])
 
   return (
-    <section className='projects' id='projects'>
+    <section className='projects'>
       <AliceCarousel        
         items={projects}
         controlsStrategy='alternate'
