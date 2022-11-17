@@ -15,7 +15,12 @@ const Projects = () => {
   useEffect(() => {
     const getGithubProjects = async () => {
       const githubProjects = [];
-      const response = await axios.get('https://api.github.com/users/ASparton/repos?sort=created');
+      const response = await axios.get(
+        'https://api.github.com/users/ASparton/repos?sort=created',
+        { 
+          headers: {'Authorization' : `Bearer ${process.env.GITHUB_API_KEY}`}
+        }
+      );
       for (const project of response.data) {
         if (!(await isRepoPortfolio(project.tags_url)))
           continue;
@@ -46,10 +51,16 @@ const Projects = () => {
         position: 'relative',
         top: '-100px'
       }}></span>
-      <Loader style={{
-        marginLeft: '24.1vw',
-        display: projects.length === 0 ? 'block' : 'none'
-      }} />
+      <div style={{
+        marginBottom: '2em',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        <Loader style={{
+          display: projects.length === 0 ? 'block' : 'none'
+        }} />
+      </div>
       <AliceCarousel
         items={projects}
         controlsStrategy='alternate'

@@ -16,7 +16,7 @@ const AppHeader = ({windowWidth}) => {
       }
       <Image src='/logo_black.png' alt='AS Logo' style={{width: '4em'}} />
       <nav className={
-        windowWidth <= 650 && (opened ? 'nav-displayed' : 'nav-hidden')
+        windowWidth <= 650 ? (opened ? 'nav-displayed' : 'nav-hidden') : ''
       }>
         <ul className='links-container'>
           <a href='#about'>About me</a>

@@ -18,15 +18,23 @@ export const Experiences = ({windowWidth}) => {
         defaultValue={experiences[0].sectionName}
       >
         <Tabs.List>
-          {experiences.map(experience => 
-            <Tabs.Tab value={experience.sectionName} className='tab'>
+          {experiences.map((experience, index) => 
+            <Tabs.Tab 
+              value={experience.sectionName} 
+              className='tab' 
+              key={index}
+            >
               <p>{experience.sectionName}</p>
             </Tabs.Tab>
           )}
         </Tabs.List>
   
-        {experiences.map(experience => 
-          <Tabs.Panel value={experience.sectionName} pl='xl'>
+        {experiences.map((experience, index) => 
+          <Tabs.Panel 
+            value={experience.sectionName} 
+            pl='xl'
+            key={index}
+          >
             <Experience experience={experience} />
           </Tabs.Panel>
         )}
