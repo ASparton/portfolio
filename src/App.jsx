@@ -25,6 +25,7 @@ function App() {
 
   return (
     <>
+      <Intro />
       <AppHeader windowWidth={windowSize.innerWidth} />
       <About />
       <Experiences windowWidth={windowSize.innerWidth} />

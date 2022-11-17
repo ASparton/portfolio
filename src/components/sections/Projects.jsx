@@ -18,7 +18,7 @@ const Projects = () => {
       const response = await axios.get(
         'https://api.github.com/users/ASparton/repos?sort=created',
         { 
-          headers: {'Authorization' : `Bearer ${process.env.GITHUB_API_KEY}`}
+          headers: {'Authorization' : `Bearer ${import.meta.env.VITE_GITHUB_API_KEY}`}
         }
       );
       for (const project of response.data) {
