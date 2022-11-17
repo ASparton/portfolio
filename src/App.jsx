@@ -25,11 +25,6 @@ function App() {
 
   return (
     <>
-      <span id='about'></span>
-      <span id='experiences'></span>
-      <span id='projects'></span>
-
-      <Intro />
       <AppHeader windowWidth={windowSize.innerWidth} />
       <About />
       <Experiences windowWidth={windowSize.innerWidth} />

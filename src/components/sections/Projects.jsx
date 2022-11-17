@@ -4,6 +4,7 @@ import { isRepoPortfolio, getRepoCover } from '../../services/repoFetcher';
 
 import AliceCarousel from 'react-alice-carousel';
 import Project from './Project';
+import { Loader } from '@mantine/core';
 
 import 'react-alice-carousel/lib/alice-carousel.css';
 import '../../styles/components/sections/projects.css';
@@ -41,7 +42,15 @@ const Projects = () => {
 
   return (
     <section className='projects'>
-      <AliceCarousel        
+      <span id='projects' style={{
+        position: 'relative',
+        top: '-100px'
+      }}></span>
+      <Loader style={{
+        marginLeft: '24.1vw',
+        display: projects.length === 0 ? 'block' : 'none'
+      }} />
+      <AliceCarousel
         items={projects}
         controlsStrategy='alternate'
         autoPlay

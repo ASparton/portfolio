@@ -6,6 +6,10 @@ import '../../styles/components/sections/about.css';
 const About = () => {
   return (
     <section className='about'>
+      <span id='about' style={{
+        position: 'relative',
+        top: '-500px'
+      }}></span>
       <div className='aboutText'>
         <Blockquote 
           icon={<IconQuote size={40} color='#6c757d' />}

@@ -8,6 +8,10 @@ import '../../styles/components/sections/experiences.css';
 export const Experiences = ({windowWidth}) => {
   return (
     <section className='experiences'>
+      <span id='experiences' style={{
+        position: 'relative',
+        top: '-350px'
+      }}></span>
       <Tabs 
         orientation={windowWidth <= 500 ? 'horizontal' : 'vertical'}
         color='dark'
