@@ -14,11 +14,13 @@ const Project = ({project}) => {
         <i>{project.date}</i>
       </div>
       <a
-        href={project.url} target='_blank' rel='noreferrer noopener'
-        className='cover-container'>
+        href={project.url} 
+        target='_blank' 
+        rel='noreferrer noopener'
+        className='cover-container'
+      >
         <img
-          height='100%'
-          width='100%'
+          className='cover'
           src={`data:image/png;base64,${project.cover}`} 
           alt={`${project.name} cover`} 
         />
