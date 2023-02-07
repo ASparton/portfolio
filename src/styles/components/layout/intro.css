@@ -1,29 +1,29 @@
 @keyframes slide-left {
-    0% {
-        transform: translateX(0vw);
-    }
-    70% {
-        transform: translateX(0vw);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
+  0% {
+    transform: translateX(0vw);
+  }
+  70% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
 }
 
 .intro-container {
-    animation-name: slide-left;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+  animation-name: slide-left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 
-    width: 100vw;
-    height: 100vh;
-    z-index: 200;
-    position: fixed;
-    top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  position: fixed;
+  top: 0;
 
-    background-color: rgb(25, 25, 25);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+  background-color: rgb(25, 25, 25);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }

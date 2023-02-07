@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import Intro from './components/layout/Intro';
-import AppHeader from './components/layout/AppHeader';
-import About from './components/sections/About';
-import Experiences from './components/sections/Experiences';
-import Projects from './components/sections/Projects';
-import Contact from './components/sections/Contact';
-import Footer from './components/layout/Footer';
+import Intro from "./components/layout/Intro";
+import AppHeader from "./components/layout/AppHeader";
+import About from "./components/sections/About";
+import Experiences from "./components/sections/Experiences";
+import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
 function App() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -14,12 +14,12 @@ function App() {
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize(getWindowSize());
-    }
+    };
 
-    window.addEventListener('resize', handleWindowResize);
+    window.addEventListener("resize", handleWindowResize);
 
     return () => {
-      window.removeEventListener('resize', handleWindowResize);
+      window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
 
@@ -37,8 +37,8 @@ function App() {
 }
 
 const getWindowSize = () => {
-  const {innerWidth, innerHeight} = window;
-  return {innerWidth, innerHeight};
-}
+  const { innerWidth, innerHeight } = window;
+  return { innerWidth, innerHeight };
+};
 
 export default App;

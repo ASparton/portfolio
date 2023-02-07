@@ -1,121 +1,121 @@
 .projects {
-    width: 50vw;
-    margin-left: 25vw;
-    position: relative;
+  width: 50vw;
+  margin-left: 25vw;
+  position: relative;
 }
 
 .project {
-    height: 70vh;
-    padding-top: 2em;
-    padding-left: 4em;
-    padding-right: 4em;
-    padding-bottom: 1em;
-    background-color: white;
-    border-radius: 10px;
+  height: 70vh;
+  padding-top: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 1em;
+  background-color: white;
+  border-radius: 10px;
 
-    display: flex;
-    flex-flow: column nowrap;
+  display: flex;
+  flex-flow: column nowrap;
 
-    text-align: center;
+  text-align: center;
 }
 
 .project .name {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .project a {
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .cover-container {
-    width: 80%;
-    height: 50%;
-    margin-left: 10%;
+  width: 80%;
+  height: 50%;
+  margin-left: 10%;
 }
 
 .cover {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .project .description {
-    flex-grow: 1;
-    font-size: 1.25em;
-    margin-top: 0.5em;
+  flex-grow: 1;
+  font-size: 1.25em;
+  margin-top: 0.5em;
 }
 
 .topics {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .alice-carousel__prev-btn-item {
-    font-size: 2em;
-    font-weight: 600;
+  font-size: 2em;
+  font-weight: 600;
 }
 .alice-carousel__next-btn-item {
-    font-size: 2em;
-    font-weight: 600;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1200px) {
-    .projects {
-        width: 70vw;
-        margin-left: 15vw;
-    }
+  .projects {
+    width: 70vw;
+    margin-left: 15vw;
+  }
 
-    .project {
-        height: 60vh;
-        padding: 1.5em;
-    }
+  .project {
+    height: 60vh;
+    padding: 1.5em;
+  }
 
-    .project a {
-        font-size: 0.8em;
-        margin-bottom: 0.25em;
-    }
+  .project a {
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+  }
 
-    .project .description {
-        font-size: 1.2em;
-    }
+  .project .description {
+    font-size: 1.2em;
+  }
 
-    .alice-carousel__prev-btn-item {
-        font-size: 1.5em;
-        font-weight: 600;
-    }
-    .alice-carousel__next-btn-item {
-        font-size: 1.5em;
-        font-weight: 600;
-    }
+  .alice-carousel__prev-btn-item {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .alice-carousel__next-btn-item {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .project {
-        height: 50vh;
-    }
+  .project {
+    height: 50vh;
+  }
 
-    .project a {
-        font-size: 0.65em;
-    }
+  .project a {
+    font-size: 0.65em;
+  }
 
-    .cover-container {
-        height: 30%;
-    }
+  .cover-container {
+    height: 30%;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .projects {
-        width: 90vw;
-        margin-left: 5vw;
-    }
+  .projects {
+    width: 90vw;
+    margin-left: 5vw;
+  }
 
-    .project {
-        height: 60vh;
-    }
+  .project {
+    height: 60vh;
+  }
 
-    .project .description {
-        font-size: 1.1em;
-    }
+  .project .description {
+    font-size: 1.1em;
+  }
 }

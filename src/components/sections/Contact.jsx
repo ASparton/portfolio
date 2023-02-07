@@ -8,7 +8,7 @@ const Contact = () => {
     <section className='contact' id='contact'>
       <h1>Get In Touch</h1>
       <p>
-        I'm always open to new opportunities and discussions,
+        I'm always opened to new opportunities and discussions,
         so don't hesitate and contact me here if you have something to say :)
       </p>
       <a href='mailto:sparton.alexandre@gmail.com'>

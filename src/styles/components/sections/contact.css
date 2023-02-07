@@ -1,98 +1,106 @@
 .contact {
-    width: 30vw;
-    margin-left: 35vw;
-    margin-top: 30vh;
-    margin-bottom: 30vh;
+  width: 30vw;
+  margin-left: 35vw;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
 
-    text-align: center;
+  text-align: center;
 }
 
 .contact p {
-    font-size: 1.3em;
-    margin-top: 1em;
-    margin-bottom: 2em;
+  font-size: 1.3em;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .contact button {
-    width: 20vw;
-    height: 6vh;
-    font-size: 1.1em;
+  width: 20vw;
+  height: 6vh;
+  font-size: 1.1em;
 }
 
 .socials {
-    width: 20%;
-    margin-left: 40%;
-    margin-top: 8%;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 8%;
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @keyframes social-hover {
-    from { transform: translateY(0); }
-    to { transform: translateY(-10px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
 }
 @keyframes social-hover-reverse {
-    from { transform: translateY(-10px); }
-    to { transform: translateY(0); }
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-.socials>li {
-    animation-name: social-hover-reverse;
-    animation-duration: 0.25s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+.socials > li {
+  animation-name: social-hover-reverse;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-.socials>li:hover {
-    animation-name: social-hover;
-    animation-duration: 0.25s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+.socials > li:hover {
+  animation-name: social-hover;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 1200px) {
-    .contact {
-        width: 50vw;
-        margin-left: 25vw;
-        margin-top: 20vh;
-        margin-bottom: 20vh;
-    }
+  .contact {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+  }
 
-    .socials {
-        width: 30%;
-        margin-left: 35%;
-    }
+  .socials {
+    width: 30%;
+    margin-left: 35%;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .contact {
-        width: 75vw;
-        margin-left: 12.5vw;
-    }
+  .contact {
+    width: 75vw;
+    margin-left: 12.5vw;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .contact {
-        width: 85vw;
-        margin-left: 7.5vw;
-    }
+  .contact {
+    width: 85vw;
+    margin-left: 7.5vw;
+  }
 
-    .contact h1 {
-        font-size: 2em;
-    }
+  .contact h1 {
+    font-size: 2em;
+  }
 
-    .contact p {
-        font-size: 1.2em;
-        margin-top: 0.5em;
-        margin-bottom: 2em;
-    }
-    
-    .contact button {
-        width: 40vw;
-        height: 5vh;
-        font-size: 1em;
-    }
+  .contact p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  .contact button {
+    width: 40vw;
+    height: 5vh;
+    font-size: 1em;
+  }
 }

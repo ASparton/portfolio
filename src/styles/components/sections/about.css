@@ -1,143 +1,143 @@
 .about {
-    width: 70vw;
-    margin-left: 15vw;
-    margin-top: 20vh;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+  width: 70vw;
+  margin-left: 15vw;
+  margin-top: 20vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @keyframes fade-in-left {
-    from {
-        transform: translateX(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 100%;
-    }
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
 }
 @keyframes fade-in-right {
-    from {
-        transform: translateX(500px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 100%;
-    }
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
 }
 @keyframes fade-in-up {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 100%;
-    }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
 }
 
 .coffee-container {
-    width: 25vw;
+  width: 25vw;
 }
 
 .coffee {
-    animation-name: fade-in-right;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+  animation-name: fade-in-right;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 
-    opacity: 0;
-    border-radius: 100%;
-    box-shadow: 0px 0px 20px grey;
+  opacity: 0;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px grey;
 }
 
 h2.quote {
-    animation-name: fade-in-left;
-    animation-duration: 1.25s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+  animation-name: fade-in-left;
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 
-    opacity: 0;
-    margin-left: 1em;
-    color: #343a40;
+  opacity: 0;
+  margin-left: 1em;
+  color: #343a40;
 }
 
 .quote-icon {
-    opacity: 0;
+  opacity: 0;
 
-    animation-name: fade-in-up;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+  animation-name: fade-in-up;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
 div.aboutText {
-    width: 50%;
-    margin-right: 10%;
+  width: 50%;
+  margin-right: 10%;
 }
 
-div.aboutText>p {
-    font-size: 1.25em;
-    opacity: 0;
+div.aboutText > p {
+  font-size: 1.25em;
+  opacity: 0;
 
-    animation-name: fade-in-up;
-    animation-duration: 1.25s;
-    animation-fill-mode: forwards;
-    animation-delay: 2.65s;
+  animation-name: fade-in-up;
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.65s;
 }
 
 @media screen and (max-width: 1200px) {
-    .about {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
+  .about {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    div.aboutText {
-        width: 100%;
-        margin-left: 10vw;
-    }
+  div.aboutText {
+    width: 80vw;
+    margin-left: 10vw;
+  }
 
-    div.aboutText>p {
-        margin-bottom: 2em;
-    }
+  div.aboutText > p {
+    margin-bottom: 2em;
+  }
 
-    .coffee-container {
-        width: 40vw;
-    }
+  .coffee-container {
+    width: 40vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .about {
-        width: 80vw;
-        margin-left: 10vw;
-        margin-top: 10vh;
-    }
+  .about {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+  }
 
-    h2.quote {
-        font-size: 1.35em;
-    }
+  h2.quote {
+    font-size: 1.35em;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .about {
-        width: 85vw;
-        margin-left: 7.5vw;
-    }
+  .about {
+    width: 85vw;
+    margin-left: 7.5vw;
+  }
 
-    h2.quote {
-        font-size: 1.1em;
-    }
+  h2.quote {
+    font-size: 1.1em;
+  }
 
-    div.aboutText>p {
-        font-size: 1.1em;
-    }
+  div.aboutText > p {
+    font-size: 1.1em;
+  }
 
-    .coffee-container {
-        width: 70%;
-    }
+  .coffee-container {
+    width: 70%;
+  }
 }
