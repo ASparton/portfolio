@@ -23,7 +23,7 @@ const About = () => {
         <p>
           The tech industry always offers us new challenging paths to explore,
           and that's what I love about it. I am currently specialized in web
-          applications, data mining and data flows management, but I am really
+          applications, data extraction and data flows management, but I am really
           curious about development in general. I enjoy thinking about the best
           and simple way to bring my ideas to the final customers, and always
           try to push the projects further within a passionate team.
