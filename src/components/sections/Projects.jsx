@@ -48,7 +48,7 @@ const Projects = () => {
         items={projects}
         controlsStrategy="alternate"
         autoPlay
-        autoPlayInterval={3000}
+        autoPlayInterval={6000}
         infinite
         keyboardNavigation
       />
