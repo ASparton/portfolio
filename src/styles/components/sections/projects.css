@@ -1,3 +1,14 @@
+@keyframes to-bg-blue {
+  from {
+    background-color: transparent;
+    color: rgb(34, 34, 34);
+  }
+  to {
+    background-color: #4c6ef5cd;
+    color: whitesmoke;
+  }
+}
+
 .projects {
   width: 50vw;
   margin-left: 25vw;
@@ -5,6 +16,8 @@
 }
 
 .project {
+  position: relative;
+
   height: 70vh;
   padding-top: 2em;
   padding-left: 4em;
@@ -17,6 +30,12 @@
   flex-flow: column nowrap;
 
   text-align: center;
+}
+
+.github:hover {
+  animation-name: to-bg-blue;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
 }
 
 .project .name {

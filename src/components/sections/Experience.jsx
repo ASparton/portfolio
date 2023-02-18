@@ -5,7 +5,7 @@ import { IconPrompt, IconWorld } from "@tabler/icons";
 
 import "../../styles/components/sections/experiences.css";
 
-const Experience = ({ experience }) => {
+export default function Experience({ experience }) {
   return (
     <article className="experience">
       <div>
@@ -31,10 +31,8 @@ const Experience = ({ experience }) => {
       </List>
     </article>
   );
-};
+}
 
 Experience.propTypes = {
   experience: PropTypes.object,
 };
-
-export default Experience;

@@ -21,12 +21,14 @@ const AppHeader = ({ windowWidth }) => {
           />
         </div>
       )}
-      <Image
-        className="logo"
-        src="/logo_black.png"
-        alt="AS Logo"
-        style={{ width: "4em" }}
-      />
+      <a href="/">
+        <Image
+          className="logo"
+          src="/logo_black.png"
+          alt="AS Logo"
+          style={{ width: "4em" }}
+        />
+      </a>
       <nav
         className={
           windowWidth <= 650 ? (opened ? "nav-displayed" : "nav-hidden") : ""
@@ -34,10 +36,10 @@ const AppHeader = ({ windowWidth }) => {
       >
         {opened && <h2></h2>}
         <ul className="links-container">
-          <a href="#about">About me</a>
-          <a href="#experiences">Experiences</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contacts</a>
+          <a href="/#about">About me</a>
+          <a href="/#experiences">Experiences</a>
+          <a href="/#projects">Projects</a>
+          <a href="/#contact">Contacts</a>
         </ul>
       </nav>
     </Header>

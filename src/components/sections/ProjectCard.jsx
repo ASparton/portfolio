@@ -1,24 +1,21 @@
 import PropTypes from "prop-types";
 
 import { Badge } from "@mantine/core";
+import GithubLink from "../project/GithubLink";
 
 import "../../styles/components/sections/projects.css";
 
-const Project = ({ project }) => {
+export default function ProjectCard({ project }) {
   return (
     <article className="project" radius="md">
+      <GithubLink repositoryUrl={project.url} top={25} left={25} />
       <div className="name">
-        <a href={project.url} target="_blank" rel="noreferrer noopener">
-          <h1>{project.name}</h1>
+        <a href={`/projects/${project.name}`}>
+          <h1>{project.displayName}</h1>
         </a>
         <i>{project.date}</i>
       </div>
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noreferrer noopener"
-        className="cover-container"
-      >
+      <a href={`/projects/${project.name}`} className="cover-container">
         <img
           className="cover"
           src={`data:image/png;base64,${project.cover}`}
@@ -37,10 +34,8 @@ const Project = ({ project }) => {
       </ul>
     </article>
   );
-};
+}
 
-Project.propTypes = {
+ProjectCard.propTypes = {
   project: PropTypes.object,
 };
-
-export default Project;

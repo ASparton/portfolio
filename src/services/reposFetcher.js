@@ -6,6 +6,16 @@ const octokit = new Octokit({
   userAgent: "asparton-portfolio/v2.0",
 });
 
+export const getPortfolioProjectByName = async (repositoryName) => {
+  const response = await octokit.request("GET /repos/{org}/{repo}", {
+    org: "asparton-portfolio",
+    repo: repositoryName,
+  });
+  const project = await buildProject(response.data);
+  project.readme = await getRepoReadme(repositoryName);
+  return project;
+};
+
 export const getPortfolioProjects = async () => {
   const response = await octokit.request("GET /orgs/{org}/repos", {
     org: "asparton-portfolio",
@@ -19,9 +29,11 @@ export const getPortfolioProjects = async () => {
 
 const buildProject = async (projectData) => {
   let newProject = {};
-  newProject["name"] = projectData.name.replaceAll("-", " ");
-  newProject.name =
-    newProject.name[0].toUpperCase() + newProject.name.substring(1);
+  newProject["name"] = projectData.name;
+  newProject["displayName"] = newProject.name.replaceAll("-", " ");
+  newProject.displayName =
+    newProject.displayName[0].toUpperCase() +
+    newProject.displayName.substring(1);
   newProject["date"] = projectData.created_at.split("T")[0];
   newProject["url"] = projectData.html_url;
   newProject["description"] = projectData.description;
@@ -60,4 +72,15 @@ const getRepoCover = async (repositoryName) => {
   } catch (_) {
     return null;
   }
+};
+
+const getRepoReadme = async (repositoryName) => {
+  const response = await octokit.request("GET /repos/{owner}/{repo}/readme", {
+    owner: "asparton-portfolio",
+    repo: repositoryName,
+    mediaType: {
+      format: "html",
+    },
+  });
+  return response.data;
 };

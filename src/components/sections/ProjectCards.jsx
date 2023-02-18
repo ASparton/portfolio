@@ -3,19 +3,19 @@ import { getPortfolioProjects } from "../../services/reposFetcher";
 
 import AliceCarousel from "react-alice-carousel";
 import { Loader } from "@mantine/core";
-import Project from "./Project";
+import ProjectCard from "./ProjectCard";
 
 import "react-alice-carousel/lib/alice-carousel.css";
 import "../../styles/components/sections/projects.css";
 
-const Projects = () => {
+export default function ProjectCards() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     getPortfolioProjects()
       .then((portfolioProjects) => {
         setProjects(
-          portfolioProjects.map((project) => <Project project={project} />)
+          portfolioProjects.map((project) => <ProjectCard project={project} />)
         );
       })
       .catch((err) => console.error(err));
@@ -54,6 +54,4 @@ const Projects = () => {
       />
     </section>
   );
-};
-
-export default Projects;
+}

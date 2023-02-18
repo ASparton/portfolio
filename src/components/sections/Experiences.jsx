@@ -5,7 +5,7 @@ import Experience from "./Experience";
 
 import "../../styles/components/sections/experiences.css";
 
-export const Experiences = ({ windowWidth }) => {
+export default function Experiences({ windowWidth }) {
   return (
     <section className="experiences">
       <span
@@ -40,6 +40,4 @@ export const Experiences = ({ windowWidth }) => {
       </Tabs>
     </section>
   );
-};
-
-export default Experiences;
+}

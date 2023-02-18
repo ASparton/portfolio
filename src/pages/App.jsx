@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
-import Intro from "./components/layout/Intro";
-import AppHeader from "./components/layout/AppHeader";
-import About from "./components/sections/About";
-import Experiences from "./components/sections/Experiences";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/layout/Footer";
+import Intro from "../components/layout/Intro";
+import About from "../components/sections/About";
+import Experiences from "../components/sections/Experiences";
+import ProjectCards from "../components/sections/ProjectCards";
+import Contact from "../components/sections/Contact";
+import Footer from "../components/layout/Footer";
 
 function App() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -26,10 +25,9 @@ function App() {
   return (
     <>
       <Intro />
-      <AppHeader windowWidth={windowSize.innerWidth} />
       <About />
       <Experiences windowWidth={windowSize.innerWidth} />
-      <Projects />
+      <ProjectCards />
       <Contact />
       <Footer />
     </>
