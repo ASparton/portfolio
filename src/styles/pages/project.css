@@ -1,39 +1,50 @@
-@keyframes to-up {
-    from { transform: translateY(0px); }
-    to { transform: translateY(-5px); }
+.loader {
+  width: 30vw;
+  margin-left: 35vw;
+  margin-bottom: 50vh;
+  margin-top: 30vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes to-down {
-    from { transform: translateY(-5px); }
-    to { transform: translateY(0px); }
+.project-name {
+  width: 55vw;
+  margin-left: 22.5vw;
+  text-align: center;
 }
 
-.github {
-    width: 48px;
-    height: 48px;
+.project-topics {
+  width: 40vw;
+  margin-left: 30vw;
+  margin-top: 2em;
 
-    animation-name: to-down;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.github:hover {
-    animation-name: to-up;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
+.project-cover {
+  display: block;
+  width: 55vw;
+  margin-left: 22.5vw;
+  margin-top: 1em;
 }
 
-.more-of {
-    font-size: 1.4em;
-  }
+.project-cover > img {
+  width: 100%;
+}
+
+.project-description {
+  width: 56vw;
+  margin-left: 22vw;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+}
 
 @media screen and (max-width: 650px) {
-  .github {
-    width: 32px;
-    height: 32px;
-  }
-
-  .more-of {
-    font-size: 1.1em;
-  }
 }

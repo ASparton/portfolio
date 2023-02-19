@@ -16,6 +16,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/projects/:name" element={<Project />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-    <Footer />
   </BrowserRouter>
 );

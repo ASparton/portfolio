@@ -1,27 +1,16 @@
-import { Badge, Image } from "@mantine/core";
+import { Badge } from "@mantine/core";
+import { IconBrandGithub } from "@tabler/icons";
+
+import "../../styles/pages/project.css";
 
 export default function ProjectHeader({ project }) {
   return (
     <section style={{ marginTop: "2em" }}>
-      <div
-        style={{
-          width: "55vw",
-          marginLeft: "22.5vw",
-          textAlign: "center",
-          position: "relative",
-        }}
-      >        
+      <div className="project-name">
         <h1>{project.displayName}</h1>
         <i>{project.date}</i>
       </div>
-      <ul
-        className="topics"
-        style={{
-          width: "40vw",
-          marginLeft: "30vw",
-          marginTop: "2em",
-        }}
-      >
+      <ul className="project-topics">
         {project.topics.map((topic, index) => (
           <li key={index}>
             <Badge color="indigo" variant="outline" size="lg" mb="sm">
@@ -30,23 +19,18 @@ export default function ProjectHeader({ project }) {
           </li>
         ))}
       </ul>
-      <Image
-        src={`data:image/png;base64,${project.cover}`}
-        alt={`${project.name} cover`}
-        style={{ width: "55vw", marginLeft: "22.5vw", marginTop: "1em" }}
-      />
-      <p
-        style={{
-          width: "56vw",
-          marginLeft: "22vw",
-          marginTop: "1em",
-          textAlign: "center",
-          fontSize: "1.3em",
-          fontWeight: 500,
-        }}
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noreferrer noopener"
+        className="project-cover"
       >
-        {project.description}
-      </p>
+        <img
+          src={`data:image/png;base64,${project.cover}`}
+          alt={`${project.name} cover`}
+        />
+      </a>
+      <p className="project-description">{project.description}</p>
     </section>
   );
 }

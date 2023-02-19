@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getPortfolioProjectByName } from "../services/reposFetcher";
 
-import ProjectHeader from "../components/project/ProjectHeader";
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons";
+import ProjectHeader from "../components/project/ProjectHeader";
+import Footer from "../components/layout/Footer";
 
 import "../styles/pages/project.css";
+import { Loader } from "@mantine/core";
 
 export default function Project() {
   const paramProjectName = useParams().name;
@@ -19,7 +21,7 @@ export default function Project() {
 
   return (
     <>
-      {project && (
+      {project ? (
         <>
           <ProjectHeader project={project} />
           <section
@@ -27,49 +29,27 @@ export default function Project() {
             style={{
               width: "75vw",
               marginLeft: "12.5vw",
+              marginBottom: "35vh",
               display: "flex",
               justifyContent: "center",
             }}
           ></section>
-          <section
+        </>
+      ) : (
+        <section className="loader">
+          <Loader variant="bars" size="xl" color="#4c6ef5" />
+          <p
             style={{
-              width: "100vw",
-              display: "flex",              
-              justifyContent: "center",
+              marginTop: "1em",
+              fontSize: "1.25em",
+              color: "#4c6ef5",
             }}
           >
-            <div style={{
-              padding: "3em",
-              borderRadius: "20px",
-              backgroundColor: "#212529",
-              display: "flex",
-              flexFlow: "column nowrap",
-              justifyContent: "center",
-              alignItems: "center",
-              boxShadow: "0px 0px 20px grey",
-            }}>
-              <a href={project.url} target="_blank" rel="noreferrer noopener">
-                <IconBrandGithub className="github" color="whitesmoke" />
-              </a>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noreferrer noopener"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  color: "whitesmoke",
-                  textDecoration: "underline",
-                }}
-                className="more-of"
-              >
-                More of this project on Github
-                <IconExternalLink style={{ marginLeft: "0.25em" }} />
-              </a>
-            </div>
-          </section>
-        </>
+            Project loading
+          </p>
+        </section>
       )}
+      <Footer />
     </>
   );
 }

@@ -4,6 +4,7 @@ import Intro from "../components/layout/Intro";
 import About from "../components/sections/About";
 import Experiences from "../components/sections/Experiences";
 import ProjectCards from "../components/sections/ProjectCards";
+import Footer from "../components/layout/Footer";
 
 const getWindowSize = () => {
   const { innerWidth, innerHeight } = window;
@@ -31,6 +32,7 @@ export default function App() {
       <About />
       <Experiences windowWidth={windowSize.innerWidth} />
       <ProjectCards />
+      <Footer />
     </>
   );
 }
