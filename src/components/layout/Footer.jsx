@@ -1,16 +1,15 @@
-const Footer = () => {
+import WorkBanner from "./WorkBanner";
+import SocialsSection from "./SocialsSection";
+import Copyright from "./Copyright";
+
+import "../../styles/components/layout/footer.css";
+
+export default function Footer() {
   return (
-    <footer
-      style={{
-        marginBottom: "30px",
-        textAlign: "center",
-        fontSize: "1.15em",
-        fontWeight: 500,
-      }}
-    >
-      <p>Design & Built by Alexandre Sparton</p>
+    <footer className="footer">
+      <WorkBanner />
+      <SocialsSection />
+      <Copyright />
     </footer>
   );
-};
-
-export default Footer;
+}

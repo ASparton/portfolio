@@ -1,0 +1,50 @@
+.loader {
+  width: 30vw;
+  margin-left: 35vw;
+  margin-bottom: 50vh;
+  margin-top: 30vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-name {
+  width: 55vw;
+  margin-left: 22.5vw;
+  text-align: center;
+}
+
+.project-topics {
+  width: 40vw;
+  margin-left: 30vw;
+  margin-top: 2em;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-cover {
+  display: block;
+  width: 55vw;
+  margin-left: 22.5vw;
+  margin-top: 1em;
+}
+
+.project-cover > img {
+  width: 100%;
+}
+
+.project-description {
+  width: 56vw;
+  margin-left: 22vw;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 650px) {
+}
