@@ -1,5 +1,4 @@
 import { Badge, Image } from "@mantine/core";
-import GithubLink from "./GithubLink";
 
 export default function ProjectHeader({ project }) {
   return (
@@ -11,8 +10,7 @@ export default function ProjectHeader({ project }) {
           textAlign: "center",
           position: "relative",
         }}
-      >
-        <GithubLink repositoryUrl={project.url} top={0} left={0} />
+      >        
         <h1>{project.displayName}</h1>
         <i>{project.date}</i>
       </div>

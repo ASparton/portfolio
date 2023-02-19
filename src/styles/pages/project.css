@@ -1,0 +1,39 @@
+@keyframes to-up {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-5px); }
+}
+
+@keyframes to-down {
+    from { transform: translateY(-5px); }
+    to { transform: translateY(0px); }
+}
+
+.github {
+    width: 48px;
+    height: 48px;
+
+    animation-name: to-down;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.github:hover {
+    animation-name: to-up;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.more-of {
+    font-size: 1.4em;
+  }
+
+@media screen and (max-width: 650px) {
+  .github {
+    width: 32px;
+    height: 32px;
+  }
+
+  .more-of {
+    font-size: 1.1em;
+  }
+}

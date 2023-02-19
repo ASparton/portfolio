@@ -1,4 +1,6 @@
-import { IconFaceIdError } from "@tabler/icons";
+import { IconFaceIdError, IconHome } from "@tabler/icons";
+
+import "../styles/pages/notFound.css";
 
 export default function NotFound() {
   return (
@@ -12,8 +14,12 @@ export default function NotFound() {
         alignItems: "center",
       }}
     >
-      <h1>This page does not exists</h1>
-      <IconFaceIdError size={256} stroke={2} color="#4c6ef5" />
+      <h1 className="not-found-title">This page does not exists</h1>
+      <IconFaceIdError className="face-error" stroke={2} color="#4c6ef5" />
+      <a href="/">
+        <IconHome className="home-logo" />
+      </a>
+      <a href="/" className="return-home">Get back to home page</a>
     </div>
   );
 }

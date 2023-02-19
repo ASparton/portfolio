@@ -1,16 +1,17 @@
-const Footer = () => {
+import Socials from "./Socials";
+import Copyright from "./Copyright";
+
+export default function Footer() {
   return (
     <footer
       style={{
-        marginBottom: "30px",
-        textAlign: "center",
-        fontSize: "1.15em",
-        fontWeight: 500,
+        height: "40vh",
+        backgroundColor: "#4c6ef5",
+        color: "white",
       }}
     >
-      <p>Design & Built by Alexandre Sparton</p>
+      <Socials />
+      <Copyright />
     </footer>
   );
-};
-
-export default Footer;
+}

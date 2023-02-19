@@ -1,0 +1,60 @@
+@keyframes scale-up {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+@keyframes scale-down {
+    from { transform: scale(1.2); }
+    to { transform: scale(1); }
+}
+
+.not-found-title {
+  font-size: 2.5em;
+}
+
+.face-error {
+  width: 256px;
+  height: 256px;
+}
+
+.home-logo {
+  margin-top: 2.5em;
+  width: 48px;
+  height: 48px;
+
+  animation-name: scale-down;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.home-logo:hover {
+    animation-name: scale-up;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;  
+}
+
+.return-home {
+  font-size: 1.25em;
+  color: #4c6ef5;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+  .not-found-title {
+    font-size: 1.5em;
+  }
+
+  .face-error {
+    width: 128px;
+    height: 128px;
+  }
+
+  .home-logo {    
+    width: 32px;
+    height: 32px;
+  }
+
+  .return-home {
+    font-size: 1.15em;
+  }
+}
