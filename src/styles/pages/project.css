@@ -1,6 +1,6 @@
 .loader {
-  width: 30vw;
-  margin-left: 35vw;
+  width: 80vw;
+  margin-left: 10vw;
   margin-bottom: 50vh;
   margin-top: 30vh;
   display: flex;
@@ -10,14 +10,14 @@
 }
 
 .project-name {
-  width: 55vw;
-  margin-left: 22.5vw;
+  width: 85vw;
+  margin-left: 7.5vw;
   text-align: center;
 }
 
 .project-topics {
-  width: 40vw;
-  margin-left: 30vw;
+  width: 80vw;
+  margin-left: 10vw;
   margin-top: 2em;
 
   display: flex;
@@ -38,13 +38,31 @@
 }
 
 .project-description {
-  width: 56vw;
-  margin-left: 22vw;
+  width: 80vw;
+  margin-left: 10vw;
   margin-top: 1em;
   text-align: center;
   font-size: 1.3em;
   font-weight: 500;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
+  .project-name > h1 {
+    font-size: 1.65em;
+  }
+
+  .project-topics span {
+    font-size: 0.8em;
+  }
+
+  .project-cover {
+    width: 85vw;
+    margin-left: 7.5vw;
+  }
+
+  .project-description {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 0.75em;
+  }
 }
