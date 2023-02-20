@@ -201,7 +201,15 @@
   }
 
   .work-banner h2 {
-    font-size: 1.75em;
+    font-size: 1.6em;
+  }
+
+  .footer p {
+    font-size: 1.1em;
+  }
+  
+  .socials-section h2 {
+    font-size: 1.9em;
   }
 
   .copyright {
@@ -211,6 +219,6 @@
 
 @media screen and (max-width: 450px) {
   .socials-section h2 {
-    font-size: 1.9em;
+    font-size: 1.7em;
   }
 }
