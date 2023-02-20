@@ -29,6 +29,7 @@ export default function ProjectHeader({ project }) {
           src={`data:image/png;base64,${project.cover}`}
           alt={`${project.name} cover`}
         />
+        <IconBrandGithub className="github-logo" />
       </a>
       <p className="project-description">{project.description}</p>
     </section>

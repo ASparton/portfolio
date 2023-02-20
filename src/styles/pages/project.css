@@ -1,3 +1,43 @@
+@keyframes to-less-brightness {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(35%);
+  }
+}
+
+@keyframes to-more-brightness {
+  from {
+    filter: brightness(35%);
+  }
+  to {
+    filter: brightness(100%);
+  }
+}
+
+@keyframes to-github-white {
+  from {
+    background-color: transparent;
+    color: whitesmoke;
+  }
+  to {
+    background-color: whitesmoke;
+    color: black;
+  }
+}
+
+@keyframes to-github-transparent {
+  from {
+    background-color: whitesmoke;
+    color: black;
+  }
+  to {
+    background-color: transparent;
+    color: whitesmoke;
+  }
+}
+
 .loader {
   width: 80vw;
   margin-left: 10vw;
@@ -16,8 +56,8 @@
 }
 
 .project-topics {
-  width: 80vw;
-  margin-left: 10vw;
+  width: 40vw;
+  margin-left: 30vw;
   margin-top: 2em;
 
   display: flex;
@@ -28,6 +68,7 @@
 
 .project-cover {
   display: block;
+  position: relative;
   width: 55vw;
   margin-left: 22.5vw;
   margin-top: 1em;
@@ -35,6 +76,41 @@
 
 .project-cover > img {
   width: 100%;
+
+  animation-name: to-more-brightness;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.project-cover:hover > img {
+  animation-name: to-less-brightness;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.github-logo {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 10%;
+  height: 10%;
+  padding-top: 2.1%;
+  padding-bottom: 2.1%;
+
+  color: whitesmoke;
+  border: 3px solid rgba(245, 245, 245, 0.793);
+  border-radius: 100%;
+}
+
+.project-cover:hover > .github-logo {
+  display: block;
+}
+
+.project-cover:hover > .github-logo:hover {
+  animation-name: to-github-white;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .project-description {
