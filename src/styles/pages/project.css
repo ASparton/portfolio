@@ -91,12 +91,12 @@
 .github-logo {
   display: none;
   position: absolute;
-  top: 40%;
-  left: 45%;
-  width: 10%;
-  height: 10%;
-  padding-top: 2.1%;
-  padding-bottom: 2.1%;
+  top: 42.5%;
+  left: 45.75%;
+  width: 5em;
+  height: 2.25em;
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
 
   color: whitesmoke;
   border: 3px solid rgba(245, 245, 245, 0.793);
@@ -122,9 +122,100 @@
   font-weight: 500;
 }
 
+.readme-section {
+  width: 75vw;
+  margin-left: 12.5vw;
+  margin-bottom: 35vh;
+  display: flex;
+  justify-content: center;
+}
+
+.readme-section > article {
+  width: 100%;
+}
+
+.readme-section h1 {
+  margin-bottom: 0.65em;
+}
+
+.readme-section h2 {
+  font-size: 1.8em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.readme-section h3 {
+  font-size: 1.5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.readme-section p,
+.readme-section li {
+  font-size: 1.25em;
+}
+
+.readme-section li,
+.readme-section ol {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.readme-section li {
+  list-style: disc;
+  margin-left: 2em;
+}
+
+.readme-section a {
+  color: #4c6ef5;
+  text-decoration: underline;
+}
+
+.readme-section > article p.code {
+  width: 100%;
+  padding: 1em;
+  margin-top: 0.25em;
+  margin-bottom: 1em;
+  background-color: rgba(220, 220, 220, 0.745);
+  border-radius: 7.5px;
+  font-family: "Fira Code", monospace;
+  font-size: 1em;
+
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.readme-section img {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.readme-section blockquote {
+  padding: 2em;
+  background-color: #4c6ef56b;
+  border-radius: 10px;
+}
+
+.readme-section blockquote > p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.readme-section blockquote g-emoji {
+  margin-right: 0.5em;
+}
+
 @media screen and (max-width: 750px) {
+  .readme-section {
+    width: 85vw;
+    margin-left: 7.5vw;
+  }
+
   .project-name > h1 {
-    font-size: 1.65em;
+    font-size: 1.5em;
   }
 
   .project-topics span {
@@ -140,5 +231,38 @@
     font-size: 1.1em;
     font-weight: 400;
     margin-top: 0.75em;
+  }
+
+  .readme-section img {
+    width: 100%;
+  }
+
+  .readme-section h1 {
+    font-size: 1.5em;
+  }
+
+  .readme-section h2 {
+    font-size: 1.25em;
+  }
+
+  .readme-section h3 {
+    font-size: 1.1em;
+  }
+
+  .readme-section p,
+  .readme-section li {
+    font-size: 1em;
+  }
+
+  .readme-section li {
+    margin-left: 1em;
+  }
+
+  .readme-section > article p.code {
+    font-size: 0.8em;
+  }
+
+  .readme-section blockquote {
+    padding: 1em;
   }
 }

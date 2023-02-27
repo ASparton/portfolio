@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getPortfolioProjectByName } from "../services/reposFetcher";
 
-import { Loader } from "@mantine/core";
+import { Loader, Code } from "@mantine/core";
 import ProjectHeader from "../components/project/ProjectHeader";
 import Footer from "../components/layout/Footer";
 
@@ -14,7 +14,9 @@ export default function Project() {
 
   useEffect(() => {
     getPortfolioProjectByName(paramProjectName)
-      .then((fetchedProject) => setProject(fetchedProject))
+      .then((fetchedProject) => {
+        setProject(fetchedProject);
+      })
       .catch((error) => console.error(error));
   }, [paramProjectName]);
 
@@ -25,13 +27,7 @@ export default function Project() {
           <ProjectHeader project={project} />
           <section
             dangerouslySetInnerHTML={{ __html: project.readme }}
-            style={{
-              width: "75vw",
-              marginLeft: "12.5vw",
-              marginBottom: "35vh",
-              display: "flex",
-              justifyContent: "center",
-            }}
+            className="readme-section"
           ></section>
         </>
       ) : (

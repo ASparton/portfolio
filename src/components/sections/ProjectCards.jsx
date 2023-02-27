@@ -38,11 +38,26 @@ export default function ProjectCards() {
           alignItems: "center",
         }}
       >
-        <Loader
+        <div
           style={{
+            display: "flex",
+            flexFlow: "column nowrap",
+            justifyContent: "center",
+            alignItems: "center",
             display: projects.length === 0 ? "block" : "none",
           }}
-        />
+        >
+          <Loader variant="bars" color="#4c6ef5" />
+          <p
+            style={{
+              marginTop: "1em",
+              fontSize: "1.25em",
+              color: "#4c6ef5",
+            }}
+          >
+            Featching projects
+          </p>
+        </div>
       </div>
       <AliceCarousel
         items={projects}

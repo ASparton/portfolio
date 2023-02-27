@@ -1,36 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap");
 
 :root {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body, header, footer, h1, h2, h3, div, a, p, img, ul, li, i {
-    margin: 0;
-    padding: 0;
+body,
+header,
+footer,
+h1,
+h2,
+h3,
+div,
+a,
+p,
+img,
+ul,
+ol,
+li,
+i {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
-h1, h2, h3, h4, p, a, i {
-    font-family: 'Jost', sans-serif;
-    color: #212529;
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+i,
+li {
+  font-family: "Jost", sans-serif;
+  color: #212529;
 }
 
 h1 {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 section {
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }

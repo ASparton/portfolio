@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Octokit } from "octokit";
+import { parseReadme } from "./readmeParser";
 
 const octokit = new Octokit({
   auth: import.meta.env.VITE_GITHUB_API_KEY,
@@ -12,7 +13,7 @@ export const getPortfolioProjectByName = async (repositoryName) => {
     repo: repositoryName,
   });
   const project = await buildProject(response.data);
-  project.readme = await getRepoReadme(repositoryName);
+  project.readme = parseReadme(await getRepoReadme(repositoryName));
   return project;
 };
 
