@@ -40,11 +40,10 @@ export default function ProjectCards() {
       >
         <div
           style={{
-            display: "flex",
+            display: projects.length === 0 ? "flex" : "none",
             flexFlow: "column nowrap",
             justifyContent: "center",
             alignItems: "center",
-            display: projects.length === 0 ? "block" : "none",
           }}
         >
           <Loader variant="bars" color="#4c6ef5" />

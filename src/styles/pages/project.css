@@ -212,6 +212,7 @@
   .readme-section {
     width: 85vw;
     margin-left: 7.5vw;
+    margin-right: 7.5vw;
   }
 
   .project-name > h1 {
@@ -260,6 +261,7 @@
 
   .readme-section > article p.code {
     font-size: 0.8em;
+    width: 93%;
   }
 
   .readme-section blockquote {
