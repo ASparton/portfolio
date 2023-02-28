@@ -91,12 +91,13 @@
 .github-logo {
   display: none;
   position: absolute;
-  top: 42.5%;
-  left: 45.75%;
-  width: 5em;
-  height: 2.25em;
-  padding-top: 1.3em;
-  padding-bottom: 1.3em;
+  top: 38%;
+  left: 42.5%;
+  width: 10%;
+  height: 10%;
+  padding: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 
   color: whitesmoke;
   border: 3px solid rgba(245, 245, 245, 0.793);
@@ -237,6 +238,15 @@
     font-size: 1.1em;
     font-weight: 400;
     margin-top: 0.75em;
+  }
+
+  .github-logo {
+    top: 35%;
+    left: 40%;
+    width: 15%;
+    height: 15%;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 
   .readme-section img {
