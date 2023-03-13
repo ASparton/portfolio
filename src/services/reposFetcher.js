@@ -13,9 +13,21 @@ export const getPortfolioProjectByName = async (repositoryName) => {
     repo: repositoryName,
   });
   const project = await buildProject(response.data);
-  project.readme = parseReadme(await getRepoReadme(repositoryName));
+  project.readme = await getRepoReadme(repositoryName);
   return project;
 };
+
+export const getRepoReadme = async (repositoryName) => {
+  const response = await octokit.request("GET /repos/{owner}/{repo}/readme", {
+    owner: "asparton-portfolio",
+    repo: repositoryName,
+    mediaType: {
+      format: "html",
+    },
+  });
+  return parseReadme(response.data);
+};
+
 
 export const getPortfolioProjects = async () => {
   const response = await octokit.request("GET /orgs/{org}/repos", {
@@ -73,15 +85,4 @@ const getRepoCover = async (repositoryName) => {
   } catch (_) {
     return null;
   }
-};
-
-const getRepoReadme = async (repositoryName) => {
-  const response = await octokit.request("GET /repos/{owner}/{repo}/readme", {
-    owner: "asparton-portfolio",
-    repo: repositoryName,
-    mediaType: {
-      format: "html",
-    },
-  });
-  return response.data;
 };
