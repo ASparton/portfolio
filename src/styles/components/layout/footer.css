@@ -146,6 +146,13 @@
   animation-fill-mode: forwards;
 }
 
+.socials > li > a:last-child {
+  width: 1.75em;
+  height: 1.7em;
+
+  padding: 1.05em;
+}
+
 .socials > li > a:hover {
   animation-name: to-bg-white;
   animation-duration: 0.2s;

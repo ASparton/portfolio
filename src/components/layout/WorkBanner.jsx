@@ -1,7 +1,8 @@
 import { Image } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons";
 
-import malt_logo from "/malt_logo.png";
+import maltLogo from "/malt_logo.png";
+import worksLogo from "/404works_logo.png";
 import "../../styles/components/layout/footer.css";
 
 export default function WorkBanner() {
@@ -22,7 +23,16 @@ export default function WorkBanner() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <Image src={malt_logo} alt="malt.fr logo" />
+              <Image src={maltLogo} alt="malt.fr logo" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.404works.com/fr/users/view_profile/alexandresparton"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Image src={worksLogo} alt="404Works logo" />
             </a>
           </li>
         </ul>
