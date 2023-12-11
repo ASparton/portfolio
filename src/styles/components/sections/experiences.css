@@ -36,10 +36,30 @@
   margin-bottom: 1.5em;
 }
 
+.date {
+  margin-top: 0.5rem;
+  margin-left: -0.25rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 .website {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+}
+
+.technos-list {
+  width: 60%;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.technos-list > li {
+  width: 3rem;
+  margin-right: 1rem;
 }
 
 @keyframes to-indigo {
