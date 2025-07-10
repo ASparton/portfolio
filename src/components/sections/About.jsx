@@ -28,6 +28,7 @@ export default function About() {
           the best and simple way to bring my ideas to the final customers, and
           always try to push the projects further within a passionate team.
         </p>
+        <h2>This is a new change</h2>
       </div>
       <div className="coffee-container">
         <Image src="/mycoffee.png" alt="Me & My coffee" className="coffee" />
